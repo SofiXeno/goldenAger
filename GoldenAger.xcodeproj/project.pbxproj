@@ -15,6 +15,7 @@
 		8984D13F2620CE2900C65994 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8984D13D2620CE2900C65994 /* LaunchScreen.storyboard */; };
 		8984D14A2620CE2900C65994 /* GoldenAgerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8984D1492620CE2900C65994 /* GoldenAgerTests.swift */; };
 		8984D1552620CE2900C65994 /* GoldenAgerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8984D1542620CE2900C65994 /* GoldenAgerUITests.swift */; };
+		8984D1692620D96700C65994 /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = 8984D1682620D96600C65994 /* Fonts */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		8984D1502620CE2900C65994 /* GoldenAgerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoldenAgerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8984D1542620CE2900C65994 /* GoldenAgerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoldenAgerUITests.swift; sourceTree = "<group>"; };
 		8984D1562620CE2900C65994 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8984D1682620D96600C65994 /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Fonts; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 		8984D1312620CE2200C65994 /* GoldenAger */ = {
 			isa = PBXGroup;
 			children = (
+				8984D1682620D96600C65994 /* Fonts */,
 				8984D1322620CE2200C65994 /* AppDelegate.swift */,
 				8984D1342620CE2200C65994 /* SceneDelegate.swift */,
 				8984D1362620CE2200C65994 /* ViewController.swift */,
@@ -234,6 +237,7 @@
 				8984D13F2620CE2900C65994 /* LaunchScreen.storyboard in Resources */,
 				8984D13C2620CE2900C65994 /* Assets.xcassets in Resources */,
 				8984D13A2620CE2200C65994 /* Main.storyboard in Resources */,
+				8984D1692620D96700C65994 /* Fonts in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,6 +307,7 @@
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
+			usesTabs = 0;
 		};
 		8984D13D2620CE2900C65994 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
