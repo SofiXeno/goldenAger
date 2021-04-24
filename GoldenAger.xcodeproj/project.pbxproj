@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,10 @@
 		8984D14A2620CE2900C65994 /* GoldenAgerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8984D1492620CE2900C65994 /* GoldenAgerTests.swift */; };
 		8984D1552620CE2900C65994 /* GoldenAgerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8984D1542620CE2900C65994 /* GoldenAgerUITests.swift */; };
 		8984D1692620D96700C65994 /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = 8984D1682620D96600C65994 /* Fonts */; };
+		89D6E8E726332B490046F91C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 89D6E8E626332B490046F91C /* GoogleService-Info.plist */; };
+		8E8611045A909E23E906E224 /* Pods_GoldenAger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DECB5AE32C25B4E72C873821 /* Pods_GoldenAger.framework */; };
+		FA5FF108F03F8D0B6D5CBC8C /* Pods_GoldenAgerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23C02FBA4092B14B48AE2F02 /* Pods_GoldenAgerTests.framework */; };
+		FE62A58DF1901861AD7CEC6E /* Pods_GoldenAger_GoldenAgerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF8CE197CFB7D9C37E9101A4 /* Pods_GoldenAger_GoldenAgerUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +40,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		19CA77D991E6350A8AEE4219 /* Pods-GoldenAger-GoldenAgerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoldenAger-GoldenAgerUITests.debug.xcconfig"; path = "Target Support Files/Pods-GoldenAger-GoldenAgerUITests/Pods-GoldenAger-GoldenAgerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		1A7AD87D88492071613FA56E /* Pods-GoldenAger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoldenAger.debug.xcconfig"; path = "Target Support Files/Pods-GoldenAger/Pods-GoldenAger.debug.xcconfig"; sourceTree = "<group>"; };
+		23C02FBA4092B14B48AE2F02 /* Pods_GoldenAgerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoldenAgerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		56F41406469183380148925D /* Pods-GoldenAger-GoldenAgerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoldenAger-GoldenAgerUITests.release.xcconfig"; path = "Target Support Files/Pods-GoldenAger-GoldenAgerUITests/Pods-GoldenAger-GoldenAgerUITests.release.xcconfig"; sourceTree = "<group>"; };
 		8984D12F2620CE2200C65994 /* GoldenAger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoldenAger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8984D1322620CE2200C65994 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8984D1342620CE2200C65994 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +59,12 @@
 		8984D1542620CE2900C65994 /* GoldenAgerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoldenAgerUITests.swift; sourceTree = "<group>"; };
 		8984D1562620CE2900C65994 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8984D1682620D96600C65994 /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Fonts; sourceTree = "<group>"; };
+		89D6E8E626332B490046F91C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8CAECE4EBBBCC44A7D75473C /* Pods-GoldenAgerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoldenAgerTests.debug.xcconfig"; path = "Target Support Files/Pods-GoldenAgerTests/Pods-GoldenAgerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		CFAC7FA06A05B987E6265077 /* Pods-GoldenAger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoldenAger.release.xcconfig"; path = "Target Support Files/Pods-GoldenAger/Pods-GoldenAger.release.xcconfig"; sourceTree = "<group>"; };
+		DECB5AE32C25B4E72C873821 /* Pods_GoldenAger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoldenAger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF66115517494E697BE9BE3F /* Pods-GoldenAgerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoldenAgerTests.release.xcconfig"; path = "Target Support Files/Pods-GoldenAgerTests/Pods-GoldenAgerTests.release.xcconfig"; sourceTree = "<group>"; };
+		FF8CE197CFB7D9C37E9101A4 /* Pods_GoldenAger_GoldenAgerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoldenAger_GoldenAgerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E8611045A909E23E906E224 /* Pods_GoldenAger.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA5FF108F03F8D0B6D5CBC8C /* Pods_GoldenAgerTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,12 +88,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE62A58DF1901861AD7CEC6E /* Pods_GoldenAger_GoldenAgerUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		398DA5C6D7744E0B87C20158 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DECB5AE32C25B4E72C873821 /* Pods_GoldenAger.framework */,
+				FF8CE197CFB7D9C37E9101A4 /* Pods_GoldenAger_GoldenAgerUITests.framework */,
+				23C02FBA4092B14B48AE2F02 /* Pods_GoldenAgerTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8984D1262620CE2100C65994 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +112,8 @@
 				8984D1482620CE2900C65994 /* GoldenAgerTests */,
 				8984D1532620CE2900C65994 /* GoldenAgerUITests */,
 				8984D1302620CE2200C65994 /* Products */,
+				E284E697DC6AAED03E3592FD /* Pods */,
+				398DA5C6D7744E0B87C20158 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,6 +130,7 @@
 		8984D1312620CE2200C65994 /* GoldenAger */ = {
 			isa = PBXGroup;
 			children = (
+				89D6E8E626332B490046F91C /* GoogleService-Info.plist */,
 				8984D1682620D96600C65994 /* Fonts */,
 				8984D1322620CE2200C65994 /* AppDelegate.swift */,
 				8984D1342620CE2200C65994 /* SceneDelegate.swift */,
@@ -131,6 +161,19 @@
 			path = GoldenAgerUITests;
 			sourceTree = "<group>";
 		};
+		E284E697DC6AAED03E3592FD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1A7AD87D88492071613FA56E /* Pods-GoldenAger.debug.xcconfig */,
+				CFAC7FA06A05B987E6265077 /* Pods-GoldenAger.release.xcconfig */,
+				19CA77D991E6350A8AEE4219 /* Pods-GoldenAger-GoldenAgerUITests.debug.xcconfig */,
+				56F41406469183380148925D /* Pods-GoldenAger-GoldenAgerUITests.release.xcconfig */,
+				8CAECE4EBBBCC44A7D75473C /* Pods-GoldenAgerTests.debug.xcconfig */,
+				FF66115517494E697BE9BE3F /* Pods-GoldenAgerTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,9 +181,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8984D1592620CE2900C65994 /* Build configuration list for PBXNativeTarget "GoldenAger" */;
 			buildPhases = (
+				F293DF599F7524BF6FAF6A45 /* [CP] Check Pods Manifest.lock */,
 				8984D12B2620CE2200C65994 /* Sources */,
 				8984D12C2620CE2200C65994 /* Frameworks */,
 				8984D12D2620CE2200C65994 /* Resources */,
+				22A4E7FFF52127B137AC9434 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -155,6 +200,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8984D15C2620CE2900C65994 /* Build configuration list for PBXNativeTarget "GoldenAgerTests" */;
 			buildPhases = (
+				A56603422CF45E848007F903 /* [CP] Check Pods Manifest.lock */,
 				8984D1412620CE2900C65994 /* Sources */,
 				8984D1422620CE2900C65994 /* Frameworks */,
 				8984D1432620CE2900C65994 /* Resources */,
@@ -173,9 +219,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8984D15F2620CE2900C65994 /* Build configuration list for PBXNativeTarget "GoldenAgerUITests" */;
 			buildPhases = (
+				7BD4CCFF5412FE6055B17384 /* [CP] Check Pods Manifest.lock */,
 				8984D14C2620CE2900C65994 /* Sources */,
 				8984D14D2620CE2900C65994 /* Frameworks */,
 				8984D14E2620CE2900C65994 /* Resources */,
+				7B06E17F72AB1F52BCADBB43 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -236,6 +284,7 @@
 			files = (
 				8984D13F2620CE2900C65994 /* LaunchScreen.storyboard in Resources */,
 				8984D13C2620CE2900C65994 /* Assets.xcassets in Resources */,
+				89D6E8E726332B490046F91C /* GoogleService-Info.plist in Resources */,
 				8984D13A2620CE2200C65994 /* Main.storyboard in Resources */,
 				8984D1692620D96700C65994 /* Fonts in Resources */,
 			);
@@ -256,6 +305,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		22A4E7FFF52127B137AC9434 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GoldenAger/Pods-GoldenAger-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GoldenAger/Pods-GoldenAger-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GoldenAger/Pods-GoldenAger-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7B06E17F72AB1F52BCADBB43 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GoldenAger-GoldenAgerUITests/Pods-GoldenAger-GoldenAgerUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GoldenAger-GoldenAgerUITests/Pods-GoldenAger-GoldenAgerUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GoldenAger-GoldenAgerUITests/Pods-GoldenAger-GoldenAgerUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7BD4CCFF5412FE6055B17384 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GoldenAger-GoldenAgerUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A56603422CF45E848007F903 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GoldenAgerTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F293DF599F7524BF6FAF6A45 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GoldenAger-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8984D12B2620CE2200C65994 /* Sources */ = {
@@ -355,6 +507,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -416,6 +569,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -438,6 +592,7 @@
 		};
 		8984D15A2620CE2900C65994 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A7AD87D88492071613FA56E /* Pods-GoldenAger.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -457,6 +612,7 @@
 		};
 		8984D15B2620CE2900C65994 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CFAC7FA06A05B987E6265077 /* Pods-GoldenAger.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -476,6 +632,7 @@
 		};
 		8984D15D2620CE2900C65994 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8CAECE4EBBBCC44A7D75473C /* Pods-GoldenAgerTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -498,6 +655,7 @@
 		};
 		8984D15E2620CE2900C65994 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FF66115517494E697BE9BE3F /* Pods-GoldenAgerTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -520,6 +678,7 @@
 		};
 		8984D1602620CE2900C65994 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 19CA77D991E6350A8AEE4219 /* Pods-GoldenAger-GoldenAgerUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -540,6 +699,7 @@
 		};
 		8984D1612620CE2900C65994 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 56F41406469183380148925D /* Pods-GoldenAger-GoldenAgerUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

@@ -31,8 +31,8 @@
 	<array>
 		<string>BalsamiqSans-Regular.ttf</string>
 		<string>Inter-VariableFont_slnt,wght.ttf</string>
-		<string>YesevaOne-Regular.ttf</string>
 		<string>PlayfairDisplay-VariableFont_wght.ttf</string>
+		<string>YesevaOne-Regular.ttf</string>
 	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
