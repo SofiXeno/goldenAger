@@ -26,7 +26,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GoldenAger" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="IconStoryboard" id="BYZ-38-t0r" customClass="ViewController" customModule="GoldenAger" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -42,6 +42,9 @@
                                 <rect key="frame" x="2" y="231" width="410" height="395"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <state key="normal" image="ICON2"/>
+                                <connections>
+                                    <segue destination="DVq-zp-sHF" kind="show" id="QEX-j8-qM1"/>
+                                </connections>
                             </button>
                             <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Вітаємо!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="51D-YS-Dvd">
                                 <rect key="frame" x="54" y="145" width="306" height="78"/>
@@ -62,10 +65,10 @@
             </objects>
             <point key="canvasLocation" x="18.840579710144929" y="88.392857142857139"/>
         </scene>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="6PM-F3-qBh">
             <objects>
-                <viewController id="Pqo-DO-WMA" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginStoryboard" modalPresentationStyle="fullScreen" id="Pqo-DO-WMA" customClass="LoginViewController" customModule="GoldenAger" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8oh-tt-fpw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -93,37 +96,14 @@
                                 <color key="shadowColor" red="0.041485054729999998" green="0.1197929351" blue="0.1209250845" alpha="0.29547018089999999" colorSpace="custom" customColorSpace="displayP3"/>
                                 <size key="shadowOffset" width="0.0" height="3"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Твій E-mail" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="AKO-yo-6RI">
-                                <rect key="frame" x="84" y="379" width="246" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemGray6Color"/>
-                                <color key="textColor" red="0.0" green="0.1843137255" blue="0.18039215689999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="20"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done" textContentType="email"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Пароль" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="4dl-ob-ihU">
-                                <rect key="frame" x="84" y="431" width="246" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Пароль" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="4dl-ob-ihU">
+                                <rect key="frame" x="52" y="457" width="310" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <color key="textColor" red="0.0" green="0.1843137255" blue="0.18039215689999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done" textContentType="password"/>
                             </textField>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="arrow.right.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="yHC-vX-hza">
-                                <rect key="frame" x="314" y="586.5" width="64" height="64"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" red="0.85490196078431369" green="0.13333333333333333" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3vp-z9-oAe">
-                                <rect key="frame" x="20" y="579" width="138" height="72"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="YesevaOne-Regular" family="Yeseva One" pointSize="48"/>
-                                <size key="titleShadowOffset" width="0.0" height="3"/>
-                                <state key="normal" title="Вхід">
-                                    <color key="titleColor" red="0.0" green="0.1843137255" blue="0.18039215689999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <color key="titleShadowColor" systemColor="placeholderTextColor"/>
-                                </state>
-                            </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Rectangle 4" translatesAutoresizingMaskIntoConstraints="NO" id="a4n-MI-lYD">
                                 <rect key="frame" x="-15" y="832" width="197" height="11"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -137,6 +117,10 @@
                                     <color key="titleColor" red="0.0" green="0.1843137255" blue="0.18039215689999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" systemColor="placeholderTextColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="createAccountButton:" destination="Pqo-DO-WMA" eventType="touchUpInside" id="8Eq-DQ-DPz"/>
+                                    <segue destination="Vht-ei-uKr" kind="show" id="q5l-93-uuG"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Rectangle 3" translatesAutoresizingMaskIntoConstraints="NO" id="i27-EV-lRH">
                                 <rect key="frame" x="206" y="832" width="208" height="11"/>
@@ -152,19 +136,123 @@
                                     <color key="titleShadowColor" systemColor="placeholderTextColor"/>
                                 </state>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Твій E-mail" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="AKO-yo-6RI">
+                                <rect key="frame" x="52" y="362" width="310" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <color key="textColor" red="0.0" green="0.1843137255" blue="0.18039215689999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="next" textContentType="email"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3vp-z9-oAe">
+                                <rect key="frame" x="138" y="578" width="138" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="YesevaOne-Regular" family="Yeseva One" pointSize="48"/>
+                                <size key="titleShadowOffset" width="0.0" height="3"/>
+                                <state key="normal" title="Вхід">
+                                    <color key="titleColor" red="0.0" green="0.1843137255" blue="0.18039215689999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" systemColor="placeholderTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="loginButton:" destination="Pqo-DO-WMA" eventType="touchUpInside" id="Rde-uj-1Mh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Qpu-TG-38V"/>
                         <color key="backgroundColor" red="1" green="0.99215686274509807" blue="0.83137254901960778" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
+                    <navigationItem key="navigationItem" id="kvG-LI-Ik4"/>
+                    <connections>
+                        <outlet property="email" destination="AKO-yo-6RI" id="3E9-0G-imW"/>
+                        <outlet property="password" destination="4dl-ob-ihU" id="Ue4-Bc-DHQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="coQ-wz-0jI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="18.840579710144929" y="791.51785714285711"/>
         </scene>
         <!--View Controller-->
+        <scene sceneID="ABK-xV-crJ">
+            <objects>
+                <viewController id="dQo-aU-1hn" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="c5D-wF-c4t">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Rectangle 6" translatesAutoresizingMaskIntoConstraints="NO" id="HTV-X4-hSE">
+                                <rect key="frame" x="97" y="158" width="297" height="9"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="myButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gCf-yf-Zh0">
+                                <rect key="frame" x="62" y="637" width="291" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.27843137254901962" green="0.46274509803921571" blue="0.90196078431372551" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Inter-Regular_Bold" family="Inter" pointSize="24"/>
+                                <color key="tintColor" systemColor="systemGroupedBackgroundColor"/>
+                                <size key="titleShadowOffset" width="0.0" height="4"/>
+                                <state key="normal" title="Надіслати ще раз"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Rectangle 5" translatesAutoresizingMaskIntoConstraints="NO" id="gbh-4f-azM">
+                                <rect key="frame" x="25" y="121" width="328" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Перевірка номеру телефону" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WyG-9f-H5W">
+                                <rect key="frame" x="25" y="14" width="374" height="214"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="YesevaOne-Regular" family="Yeseva One" pointSize="36"/>
+                                <color key="textColor" red="0.0" green="0.1843137255" blue="0.18039215689999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="highlightedColor" red="0.0" green="0.1843137255" blue="0.18039215689999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="shadowColor" red="0.041485054729999998" green="0.1197929351" blue="0.1209250845" alpha="0.29547018089999999" colorSpace="custom" customColorSpace="displayP3"/>
+                                <size key="shadowOffset" width="1" height="3"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="На номер Вашого мобільного був висланий код" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7e4-IT-gDU">
+                                <rect key="frame" x="31" y="220" width="352" height="134"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="24"/>
+                                <color key="textColor" red="0.043137254899999998" green="0.1215686275" blue="0.1215686275" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Код" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="VPL-jv-Icp">
+                                <rect key="frame" x="52" y="418" width="310" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <color key="textColor" red="0.0" green="0.1843137255" blue="0.18039215689999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" keyboardType="numberPad" returnKeyType="go" secureTextEntry="YES" textContentType="one-time-code"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Doc-UK-nu5"/>
+                        <color key="backgroundColor" red="0.89411764705882346" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wu5-oZ-jTD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3189.8550724637685" y="791.51785714285711"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Uhh-uq-sH1">
+            <objects>
+                <viewController id="PNx-yb-qDl" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nqJ-tA-OIx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="lZ0-cp-go8"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vOS-0E-OBg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="19" y="1564"/>
+        </scene>
+        <!--Sign Up View Controller-->
         <scene sceneID="k8N-8M-SpR">
             <objects>
-                <viewController id="Vht-ei-uKr" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignUpViewController" modalPresentationStyle="fullScreen" id="Vht-ei-uKr" customClass="SignUpViewController" customModule="GoldenAger" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="clj-qH-vu2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -173,73 +261,10 @@
                                 <rect key="frame" x="-44" y="0.0" width="458" height="896"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MmG-K0-qUJ">
-                                <rect key="frame" x="302" y="708" width="64" height="64"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.96078431369999995" green="1" blue="0.49019607840000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <color key="tintColor" red="0.0" green="0.1843137255" blue="0.18039215689999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" image="chevron.right" catalog="system">
-                                    <color key="titleColor" red="0.0" green="0.1843137255" blue="0.18039215689999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="100"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F5q-Km-y9f">
-                                <rect key="frame" x="43" y="708" width="64" height="64"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.96078431369999995" green="1" blue="0.49019607840000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <color key="tintColor" red="0.0" green="0.1843137255" blue="0.18039215689999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" image="chevron.left" catalog="system">
-                                    <color key="titleColor" red="0.0" green="0.1843137255" blue="0.18039215689999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="100"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </button>
-                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="otK-r8-Idd">
-                                <rect key="frame" x="146" y="656" width="123" height="28"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </pageControl>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Rectangle 5" translatesAutoresizingMaskIntoConstraints="NO" id="YZk-rL-Beo">
                                 <rect key="frame" x="6" y="130" width="328" height="16"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ім'я" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nd4-VB-KMw">
-                                <rect key="frame" x="79" y="351" width="256" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemGray6Color"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="next" textContentType="name"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Прізвище" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wCo-uz-gfc">
-                                <rect key="frame" x="79" y="408" width="256" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemGray6Color"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="next" textContentType="family-name"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Твій E-mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W3M-8A-f3M">
-                                <rect key="frame" x="79" y="466" width="256" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemGray6Color"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next" textContentType="email"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Телефон" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CGz-em-6LX">
-                                <rect key="frame" x="79" y="525" width="256" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemGray6Color"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="phonePad" returnKeyType="done" textContentType="tel"/>
-                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Реєстрація" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UZk-js-6rL">
                                 <rect key="frame" x="19" y="81" width="303" height="74"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -249,6 +274,65 @@
                                 <color key="shadowColor" red="0.041485054729999998" green="0.1197929351" blue="0.1209250845" alpha="0.29547018089999999" colorSpace="custom" customColorSpace="displayP3"/>
                                 <size key="shadowOffset" width="1" height="3"/>
                             </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Ім'я" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="hyr-oT-yUk">
+                                <rect key="frame" x="52" y="302" width="310" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <color key="textColor" red="0.0" green="0.1843137255" blue="0.18039215689999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="next" textContentType="name"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Прізвище" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="S5I-tf-lsk">
+                                <rect key="frame" x="52" y="379" width="310" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <color key="textColor" red="0.0" green="0.1843137255" blue="0.18039215689999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="next" textContentType="family-name"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Твій E-mail" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="bnb-eZ-3BA">
+                                <rect key="frame" x="52" y="457" width="310" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <color key="textColor" red="0.0" green="0.1843137255" blue="0.18039215689999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" keyboardType="emailAddress" returnKeyType="next" textContentType="email"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Номер телефону" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="EEn-hf-9Qi">
+                                <rect key="frame" x="52" y="534" width="310" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <color key="textColor" red="0.0" green="0.1843137255" blue="0.18039215689999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" keyboardType="phonePad" returnKeyType="done" textContentType="tel"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gvt-Uj-g7t">
+                                <rect key="frame" x="88" y="602" width="239" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="YesevaOne-Regular" family="Yeseva One" pointSize="23"/>
+                                <size key="titleShadowOffset" width="0.0" height="3"/>
+                                <state key="normal" title="Вже маєш аккаунт?">
+                                    <color key="titleColor" red="0.0" green="0.1843137255" blue="0.18039215689999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" systemColor="placeholderTextColor"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Pqo-DO-WMA" kind="show" id="mFx-Aq-5GY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="myButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qDy-Jn-Qpc">
+                                <rect key="frame" x="133" y="682" width="148" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.2784313725" green="0.46274509800000002" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Inter-Regular_Bold" family="Inter" pointSize="24"/>
+                                <color key="tintColor" systemColor="systemGroupedBackgroundColor"/>
+                                <size key="titleShadowOffset" width="0.0" height="4"/>
+                                <state key="normal" title="Далі"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="jkz-UX-d8s"/>
                         <color key="backgroundColor" red="0.89411764705882346" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -257,6 +341,17 @@
                     <navigationItem key="navigationItem" id="SdO-fA-MUk">
                         <barButtonItem key="backBarButtonItem" title="Назад" id="aSa-a3-fxi"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="email" destination="bnb-eZ-3BA" id="jbw-sC-chz"/>
+                        <outlet property="emailField" destination="bnb-eZ-3BA" id="pUg-fI-4Es"/>
+                        <outlet property="name" destination="hyr-oT-yUk" id="Y5V-DA-l9V"/>
+                        <outlet property="nameField" destination="hyr-oT-yUk" id="OTd-ks-hTR"/>
+                        <outlet property="phone" destination="EEn-hf-9Qi" id="hMM-cx-09k"/>
+                        <outlet property="phoneField" destination="EEn-hf-9Qi" id="rfa-TE-qTo"/>
+                        <outlet property="surname" destination="S5I-tf-lsk" id="Jih-01-WVz"/>
+                        <outlet property="surnameField" destination="S5I-tf-lsk" id="WKb-lf-SBt"/>
+                        <outlet property="titleLabel" destination="UZk-js-6rL" id="Jrf-7H-ki9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OWR-X1-MTs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -265,7 +360,7 @@
         <!--View Controller-->
         <scene sceneID="XtH-dO-zqx">
             <objects>
-                <viewController id="DVq-zp-sHF" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="DVq-zp-sHF" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GSd-FH-azw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -309,6 +404,9 @@
                                         <integer key="value" value="20"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="Pqo-DO-WMA" kind="show" id="sHQ-iC-2NS"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="arm1" translatesAutoresizingMaskIntoConstraints="NO" id="87t-1K-6RS">
                                 <rect key="frame" x="-55" y="468" width="183" height="172"/>
@@ -333,6 +431,9 @@
                                         <integer key="value" value="20"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="ZDt-0a-yeQ" kind="show" id="IdU-5H-Imd"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="stars_1" translatesAutoresizingMaskIntoConstraints="NO" id="iFF-gk-BZ2">
                                 <rect key="frame" x="139" y="582" width="260" height="47"/>
@@ -351,7 +452,7 @@
         <!--View Controller-->
         <scene sceneID="Ekt-ss-avb">
             <objects>
-                <viewController id="ZDt-0a-yeQ" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="ZDt-0a-yeQ" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DcF-un-Hjw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -404,6 +505,7 @@
                         <viewLayoutGuide key="safeArea" id="5Q6-H7-LIv"/>
                         <color key="backgroundColor" red="0.77329379320000002" green="0.87444013359999995" blue="0.87451255319999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
+                    <navigationItem key="navigationItem" id="CIU-Xa-WHu"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r4c-lm-19z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -412,7 +514,7 @@
         <!--View Controller-->
         <scene sceneID="LfB-8Y-7HN">
             <objects>
-                <viewController id="YpV-X2-6zZ" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="YpV-X2-6zZ" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0tW-ca-VPU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -455,7 +557,7 @@
                                 <rect key="frame" x="103" y="491" width="208" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.92156862745098034" green="0.3411764705882353" blue="0.3411764705882353" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="Inter-Regular_Bold" family="Inter" pointSize="24"/>
+                                <fontDescription key="fontDescription" name="Inter-Regular_Bold" family="Inter" pointSize="34"/>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <size key="titleShadowOffset" width="0.0" height="4"/>
                                 <state key="normal" title="Ні">
@@ -479,13 +581,21 @@
         <!--View Controller-->
         <scene sceneID="EOj-Oa-dxh">
             <objects>
-                <viewController id="yUX-MJ-LxU" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="yUX-MJ-LxU" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4Nd-2h-iPz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Group 122" translatesAutoresizingMaskIntoConstraints="NO" id="gR5-eB-QZH">
                                 <rect key="frame" x="-44" y="0.0" width="458" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Warm1" translatesAutoresizingMaskIntoConstraints="NO" id="UYL-bP-xhc">
+                                <rect key="frame" x="263" y="0.0" width="151" height="256"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Rectangle 5" translatesAutoresizingMaskIntoConstraints="NO" id="37V-sg-1fH">
+                                <rect key="frame" x="20" y="212" width="394" height="16"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gQ2-47-zUJ">
@@ -518,45 +628,12 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
-                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="GNC-vv-hYR">
-                                <rect key="frame" x="146" y="656" width="123" height="28"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </pageControl>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Rectangle 5" translatesAutoresizingMaskIntoConstraints="NO" id="EIp-6V-SNQ">
-                                <rect key="frame" x="6" y="130" width="328" height="16"/>
+                                <rect key="frame" x="-15" y="130" width="349" height="16"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ім'я" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PXe-uX-sm1">
-                                <rect key="frame" x="79" y="351" width="256" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemGray6Color"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="next" textContentType="name"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Прізвище" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bLD-eT-aPz">
-                                <rect key="frame" x="79" y="408" width="256" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemGray6Color"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="next" textContentType="family-name"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Твій E-mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N0X-pM-kVI">
-                                <rect key="frame" x="79" y="466" width="256" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemGray6Color"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next" textContentType="email"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Телефон" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="D9e-gp-ruV">
-                                <rect key="frame" x="79" y="525" width="256" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemGray6Color"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="phonePad" returnKeyType="done" textContentType="tel"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Реєстрація" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EUz-ic-Z8g">
-                                <rect key="frame" x="19" y="81" width="303" height="74"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ваша " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EUz-ic-Z8g">
+                                <rect key="frame" x="0.0" y="80" width="303" height="74"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="YesevaOne-Regular" family="Yeseva One" pointSize="46"/>
                                 <color key="textColor" red="0.0" green="0.1843137255" blue="0.18039215689999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -564,6 +641,27 @@
                                 <color key="shadowColor" red="0.041485054729999998" green="0.1197929351" blue="0.1209250845" alpha="0.29547018089999999" colorSpace="custom" customColorSpace="displayP3"/>
                                 <size key="shadowOffset" width="1" height="3"/>
                             </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Твій E-mail" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="J0s-yn-6uq">
+                                <rect key="frame" x="52" y="457" width="310" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <color key="textColor" red="0.0" green="0.1843137255" blue="0.18039215689999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" keyboardType="emailAddress" returnKeyType="next" textContentType="email"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="організація" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SzS-Lz-QiP">
+                                <rect key="frame" x="63" y="154" width="303" height="74"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="YesevaOne-Regular" family="Yeseva One" pointSize="46"/>
+                                <color key="textColor" red="0.0" green="0.1843137255" blue="0.18039215689999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="highlightedColor" red="0.0" green="0.1843137255" blue="0.18039215689999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="shadowColor" red="0.041485054729999998" green="0.1197929351" blue="0.1209250845" alpha="0.29547018089999999" colorSpace="custom" customColorSpace="displayP3"/>
+                                <size key="shadowOffset" width="1" height="3"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZmU-h8-MTV">
+                                <rect key="frame" x="72" y="358" width="270" height="55"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </pickerView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="f5s-N8-cxi"/>
                         <color key="backgroundColor" red="0.89411764709999997" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -575,12 +673,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9ym-P5-9eX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1642" y="792"/>
+            <point key="canvasLocation" x="1642" y="1515"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="VJ3-mc-u0P">
             <objects>
-                <viewController id="IlH-4P-Vou" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="IlH-4P-Vou" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kAO-nk-SW1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -637,7 +735,200 @@
             </objects>
             <point key="canvasLocation" x="3191" y="88"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="rnz-Yk-QUb">
+            <objects>
+                <viewController id="h5s-pn-DSL" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="InO-j4-Pg2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Телефон" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l69-F0-gWy">
+                                <rect key="frame" x="76" y="61" width="263" height="118"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="YesevaOne-Regular" family="Yeseva One" pointSize="36"/>
+                                <color key="textColor" red="0.0" green="0.1843137255" blue="0.18039215689999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="highlightedColor" red="0.0" green="0.1843137255" blue="0.18039215689999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="shadowColor" red="0.041485054729999998" green="0.1197929351" blue="0.1209250845" alpha="0.29547018089999999" colorSpace="custom" customColorSpace="displayP3"/>
+                                <size key="shadowOffset" width="1" height="2"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Номер телефону" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ydv-cC-bq6">
+                                <rect key="frame" x="144" y="389" width="252" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemGray3Color"/>
+                                <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" keyboardType="numberPad" returnKeyType="done" textContentType="tel"/>
+                            </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="arm_31" translatesAutoresizingMaskIntoConstraints="NO" id="amU-xg-TGD">
+                                <rect key="frame" x="223" y="205" width="244" height="244"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Введіть нижче Ваш номер телефону" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ija-WR-AS2">
+                                <rect key="frame" x="0.0" y="218" width="414" height="82"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="24"/>
+                                <color key="textColor" red="0.043137254899999998" green="0.1215686275" blue="0.1215686275" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="907-Mh-TdX">
+                                <rect key="frame" x="103" y="673" width="208" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.12941176469999999" green="0.58823529409999997" blue="0.32549019610000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="Inter-Regular_Bold" family="Inter" pointSize="24"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <size key="titleShadowOffset" width="0.0" height="4"/>
+                                <state key="normal" title="Далі">
+                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yZO-0g-HjH">
+                                <rect key="frame" x="-13" y="383" width="149" height="46"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </pickerView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="bqq-Wc-V52"/>
+                        <color key="backgroundColor" red="0.77329379320000002" green="0.87444013359999995" blue="0.87451255319999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ddd-ob-sf7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2444.9275362318845" y="-580.58035714285711"/>
+        </scene>
+        <!--Sign Up View Controller-->
+        <scene sceneID="m4R-78-fMw">
+            <objects>
+                <viewController storyboardIdentifier="SignUpViewController" modalPresentationStyle="fullScreen" id="Gf2-lW-QqE" customClass="SignUpViewController" customModule="GoldenAger" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2HA-Uv-bEw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Group 122" translatesAutoresizingMaskIntoConstraints="NO" id="Mlb-2E-Kcq">
+                                <rect key="frame" x="-44" y="0.0" width="458" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mKG-1T-uuh">
+                                <rect key="frame" x="302" y="708" width="64" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.96078431369999995" green="1" blue="0.49019607840000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="tintColor" red="0.0" green="0.1843137255" blue="0.18039215689999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" image="chevron.right" catalog="system">
+                                    <color key="titleColor" red="0.0" green="0.1843137255" blue="0.18039215689999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="100"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8fe-Pr-IXE">
+                                <rect key="frame" x="43" y="708" width="64" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.96078431369999995" green="1" blue="0.49019607840000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="tintColor" red="0.0" green="0.1843137255" blue="0.18039215689999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" image="chevron.left" catalog="system">
+                                    <color key="titleColor" red="0.0" green="0.1843137255" blue="0.18039215689999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="100"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="Vht-ei-uKr" kind="show" id="H75-XM-ehs"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Warm1" translatesAutoresizingMaskIntoConstraints="NO" id="CZ4-du-4hB">
+                                <rect key="frame" x="263" y="0.0" width="151" height="256"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Rectangle 5" translatesAutoresizingMaskIntoConstraints="NO" id="ABR-gd-QHe">
+                                <rect key="frame" x="-6" y="130" width="328" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" placeholder="Пароль" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="EgP-0v-E3G" customClass="HideShowPasswordTextField" customModule="HideShowPasswordTextField">
+                                <rect key="frame" x="52" y="380" width="310" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <color key="textColor" red="0.0" green="0.1843137255" blue="0.18039215689999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="next" secureTextEntry="YES" textContentType="new-password"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" placeholder="Повторіть пароль" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="LZV-ih-PRL" customClass="HideShowPasswordTextField" customModule="HideShowPasswordTextField">
+                                <rect key="frame" x="52" y="457" width="310" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <color key="textColor" red="0.0" green="0.1843137255" blue="0.18039215689999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="next" secureTextEntry="YES" textContentType="password"/>
+                            </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Rectangle 5" translatesAutoresizingMaskIntoConstraints="NO" id="xxn-Po-fsk">
+                                <rect key="frame" x="66" y="195" width="328" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="пароль" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oHS-Ld-isg">
+                                <rect key="frame" x="99" y="144" width="303" height="74"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="YesevaOne-Regular" family="Yeseva One" pointSize="46"/>
+                                <color key="textColor" red="0.0" green="0.1843137255" blue="0.18039215689999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="highlightedColor" red="0.0" green="0.1843137255" blue="0.18039215689999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="shadowColor" red="0.041485054729999998" green="0.1197929351" blue="0.1209250845" alpha="0.29547018089999999" colorSpace="custom" customColorSpace="displayP3"/>
+                                <size key="shadowOffset" width="1" height="3"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Введіть" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tac-Mk-MND">
+                                <rect key="frame" x="0.0" y="81" width="303" height="74"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="YesevaOne-Regular" family="Yeseva One" pointSize="46"/>
+                                <color key="textColor" red="0.0" green="0.1843137255" blue="0.18039215689999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="highlightedColor" red="0.0" green="0.1843137255" blue="0.18039215689999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="shadowColor" red="0.041485054729999998" green="0.1197929351" blue="0.1209250845" alpha="0.29547018089999999" colorSpace="custom" customColorSpace="displayP3"/>
+                                <size key="shadowOffset" width="1" height="3"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NEl-z6-e9s">
+                                <rect key="frame" x="87" y="525" width="240" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="YesevaOne-Regular" family="Yeseva One" pointSize="36"/>
+                                <size key="titleShadowOffset" width="0.0" height="3"/>
+                                <state key="normal" title="Реєстрація">
+                                    <color key="titleColor" red="0.0" green="0.1843137255" blue="0.18039215689999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" systemColor="placeholderTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="createAccountButton:" destination="Vht-ei-uKr" eventType="touchUpInside" id="7Nb-pJ-aAl"/>
+                                    <action selector="createAccountButton:" destination="Gf2-lW-QqE" eventType="touchUpInside" id="kk7-rV-XjI"/>
+                                    <action selector="registerButton:" destination="Vht-ei-uKr" eventType="touchUpInside" id="Qxz-dm-zKd"/>
+                                    <action selector="signUpButton:" destination="VsP-8e-Vez" eventType="touchUpInside" id="Aow-WV-FxA"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="1YM-U4-uPd"/>
+                        <color key="backgroundColor" red="0.89411764709999997" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.0" green="0.1843137255" blue="0.18039215689999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="VNU-bs-K0D">
+                        <barButtonItem key="backBarButtonItem" title="Назад" id="1YH-Li-eiP"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="password" destination="EgP-0v-E3G" id="Ozh-us-xtH"/>
+                        <outlet property="repeatPassword" destination="LZV-ih-PRL" id="SFc-5t-CyL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LKW-Ee-J6z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="VsP-8e-Vez" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1642" y="792"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="H75-XM-ehs"/>
+        <segue reference="mFx-Aq-5GY"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="Group 121" width="375" height="812"/>
         <image name="Group 122" width="343" height="812"/>
@@ -645,10 +936,11 @@
         <image name="Rectangle 3" width="159" height="9"/>
         <image name="Rectangle 4" width="117" height="9"/>
         <image name="Rectangle 5" width="297" height="9"/>
+        <image name="Rectangle 6" width="297" height="9"/>
+        <image name="Warm1" width="151" height="255.5"/>
         <image name="arm1" width="183" height="172"/>
         <image name="arm_1" width="183" height="172"/>
         <image name="arm_31" width="244" height="243.5"/>
-        <image name="arrow.right.circle.fill" catalog="system" width="128" height="121"/>
         <image name="chevron.left" catalog="system" width="96" height="128"/>
         <image name="chevron.right" catalog="system" width="96" height="128"/>
         <image name="people1" width="375" height="185"/>
@@ -656,6 +948,9 @@
         <image name="stars_1" width="260" height="47"/>
         <systemColor name="placeholderTextColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray3Color">
             <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

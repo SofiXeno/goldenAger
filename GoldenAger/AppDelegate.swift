@@ -18,9 +18,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     didFinishLaunchingWithOptions launchOptions:
         [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     FirebaseApp.configure()
+    Auth.auth().addStateDidChangeListener{(auth,user) in
+        if user==nil{
+            self.showModalAuth()
+        }
+    }
     return true
   }
     
+    func showModalAuth(){
+        let storyboard = UIStoryboard(name:"Main",bundle:nil)
+        let newvc = storyboard.instantiateViewController(withIdentifier: "AuthViewController") as! AuthViewController
+        
+        self.window?.rootViewController?.present(newvc, animated: false, completion: nil)
+    }
 
 
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
