@@ -8,10 +8,16 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+  
+    
+    @IBOutlet weak var email: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: 15, height: self.email.frame.height))
+        email.leftView = paddingView
+        email.leftViewMode = UITextField.ViewMode.always
+
         
     }
 

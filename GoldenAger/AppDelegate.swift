@@ -7,7 +7,7 @@
 
 import Foundation
 import UIKit
-import Firebase
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,23 +15,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   var window: UIWindow?
 
   func application(_ application: UIApplication,
-    didFinishLaunchingWithOptions launchOptions:
-        [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-    FirebaseApp.configure()
-    Auth.auth().addStateDidChangeListener{(auth,user) in
-        if user==nil{
-            self.showModalAuth()
-        }
-    }
+    didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+ 
+
+    
     return true
   }
     
-    func showModalAuth(){
-        let storyboard = UIStoryboard(name:"Main",bundle:nil)
-        let newvc = storyboard.instantiateViewController(withIdentifier: "AuthViewController") as! AuthViewController
-        
-        self.window?.rootViewController?.present(newvc, animated: false, completion: nil)
-    }
+
 
 
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {

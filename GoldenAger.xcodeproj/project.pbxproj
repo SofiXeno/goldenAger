@@ -19,9 +19,6 @@
 		8984D13F2620CE2900C65994 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8984D13D2620CE2900C65994 /* LaunchScreen.storyboard */; };
 		8984D14A2620CE2900C65994 /* GoldenAgerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8984D1492620CE2900C65994 /* GoldenAgerTests.swift */; };
 		8984D1552620CE2900C65994 /* GoldenAgerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8984D1542620CE2900C65994 /* GoldenAgerUITests.swift */; };
-		899398E126445115009B92FD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899398E026445115009B92FD /* LoginViewController.swift */; };
-		899398E926447F92009B92FD /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899398E826447F92009B92FD /* SignUpViewController.swift */; };
-		89D6E8E726332B490046F91C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 89D6E8E626332B490046F91C /* GoogleService-Info.plist */; };
 		8E8611045A909E23E906E224 /* Pods_GoldenAger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DECB5AE32C25B4E72C873821 /* Pods_GoldenAger.framework */; };
 		FA5FF108F03F8D0B6D5CBC8C /* Pods_GoldenAgerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23C02FBA4092B14B48AE2F02 /* Pods_GoldenAgerTests.framework */; };
 		FE62A58DF1901861AD7CEC6E /* Pods_GoldenAger_GoldenAgerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF8CE197CFB7D9C37E9101A4 /* Pods_GoldenAger_GoldenAgerUITests.framework */; };
@@ -67,9 +64,6 @@
 		8984D1502620CE2900C65994 /* GoldenAgerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoldenAgerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8984D1542620CE2900C65994 /* GoldenAgerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoldenAgerUITests.swift; sourceTree = "<group>"; };
 		8984D1562620CE2900C65994 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		899398E026445115009B92FD /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		899398E826447F92009B92FD /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
-		89D6E8E626332B490046F91C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8CAECE4EBBBCC44A7D75473C /* Pods-GoldenAgerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoldenAgerTests.debug.xcconfig"; path = "Target Support Files/Pods-GoldenAgerTests/Pods-GoldenAgerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CFAC7FA06A05B987E6265077 /* Pods-GoldenAger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoldenAger.release.xcconfig"; path = "Target Support Files/Pods-GoldenAger/Pods-GoldenAger.release.xcconfig"; sourceTree = "<group>"; };
 		DECB5AE32C25B4E72C873821 /* Pods_GoldenAger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoldenAger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -140,10 +134,11 @@
 		8984D1312620CE2200C65994 /* GoldenAger */ = {
 			isa = PBXGroup;
 			children = (
+				89AA3A452646A6FC0017FE5E /* Presentions */,
+				89AA3A442646A6E40017FE5E /* Core */,
 				89AA3A362645BBA50017FE5E /* Storyboards */,
 				89AA3A352645BB9A0017FE5E /* ViewControllers */,
 				89AA3A342645BB390017FE5E /* Fonts */,
-				89D6E8E626332B490046F91C /* GoogleService-Info.plist */,
 				8984D1322620CE2200C65994 /* AppDelegate.swift */,
 				8984D1342620CE2200C65994 /* SceneDelegate.swift */,
 				8984D1362620CE2200C65994 /* ViewController.swift */,
@@ -187,8 +182,6 @@
 		89AA3A352645BB9A0017FE5E /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				899398E026445115009B92FD /* LoginViewController.swift */,
-				899398E826447F92009B92FD /* SignUpViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -198,6 +191,20 @@
 			children = (
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		89AA3A442646A6E40017FE5E /* Core */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		89AA3A452646A6FC0017FE5E /* Presentions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presentions;
 			sourceTree = "<group>";
 		};
 		E284E697DC6AAED03E3592FD /* Pods */ = {
@@ -325,7 +332,6 @@
 				892A65A626442818006DA1DE /* Inter-VariableFont_slnt,wght.ttf in Resources */,
 				892A65A72644281B006DA1DE /* PlayfairDisplay-VariableFont_wght.ttf in Resources */,
 				8984D13C2620CE2900C65994 /* Assets.xcassets in Resources */,
-				89D6E8E726332B490046F91C /* GoogleService-Info.plist in Resources */,
 				892A65A82644281D006DA1DE /* YesevaOne-Regular.ttf in Resources */,
 				8984D13A2620CE2200C65994 /* Main.storyboard in Resources */,
 				892A65A226442811006DA1DE /* BalsamiqSans-Regular.ttf in Resources */,
@@ -456,11 +462,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				899398E126445115009B92FD /* LoginViewController.swift in Sources */,
 				8984D1372620CE2200C65994 /* ViewController.swift in Sources */,
 				8984D1332620CE2200C65994 /* AppDelegate.swift in Sources */,
 				8984D1352620CE2200C65994 /* SceneDelegate.swift in Sources */,
-				899398E926447F92009B92FD /* SignUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
