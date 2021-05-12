@@ -22,7 +22,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pfb-Xe-Vhe">
                                 <rect key="frame" x="2" y="251" width="410" height="395"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <state key="normal" image="ICON2"/>
+                                <state key="normal" image="ICON"/>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -35,6 +35,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="ICON2" width="327" height="327"/>
+        <image name="ICON" width="327" height="327"/>
     </resources>
 </document>

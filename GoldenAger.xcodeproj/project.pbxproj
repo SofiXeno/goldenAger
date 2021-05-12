@@ -11,6 +11,14 @@
 		892A65A626442818006DA1DE /* Inter-VariableFont_slnt,wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 892A659E2644273B006DA1DE /* Inter-VariableFont_slnt,wght.ttf */; };
 		892A65A72644281B006DA1DE /* PlayfairDisplay-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 892A659B2644273B006DA1DE /* PlayfairDisplay-VariableFont_wght.ttf */; };
 		892A65A82644281D006DA1DE /* YesevaOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 892A659D2644273B006DA1DE /* YesevaOne-Regular.ttf */; };
+		896327B0264C11CF005394B0 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896327AF264C11CE005394B0 /* RegistrationViewController.swift */; };
+		896327CA264C5D49005394B0 /* BirthdayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896327C9264C5D48005394B0 /* BirthdayViewController.swift */; };
+		896327CF264C620E005394B0 /* OrganizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896327CE264C620E005394B0 /* OrganizationViewController.swift */; };
+		896327D4264C67DC005394B0 /* NameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896327D3264C67DC005394B0 /* NameViewController.swift */; };
+		896327D9264C7007005394B0 /* QAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896327D8264C7007005394B0 /* QAViewController.swift */; };
+		896327DE264C7030005394B0 /* SurnameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896327DD264C7030005394B0 /* SurnameViewController.swift */; };
+		896327E3264C7081005394B0 /* Birthday2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896327E2264C7081005394B0 /* Birthday2ViewController.swift */; };
+		896327E8264C70C9005394B0 /* PhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896327E7264C70C9005394B0 /* PhoneViewController.swift */; };
 		8984D1332620CE2200C65994 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8984D1322620CE2200C65994 /* AppDelegate.swift */; };
 		8984D1352620CE2200C65994 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8984D1342620CE2200C65994 /* SceneDelegate.swift */; };
 		8984D1372620CE2200C65994 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8984D1362620CE2200C65994 /* ViewController.swift */; };
@@ -19,8 +27,16 @@
 		8984D13F2620CE2900C65994 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8984D13D2620CE2900C65994 /* LaunchScreen.storyboard */; };
 		8984D14A2620CE2900C65994 /* GoldenAgerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8984D1492620CE2900C65994 /* GoldenAgerTests.swift */; };
 		8984D1552620CE2900C65994 /* GoldenAgerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8984D1542620CE2900C65994 /* GoldenAgerUITests.swift */; };
+		89896C79264AFD4500047CD4 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89896C78264AFD4500047CD4 /* Utilities.swift */; };
+		89896C81264B197F00047CD4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89896C80264B197F00047CD4 /* LoginViewController.swift */; };
 		89A4777226482C1F00E88343 /* Pensioner.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89A4777126482C1F00E88343 /* Pensioner.storyboard */; };
 		89A4777A26482C7800E88343 /* Volunteer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89A4777926482C7800E88343 /* Volunteer.storyboard */; };
+		89C222C5264ABFC9002A93FD /* UserRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C222C4264ABFC9002A93FD /* UserRouter.swift */; };
+		89C222CA264ABFDB002A93FD /* CategoryRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C222C9264ABFDB002A93FD /* CategoryRouter.swift */; };
+		89C222CF264ABFE6002A93FD /* TaskRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C222CE264ABFE6002A93FD /* TaskRouter.swift */; };
+		89C222E3264ACBF3002A93FD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C222E2264ACBF3002A93FD /* User.swift */; };
+		89C222EB264ACC03002A93FD /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C222EA264ACC03002A93FD /* Category.swift */; };
+		89C222F0264ACC10002A93FD /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C222EF264ACC10002A93FD /* Task.swift */; };
 		8E8611045A909E23E906E224 /* Pods_GoldenAger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DECB5AE32C25B4E72C873821 /* Pods_GoldenAger.framework */; };
 		FA5FF108F03F8D0B6D5CBC8C /* Pods_GoldenAgerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23C02FBA4092B14B48AE2F02 /* Pods_GoldenAgerTests.framework */; };
 		FE62A58DF1901861AD7CEC6E /* Pods_GoldenAger_GoldenAgerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF8CE197CFB7D9C37E9101A4 /* Pods_GoldenAger_GoldenAgerUITests.framework */; };
@@ -52,6 +68,14 @@
 		892A659C2644273B006DA1DE /* BalsamiqSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BalsamiqSans-Regular.ttf"; sourceTree = "<group>"; };
 		892A659D2644273B006DA1DE /* YesevaOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "YesevaOne-Regular.ttf"; sourceTree = "<group>"; };
 		892A659E2644273B006DA1DE /* Inter-VariableFont_slnt,wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-VariableFont_slnt,wght.ttf"; sourceTree = "<group>"; };
+		896327AF264C11CE005394B0 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		896327C9264C5D48005394B0 /* BirthdayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayViewController.swift; sourceTree = "<group>"; };
+		896327CE264C620E005394B0 /* OrganizationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationViewController.swift; sourceTree = "<group>"; };
+		896327D3264C67DC005394B0 /* NameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameViewController.swift; sourceTree = "<group>"; };
+		896327D8264C7007005394B0 /* QAViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QAViewController.swift; sourceTree = "<group>"; };
+		896327DD264C7030005394B0 /* SurnameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurnameViewController.swift; sourceTree = "<group>"; };
+		896327E2264C7081005394B0 /* Birthday2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Birthday2ViewController.swift; sourceTree = "<group>"; };
+		896327E7264C70C9005394B0 /* PhoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneViewController.swift; sourceTree = "<group>"; };
 		8984D12F2620CE2200C65994 /* GoldenAger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoldenAger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8984D1322620CE2200C65994 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8984D1342620CE2200C65994 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,8 +90,16 @@
 		8984D1502620CE2900C65994 /* GoldenAgerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoldenAgerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8984D1542620CE2900C65994 /* GoldenAgerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoldenAgerUITests.swift; sourceTree = "<group>"; };
 		8984D1562620CE2900C65994 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		89896C78264AFD4500047CD4 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		89896C80264B197F00047CD4 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		89A4777126482C1F00E88343 /* Pensioner.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Pensioner.storyboard; sourceTree = "<group>"; };
 		89A4777926482C7800E88343 /* Volunteer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Volunteer.storyboard; sourceTree = "<group>"; };
+		89C222C4264ABFC9002A93FD /* UserRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRouter.swift; sourceTree = "<group>"; };
+		89C222C9264ABFDB002A93FD /* CategoryRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryRouter.swift; sourceTree = "<group>"; };
+		89C222CE264ABFE6002A93FD /* TaskRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskRouter.swift; sourceTree = "<group>"; };
+		89C222E2264ACBF3002A93FD /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		89C222EA264ACC03002A93FD /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		89C222EF264ACC10002A93FD /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		8CAECE4EBBBCC44A7D75473C /* Pods-GoldenAgerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoldenAgerTests.debug.xcconfig"; path = "Target Support Files/Pods-GoldenAgerTests/Pods-GoldenAgerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CFAC7FA06A05B987E6265077 /* Pods-GoldenAger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoldenAger.release.xcconfig"; path = "Target Support Files/Pods-GoldenAger/Pods-GoldenAger.release.xcconfig"; sourceTree = "<group>"; };
 		DECB5AE32C25B4E72C873821 /* Pods_GoldenAger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoldenAger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -138,17 +170,17 @@
 		8984D1312620CE2200C65994 /* GoldenAger */ = {
 			isa = PBXGroup;
 			children = (
-				89AA3A452646A6FC0017FE5E /* Presentions */,
-				89AA3A442646A6E40017FE5E /* Core */,
-				89AA3A362645BBA50017FE5E /* Storyboards */,
-				89AA3A342645BB390017FE5E /* Fonts */,
 				8984D1322620CE2200C65994 /* AppDelegate.swift */,
 				8984D1342620CE2200C65994 /* SceneDelegate.swift */,
-				8984D1362620CE2200C65994 /* ViewController.swift */,
-				8984D1382620CE2200C65994 /* Main.storyboard */,
 				8984D13B2620CE2900C65994 /* Assets.xcassets */,
+				89896C77264AFD2600047CD4 /* Utils */,
+				89C222C3264ABFB4002A93FD /* View-Model */,
+				89AA3A452646A6FC0017FE5E /* Presentions(View) */,
+				89AA3A442646A6E40017FE5E /* Model */,
+				8984D1362620CE2200C65994 /* ViewController.swift */,
 				8984D13D2620CE2900C65994 /* LaunchScreen.storyboard */,
 				8984D1402620CE2900C65994 /* Info.plist */,
+				89AA3A342645BB390017FE5E /* Fonts */,
 			);
 			path = GoldenAger;
 			sourceTree = "<group>";
@@ -171,6 +203,26 @@
 			path = GoldenAgerUITests;
 			sourceTree = "<group>";
 		};
+		89896C77264AFD2600047CD4 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				89896C78264AFD4500047CD4 /* Utilities.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		89896C95264B2B7F00047CD4 /* PensioneerViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				896327D3264C67DC005394B0 /* NameViewController.swift */,
+				896327D8264C7007005394B0 /* QAViewController.swift */,
+				896327DD264C7030005394B0 /* SurnameViewController.swift */,
+				896327E2264C7081005394B0 /* Birthday2ViewController.swift */,
+				896327E7264C70C9005394B0 /* PhoneViewController.swift */,
+			);
+			path = PensioneerViewControllers;
+			sourceTree = "<group>";
+		};
 		89AA3A342645BB390017FE5E /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -182,36 +234,57 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
-		89AA3A352645BB9A0017FE5E /* ViewControllers */ = {
+		89AA3A352645BB9A0017FE5E /* VolunteerViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				89896C80264B197F00047CD4 /* LoginViewController.swift */,
+				896327AF264C11CE005394B0 /* RegistrationViewController.swift */,
+				896327C9264C5D48005394B0 /* BirthdayViewController.swift */,
+				896327CE264C620E005394B0 /* OrganizationViewController.swift */,
 			);
-			path = ViewControllers;
+			path = VolunteerViewControllers;
 			sourceTree = "<group>";
 		};
-		89AA3A362645BBA50017FE5E /* Storyboards */ = {
+		89AA3A442646A6E40017FE5E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				89C222E1264ACBDF002A93FD /* ModelSchemas */,
+				89C222C4264ABFC9002A93FD /* UserRouter.swift */,
+				89C222C9264ABFDB002A93FD /* CategoryRouter.swift */,
+				89C222CE264ABFE6002A93FD /* TaskRouter.swift */,
 			);
-			path = Storyboards;
+			path = Model;
 			sourceTree = "<group>";
 		};
-		89AA3A442646A6E40017FE5E /* Core */ = {
+		89AA3A452646A6FC0017FE5E /* Presentions(View) */ = {
 			isa = PBXGroup;
 			children = (
-			);
-			path = Core;
-			sourceTree = "<group>";
-		};
-		89AA3A452646A6FC0017FE5E /* Presentions */ = {
-			isa = PBXGroup;
-			children = (
-				89AA3A352645BB9A0017FE5E /* ViewControllers */,
+				8984D1382620CE2200C65994 /* Main.storyboard */,
+				89896C95264B2B7F00047CD4 /* PensioneerViewControllers */,
+				89AA3A352645BB9A0017FE5E /* VolunteerViewControllers */,
 				89A4777126482C1F00E88343 /* Pensioner.storyboard */,
 				89A4777926482C7800E88343 /* Volunteer.storyboard */,
 			);
-			path = Presentions;
+			path = "Presentions(View)";
 			sourceTree = "<group>";
+		};
+		89C222C3264ABFB4002A93FD /* View-Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View-Model";
+			sourceTree = "<group>";
+		};
+		89C222E1264ACBDF002A93FD /* ModelSchemas */ = {
+			isa = PBXGroup;
+			children = (
+				89C222E2264ACBF3002A93FD /* User.swift */,
+				89C222EA264ACC03002A93FD /* Category.swift */,
+				89C222EF264ACC10002A93FD /* Task.swift */,
+			);
+			name = ModelSchemas;
+			path = GoldenAger/ModelSchemas;
+			sourceTree = SOURCE_ROOT;
 		};
 		E284E697DC6AAED03E3592FD /* Pods */ = {
 			isa = PBXGroup;
@@ -470,9 +543,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89C222C5264ABFC9002A93FD /* UserRouter.swift in Sources */,
+				89C222CA264ABFDB002A93FD /* CategoryRouter.swift in Sources */,
+				896327D9264C7007005394B0 /* QAViewController.swift in Sources */,
 				8984D1372620CE2200C65994 /* ViewController.swift in Sources */,
+				896327DE264C7030005394B0 /* SurnameViewController.swift in Sources */,
 				8984D1332620CE2200C65994 /* AppDelegate.swift in Sources */,
+				896327E8264C70C9005394B0 /* PhoneViewController.swift in Sources */,
+				89C222CF264ABFE6002A93FD /* TaskRouter.swift in Sources */,
 				8984D1352620CE2200C65994 /* SceneDelegate.swift in Sources */,
+				896327E3264C7081005394B0 /* Birthday2ViewController.swift in Sources */,
+				896327CF264C620E005394B0 /* OrganizationViewController.swift in Sources */,
+				896327B0264C11CF005394B0 /* RegistrationViewController.swift in Sources */,
+				89C222E3264ACBF3002A93FD /* User.swift in Sources */,
+				89C222F0264ACC10002A93FD /* Task.swift in Sources */,
+				89896C79264AFD4500047CD4 /* Utilities.swift in Sources */,
+				89C222EB264ACC03002A93FD /* Category.swift in Sources */,
+				89896C81264B197F00047CD4 /* LoginViewController.swift in Sources */,
+				896327CA264C5D49005394B0 /* BirthdayViewController.swift in Sources */,
+				896327D4264C67DC005394B0 /* NameViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
