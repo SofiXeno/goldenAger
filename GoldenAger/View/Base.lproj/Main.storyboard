@@ -166,6 +166,9 @@
                                     <color key="titleColor" red="0.0" green="0.1843137255" blue="0.18039215689999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" systemColor="placeholderTextColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="validateAction:" destination="Pqo-DO-WMA" eventType="touchUpInside" id="0zb-Nk-WMW"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Qpu-TG-38V"/>
@@ -173,6 +176,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="kvG-LI-Ik4"/>
                     <connections>
+                        <outlet property="password" destination="4dl-ob-ihU" id="CIW-LV-dFO"/>
                         <outlet property="phone" destination="AKO-yo-6RI" id="wz7-FK-5Ly"/>
                     </connections>
                 </viewController>
@@ -783,7 +787,7 @@
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <color key="textColor" red="0.0" green="0.1843137255" blue="0.18039215689999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="20"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="next" textContentType="family-name"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" keyboardType="phonePad" returnKeyType="next" textContentType="family-name"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="10"/>
@@ -813,7 +817,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FXr-lE-OKJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="Ydm-2Z-Eyh" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3190" y="-60"/>
+            <point key="canvasLocation" x="3145" y="-60"/>
         </scene>
         <!--Birthday2 View Controller-->
         <scene sceneID="pnW-EJ-ueu">
@@ -1060,6 +1064,10 @@
                     <navigationItem key="navigationItem" id="VNU-bs-K0D">
                         <barButtonItem key="backBarButtonItem" title="Назад" id="1YH-Li-eiP"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="password" destination="EgP-0v-E3G" id="QUL-u8-FUY"/>
+                        <outlet property="repeatPassword" destination="LZV-ih-PRL" id="rRc-x6-07P"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LKW-Ee-J6z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1168,10 +1176,87 @@
             </objects>
             <point key="canvasLocation" x="2024.6376811594205" y="837.72321428571422"/>
         </scene>
+        <!--Register Phone View Controller-->
+        <scene sceneID="RYY-Du-wol">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="Rs5-3P-PBT" customClass="RegisterPhoneViewController" customModule="GoldenAger" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PUO-r3-9TR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Номер телефону" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qlM-ZV-G4U">
+                                <rect key="frame" x="52" y="61" width="311" height="118"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="YesevaOne-Regular" family="Yeseva One" pointSize="36"/>
+                                <color key="textColor" red="0.0" green="0.1843137255" blue="0.18039215689999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="highlightedColor" red="0.0" green="0.1843137255" blue="0.18039215689999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="shadowColor" red="0.041485054729999998" green="0.1197929351" blue="0.1209250845" alpha="0.29547018089999999" colorSpace="custom" customColorSpace="displayP3"/>
+                                <size key="shadowOffset" width="1" height="1"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="arm_31" translatesAutoresizingMaskIntoConstraints="NO" id="mxG-eL-zTq">
+                                <rect key="frame" x="223" y="205" width="244" height="244"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xfi-sD-dnu">
+                                <rect key="frame" x="103" y="673" width="208" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.12941176469999999" green="0.58823529409999997" blue="0.32549019610000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="Inter-Regular_Bold" family="Inter" pointSize="24"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <size key="titleShadowOffset" width="0.0" height="4"/>
+                                <state key="normal" title="Далі">
+                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" placeholder="Номер телефону" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="3f8-Td-cbq">
+                                <rect key="frame" x="22" y="389" width="372" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <color key="textColor" red="0.0" green="0.1843137255" blue="0.18039215689999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="next" textContentType="tel"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="surname:" destination="84E-zK-eba" eventType="editingDidEnd" id="SrK-C5-20i"/>
+                                    <action selector="surname:" destination="Ydm-2Z-Eyh" eventType="editingDidEnd" id="wm2-fF-Z4n"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Введіть нижче Ваш номер телефону" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Sr-Ct-Lfn">
+                                <rect key="frame" x="81" y="163" width="253" height="161"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="30"/>
+                                <color key="textColor" red="0.043137254899999998" green="0.1215686275" blue="0.1215686275" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="rPF-v6-bTf"/>
+                        <color key="backgroundColor" red="0.74901960779999999" green="0.87843137250000003" blue="0.87843137250000003" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="6YI-xF-FPj"/>
+                    <connections>
+                        <outlet property="newphone" destination="3f8-Td-cbq" id="09F-8d-Lc8"/>
+                        <outlet property="surname" destination="3f8-Td-cbq" id="4ny-SQ-dSM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LGc-wz-TkP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="84E-zK-eba" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="4876.811594202899" y="-60.267857142857139"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="iyX-xx-Nu8"/>
-        <segue reference="Nee-s7-nTi"/>
+        <segue reference="250-gd-kiT"/>
+        <segue reference="fi8-cZ-imx"/>
         <segue reference="9HK-qn-qyf"/>
         <segue reference="mFx-Aq-5GY"/>
     </inferredMetricsTieBreakers>

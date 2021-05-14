@@ -8,8 +8,12 @@
 import Foundation
 
 
+
+
 struct User: Decodable {
-    var _id: Bool
+
+    
+    var _id: String
     
     var is_volunteer: Bool
     
@@ -33,10 +37,51 @@ struct User: Decodable {
         case birthday = "birthday"
         case organization = "organization"
         case is_free = "is_free"
-        
-        
+
+
     }
     
+}
+
+
+struct LoginData {
+    var phone: String
+    var password: String
+}
+
+
+struct RegisterData {
+    var phone: String
+    var password: String
+    var first_name: String
+    var last_name: String
+    var birthday: Date
+    var organization: String
+}
+
+extension User{
+    public init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        _id = try container.decode(String.self, forKey: ._id)
+        is_volunteer = try container.decode(Bool.self, forKey: .is_volunteer)
+        phone = try container.decode(String.self, forKey: .phone)
+        password = try container.decode(String.self, forKey: .password)
+        first_name = try container.decode(String.self, forKey: .first_name)
+        last_name = try container.decode(String.self, forKey: .last_name)
+        
+        birthday = try Formatter.custom.date(from: container.decode(String.self, forKey: .birthday))!
+        organization = try container.decode(String.self, forKey: .organization)
+        is_free = try container.decode(Bool.self, forKey: .is_free)
+        
+    }
+}
+
+extension Formatter {
+    static let custom: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.ZZZ+ZZ:ZZ"
+        return formatter
+    }()
 }
 
 //extension User: DocumentSerializable {
