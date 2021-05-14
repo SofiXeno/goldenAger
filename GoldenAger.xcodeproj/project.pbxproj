@@ -19,6 +19,7 @@
 		896327DE264C7030005394B0 /* SurnameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896327DD264C7030005394B0 /* SurnameViewController.swift */; };
 		896327E3264C7081005394B0 /* Birthday2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896327E2264C7081005394B0 /* Birthday2ViewController.swift */; };
 		896327E8264C70C9005394B0 /* PhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896327E7264C70C9005394B0 /* PhoneViewController.swift */; };
+		89632801264D44AA005394B0 /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89632800264D44AA005394B0 /* CategoriesViewController.swift */; };
 		8984D1332620CE2200C65994 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8984D1322620CE2200C65994 /* AppDelegate.swift */; };
 		8984D1352620CE2200C65994 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8984D1342620CE2200C65994 /* SceneDelegate.swift */; };
 		8984D1372620CE2200C65994 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8984D1362620CE2200C65994 /* ViewController.swift */; };
@@ -31,9 +32,14 @@
 		89896C81264B197F00047CD4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89896C80264B197F00047CD4 /* LoginViewController.swift */; };
 		89A4777226482C1F00E88343 /* Pensioner.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89A4777126482C1F00E88343 /* Pensioner.storyboard */; };
 		89A4777A26482C7800E88343 /* Volunteer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89A4777926482C7800E88343 /* Volunteer.storyboard */; };
-		89C222C5264ABFC9002A93FD /* UserRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C222C4264ABFC9002A93FD /* UserRouter.swift */; };
-		89C222CA264ABFDB002A93FD /* CategoryRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C222C9264ABFDB002A93FD /* CategoryRouter.swift */; };
-		89C222CF264ABFE6002A93FD /* TaskRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C222CE264ABFE6002A93FD /* TaskRouter.swift */; };
+		89A51EAA264D991500A964D3 /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A51EA8264D991500A964D3 /* MyCollectionViewCell.swift */; };
+		89A51EB0264DA82D00A964D3 /* MoyaService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A51EAF264DA82D00A964D3 /* MoyaService.swift */; };
+		89A51EB8264DF19A00A964D3 /* TaskTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A51EB7264DF19900A964D3 /* TaskTemplate.swift */; };
+		89A51EBD264DF43500A964D3 /* TaskTemplateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A51EBC264DF43500A964D3 /* TaskTemplateService.swift */; };
+		89A51EC2264DF51900A964D3 /* TasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A51EC1264DF51900A964D3 /* TasksViewController.swift */; };
+		89C222C5264ABFC9002A93FD /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C222C4264ABFC9002A93FD /* UserService.swift */; };
+		89C222CA264ABFDB002A93FD /* CategoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C222C9264ABFDB002A93FD /* CategoryService.swift */; };
+		89C222CF264ABFE6002A93FD /* TaskService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C222CE264ABFE6002A93FD /* TaskService.swift */; };
 		89C222E3264ACBF3002A93FD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C222E2264ACBF3002A93FD /* User.swift */; };
 		89C222EB264ACC03002A93FD /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C222EA264ACC03002A93FD /* Category.swift */; };
 		89C222F0264ACC10002A93FD /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C222EF264ACC10002A93FD /* Task.swift */; };
@@ -76,6 +82,7 @@
 		896327DD264C7030005394B0 /* SurnameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurnameViewController.swift; sourceTree = "<group>"; };
 		896327E2264C7081005394B0 /* Birthday2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Birthday2ViewController.swift; sourceTree = "<group>"; };
 		896327E7264C70C9005394B0 /* PhoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneViewController.swift; sourceTree = "<group>"; };
+		89632800264D44AA005394B0 /* CategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
 		8984D12F2620CE2200C65994 /* GoldenAger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoldenAger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8984D1322620CE2200C65994 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8984D1342620CE2200C65994 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -94,9 +101,14 @@
 		89896C80264B197F00047CD4 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		89A4777126482C1F00E88343 /* Pensioner.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Pensioner.storyboard; sourceTree = "<group>"; };
 		89A4777926482C7800E88343 /* Volunteer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Volunteer.storyboard; sourceTree = "<group>"; };
-		89C222C4264ABFC9002A93FD /* UserRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRouter.swift; sourceTree = "<group>"; };
-		89C222C9264ABFDB002A93FD /* CategoryRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryRouter.swift; sourceTree = "<group>"; };
-		89C222CE264ABFE6002A93FD /* TaskRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskRouter.swift; sourceTree = "<group>"; };
+		89A51EA8264D991500A964D3 /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
+		89A51EAF264DA82D00A964D3 /* MoyaService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaService.swift; sourceTree = "<group>"; };
+		89A51EB7264DF19900A964D3 /* TaskTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTemplate.swift; sourceTree = "<group>"; };
+		89A51EBC264DF43500A964D3 /* TaskTemplateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTemplateService.swift; sourceTree = "<group>"; };
+		89A51EC1264DF51900A964D3 /* TasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksViewController.swift; sourceTree = "<group>"; };
+		89C222C4264ABFC9002A93FD /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		89C222C9264ABFDB002A93FD /* CategoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryService.swift; sourceTree = "<group>"; };
+		89C222CE264ABFE6002A93FD /* TaskService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskService.swift; sourceTree = "<group>"; };
 		89C222E2264ACBF3002A93FD /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		89C222EA264ACC03002A93FD /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		89C222EF264ACC10002A93FD /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
@@ -174,11 +186,10 @@
 				8984D1342620CE2200C65994 /* SceneDelegate.swift */,
 				8984D13B2620CE2900C65994 /* Assets.xcassets */,
 				89896C77264AFD2600047CD4 /* Utils */,
-				89C222C3264ABFB4002A93FD /* View-Model */,
-				89AA3A452646A6FC0017FE5E /* Presentions(View) */,
+				89A51E9E264D677500A964D3 /* View */,
+				89AA3A452646A6FC0017FE5E /* View-Controllers */,
 				89AA3A442646A6E40017FE5E /* Model */,
 				8984D1362620CE2200C65994 /* ViewController.swift */,
-				8984D13D2620CE2900C65994 /* LaunchScreen.storyboard */,
 				8984D1402620CE2900C65994 /* Info.plist */,
 				89AA3A342645BB390017FE5E /* Fonts */,
 			);
@@ -219,8 +230,22 @@
 				896327DD264C7030005394B0 /* SurnameViewController.swift */,
 				896327E2264C7081005394B0 /* Birthday2ViewController.swift */,
 				896327E7264C70C9005394B0 /* PhoneViewController.swift */,
+				89632800264D44AA005394B0 /* CategoriesViewController.swift */,
+				89A51EC1264DF51900A964D3 /* TasksViewController.swift */,
 			);
 			path = PensioneerViewControllers;
+			sourceTree = "<group>";
+		};
+		89A51E9E264D677500A964D3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8984D13D2620CE2900C65994 /* LaunchScreen.storyboard */,
+				89A4777126482C1F00E88343 /* Pensioner.storyboard */,
+				89A4777926482C7800E88343 /* Volunteer.storyboard */,
+				8984D1382620CE2200C65994 /* Main.storyboard */,
+				89A51EA8264D991500A964D3 /* MyCollectionViewCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		89AA3A342645BB390017FE5E /* Fonts */ = {
@@ -249,30 +274,22 @@
 			isa = PBXGroup;
 			children = (
 				89C222E1264ACBDF002A93FD /* ModelSchemas */,
-				89C222C4264ABFC9002A93FD /* UserRouter.swift */,
-				89C222C9264ABFDB002A93FD /* CategoryRouter.swift */,
-				89C222CE264ABFE6002A93FD /* TaskRouter.swift */,
+				89C222C4264ABFC9002A93FD /* UserService.swift */,
+				89C222C9264ABFDB002A93FD /* CategoryService.swift */,
+				89C222CE264ABFE6002A93FD /* TaskService.swift */,
+				89A51EAF264DA82D00A964D3 /* MoyaService.swift */,
+				89A51EBC264DF43500A964D3 /* TaskTemplateService.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
-		89AA3A452646A6FC0017FE5E /* Presentions(View) */ = {
+		89AA3A452646A6FC0017FE5E /* View-Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				8984D1382620CE2200C65994 /* Main.storyboard */,
 				89896C95264B2B7F00047CD4 /* PensioneerViewControllers */,
 				89AA3A352645BB9A0017FE5E /* VolunteerViewControllers */,
-				89A4777126482C1F00E88343 /* Pensioner.storyboard */,
-				89A4777926482C7800E88343 /* Volunteer.storyboard */,
 			);
-			path = "Presentions(View)";
-			sourceTree = "<group>";
-		};
-		89C222C3264ABFB4002A93FD /* View-Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "View-Model";
+			path = "View-Controllers";
 			sourceTree = "<group>";
 		};
 		89C222E1264ACBDF002A93FD /* ModelSchemas */ = {
@@ -281,6 +298,7 @@
 				89C222E2264ACBF3002A93FD /* User.swift */,
 				89C222EA264ACC03002A93FD /* Category.swift */,
 				89C222EF264ACC10002A93FD /* Task.swift */,
+				89A51EB7264DF19900A964D3 /* TaskTemplate.swift */,
 			);
 			name = ModelSchemas;
 			path = GoldenAger/ModelSchemas;
@@ -543,20 +561,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				89C222C5264ABFC9002A93FD /* UserRouter.swift in Sources */,
-				89C222CA264ABFDB002A93FD /* CategoryRouter.swift in Sources */,
+				89C222C5264ABFC9002A93FD /* UserService.swift in Sources */,
+				89C222CA264ABFDB002A93FD /* CategoryService.swift in Sources */,
+				89A51EC2264DF51900A964D3 /* TasksViewController.swift in Sources */,
 				896327D9264C7007005394B0 /* QAViewController.swift in Sources */,
 				8984D1372620CE2200C65994 /* ViewController.swift in Sources */,
+				89A51EBD264DF43500A964D3 /* TaskTemplateService.swift in Sources */,
 				896327DE264C7030005394B0 /* SurnameViewController.swift in Sources */,
 				8984D1332620CE2200C65994 /* AppDelegate.swift in Sources */,
 				896327E8264C70C9005394B0 /* PhoneViewController.swift in Sources */,
-				89C222CF264ABFE6002A93FD /* TaskRouter.swift in Sources */,
+				89C222CF264ABFE6002A93FD /* TaskService.swift in Sources */,
+				89A51EAA264D991500A964D3 /* MyCollectionViewCell.swift in Sources */,
 				8984D1352620CE2200C65994 /* SceneDelegate.swift in Sources */,
 				896327E3264C7081005394B0 /* Birthday2ViewController.swift in Sources */,
 				896327CF264C620E005394B0 /* OrganizationViewController.swift in Sources */,
 				896327B0264C11CF005394B0 /* RegistrationViewController.swift in Sources */,
 				89C222E3264ACBF3002A93FD /* User.swift in Sources */,
 				89C222F0264ACC10002A93FD /* Task.swift in Sources */,
+				89A51EB0264DA82D00A964D3 /* MoyaService.swift in Sources */,
+				89A51EB8264DF19A00A964D3 /* TaskTemplate.swift in Sources */,
+				89632801264D44AA005394B0 /* CategoriesViewController.swift in Sources */,
 				89896C79264AFD4500047CD4 /* Utilities.swift in Sources */,
 				89C222EB264ACC03002A93FD /* Category.swift in Sources */,
 				89896C81264B197F00047CD4 /* LoginViewController.swift in Sources */,

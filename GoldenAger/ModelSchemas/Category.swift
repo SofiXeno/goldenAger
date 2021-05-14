@@ -8,25 +8,27 @@
 import Foundation
 
 
-struct Category {
+struct Category: Decodable {
+    var _id: String
     var title: String
   
 
-    var dictionary:[String:Any] {
-        return [
-            "title": title]
+    enum CodingKeys : String, CodingKey{
+        case _id = "_id"
+        case title = "title"
+        
     }
-
     
 
+
 }
 
-extension Category : DocumentSerializable {
+//extension Category : DocumentSerializable {
+//
+//    init?(dictionary: [String : Any]) {
+//
+//        let title = dictionary["title"] as? String ?? "Error! Title Field Not Found!"
+//
+//        self.init(title: title)
+//    }
 
-    init?(dictionary: [String : Any]) {
-
-        let title = dictionary["title"] as? String ?? "Error! Title Field Not Found!"
-       
-        self.init(title: title)
-    }
-}
