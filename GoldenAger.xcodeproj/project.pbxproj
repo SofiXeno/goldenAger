@@ -30,6 +30,9 @@
 		8984D1552620CE2900C65994 /* GoldenAgerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8984D1542620CE2900C65994 /* GoldenAgerUITests.swift */; };
 		89896C79264AFD4500047CD4 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89896C78264AFD4500047CD4 /* Utilities.swift */; };
 		89896C81264B197F00047CD4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89896C80264B197F00047CD4 /* LoginViewController.swift */; };
+		899823F026506B2500371489 /* InboxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899823EF26506B2500371489 /* InboxViewController.swift */; };
+		899823F526506B5B00371489 /* OnlineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899823F426506B5B00371489 /* OnlineViewController.swift */; };
+		899823FA26506BAC00371489 /* DoneTasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899823F926506BAC00371489 /* DoneTasksViewController.swift */; };
 		89A4777226482C1F00E88343 /* Pensioner.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89A4777126482C1F00E88343 /* Pensioner.storyboard */; };
 		89A4777A26482C7800E88343 /* Volunteer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89A4777926482C7800E88343 /* Volunteer.storyboard */; };
 		89A51EAA264D991500A964D3 /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A51EA8264D991500A964D3 /* MyCollectionViewCell.swift */; };
@@ -101,6 +104,9 @@
 		8984D1562620CE2900C65994 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		89896C78264AFD4500047CD4 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		89896C80264B197F00047CD4 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		899823EF26506B2500371489 /* InboxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxViewController.swift; sourceTree = "<group>"; };
+		899823F426506B5B00371489 /* OnlineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlineViewController.swift; sourceTree = "<group>"; };
+		899823F926506BAC00371489 /* DoneTasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneTasksViewController.swift; sourceTree = "<group>"; };
 		89A4777126482C1F00E88343 /* Pensioner.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Pensioner.storyboard; sourceTree = "<group>"; };
 		89A4777926482C7800E88343 /* Volunteer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Volunteer.storyboard; sourceTree = "<group>"; };
 		89A51EA8264D991500A964D3 /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -272,6 +278,9 @@
 				896327C9264C5D48005394B0 /* BirthdayViewController.swift */,
 				896327CE264C620E005394B0 /* OrganizationViewController.swift */,
 				89A51EC9264F329700A964D3 /* PasswordViewController.swift */,
+				899823EF26506B2500371489 /* InboxViewController.swift */,
+				899823F426506B5B00371489 /* OnlineViewController.swift */,
+				899823F926506BAC00371489 /* DoneTasksViewController.swift */,
 			);
 			path = VolunteerViewControllers;
 			sourceTree = "<group>";
@@ -571,9 +580,11 @@
 				89A51ECF264F336E00A964D3 /* RegisterPhoneViewController.swift in Sources */,
 				89C222CA264ABFDB002A93FD /* CategoryService.swift in Sources */,
 				89A51EC2264DF51900A964D3 /* TasksViewController.swift in Sources */,
+				899823F526506B5B00371489 /* OnlineViewController.swift in Sources */,
 				896327D9264C7007005394B0 /* QAViewController.swift in Sources */,
 				8984D1372620CE2200C65994 /* ViewController.swift in Sources */,
 				89A51EBD264DF43500A964D3 /* TaskTemplateService.swift in Sources */,
+				899823F026506B2500371489 /* InboxViewController.swift in Sources */,
 				896327DE264C7030005394B0 /* SurnameViewController.swift in Sources */,
 				8984D1332620CE2200C65994 /* AppDelegate.swift in Sources */,
 				896327E8264C70C9005394B0 /* PhoneViewController.swift in Sources */,
@@ -586,6 +597,7 @@
 				89C222E3264ACBF3002A93FD /* User.swift in Sources */,
 				89C222F0264ACC10002A93FD /* Task.swift in Sources */,
 				89A51EB0264DA82D00A964D3 /* FieldsValidator.swift in Sources */,
+				899823FA26506BAC00371489 /* DoneTasksViewController.swift in Sources */,
 				89A51EB8264DF19A00A964D3 /* TaskTemplate.swift in Sources */,
 				89A51ECA264F329800A964D3 /* PasswordViewController.swift in Sources */,
 				89632801264D44AA005394B0 /* CategoriesViewController.swift in Sources */,

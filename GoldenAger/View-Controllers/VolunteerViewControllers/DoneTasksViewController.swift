@@ -1,5 +1,5 @@
 //
-//  RegisterPhoneViewController.swift
+//  DoneTasksViewController.swift
 //  GoldenAger
 //
 //  Created by Софія Ксенофонтова  on 15.05.2021.
@@ -7,13 +7,11 @@
 
 import UIKit
 
-class RegisterPhoneViewController: UIViewController {
+class DoneTasksViewController: UIViewController {
 
-    @IBOutlet weak var newphone: UITextField!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        Utilities.paddingTextField(newphone)
+
         // Do any additional setup after loading the view.
     }
     

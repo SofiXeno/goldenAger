@@ -102,7 +102,7 @@
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <color key="tintColor" red="0.0" green="0.1843137255" blue="0.18039215689999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="textColor" red="0.0" green="0.1843137255" blue="0.18039215689999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="20"/>
+                                <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="24"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done" textContentType="password"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -855,6 +855,9 @@
                                         <integer key="value" value="20"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="Rs5-3P-PBT" kind="show" id="8sR-3V-gDV"/>
+                                </connections>
                             </button>
                             <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="inline" translatesAutoresizingMaskIntoConstraints="NO" id="gaX-mJ-5Bo">
                                 <rect key="frame" x="41" y="354" width="334" height="301"/>
@@ -956,7 +959,7 @@
         <!--Password View Controller-->
         <scene sceneID="m4R-78-fMw">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="Gf2-lW-QqE" customClass="PasswordViewController" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="Gf2-lW-QqE" customClass="PasswordViewController" customModule="GoldenAger" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2HA-Uv-bEw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1226,10 +1229,6 @@
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="surname:" destination="84E-zK-eba" eventType="editingDidEnd" id="SrK-C5-20i"/>
-                                    <action selector="surname:" destination="Ydm-2Z-Eyh" eventType="editingDidEnd" id="wm2-fF-Z4n"/>
-                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Введіть нижче Ваш номер телефону" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Sr-Ct-Lfn">
                                 <rect key="frame" x="81" y="163" width="253" height="161"/>
@@ -1244,20 +1243,18 @@
                     </view>
                     <navigationItem key="navigationItem" id="6YI-xF-FPj"/>
                     <connections>
-                        <outlet property="newphone" destination="3f8-Td-cbq" id="09F-8d-Lc8"/>
-                        <outlet property="surname" destination="3f8-Td-cbq" id="4ny-SQ-dSM"/>
+                        <outlet property="newphone" destination="3f8-Td-cbq" id="Bp5-9l-MlZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LGc-wz-TkP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="84E-zK-eba" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="4876.811594202899" y="-60.267857142857139"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="250-gd-kiT"/>
-        <segue reference="fi8-cZ-imx"/>
-        <segue reference="9HK-qn-qyf"/>
+        <segue reference="iyX-xx-Nu8"/>
+        <segue reference="Nee-s7-nTi"/>
+        <segue reference="itN-ZG-PIr"/>
         <segue reference="mFx-Aq-5GY"/>
     </inferredMetricsTieBreakers>
     <resources>

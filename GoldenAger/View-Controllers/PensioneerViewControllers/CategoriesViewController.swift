@@ -31,6 +31,7 @@ class CategoriesViewControнller: UIViewController, UICollectionViewDelegate, UI
                                  Cell(image: "delivery_person_motorcycle", name: "Доставка"),
                                  Cell(image: "real estate favorite hold house", name: "Хатня робота"),Cell(image: "real estate settings house wrench", name: "Ремонт"),
                                  Cell(image: "question circle", name: "Консультація")]
+
     
     
     
@@ -41,6 +42,7 @@ class CategoriesViewControнller: UIViewController, UICollectionViewDelegate, UI
         self.categories.dataSource = self
         self.categories.delegate = self
         
+//        if (cell.label.text == "Консультація")
         
         
         

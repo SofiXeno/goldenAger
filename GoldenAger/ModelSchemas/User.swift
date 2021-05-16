@@ -11,15 +11,10 @@ import Foundation
 
 
 struct User: Decodable {
-
-    
     var _id: String
-    
     var is_volunteer: Bool
-    
     var phone: String
     var password : String
-    
     var first_name: String
     var last_name: String
     var birthday: Date
