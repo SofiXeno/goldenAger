@@ -22,8 +22,8 @@ class TasksViewController: UIViewController {
 //
         
         
-        let service = UserService(baseUrl: "https://golden-ager.herokuapp.com/users")
-        service.getAllUsers(endPoint: "/")
+        let service = TaskService(baseUrl: "https://golden-ager.herokuapp.com/tasks")
+        service.getAllTasks()
         
         
 //        let service = UserService(baseUrl: "https://golden-ager.herokuapp.com/users")

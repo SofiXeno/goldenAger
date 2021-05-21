@@ -12,7 +12,7 @@ import Alamofire
 class TaskTemplateService{
     //https://golden-ager.herokuapp.com/template
     
-    fileprivate var baseUrl = ""
+    fileprivate var baseUrl = "https://golden-ager.herokuapp.com/template"
     
     init(baseUrl:String) {
         self.baseUrl = baseUrl
@@ -20,8 +20,8 @@ class TaskTemplateService{
     
     
     //MARK:- getAllTasks отримати всі завдання
-    func getAllTasks(endPoint:String){
-        AF.request(self.baseUrl + endPoint, method: .get, parameters: nil, encoding: URLEncoding.default, headers: nil, interceptor: nil).response {
+    func getAllTasks(){
+        AF.request(self.baseUrl + "/", method: .get, parameters: nil, encoding: URLEncoding.default, headers: nil, interceptor: nil).response {
             DataResponse in
             guard let data = DataResponse.data else {return}
             do{
@@ -34,8 +34,8 @@ class TaskTemplateService{
     }
     
     //MARK:- getTaskFromCategory отримати всі завдання з заданої категорії
-    func getTaskFromCategory(endPoint:String, categoryId: String){
-        AF.request(self.baseUrl + endPoint + categoryId, method: .get, parameters: nil, encoding: URLEncoding.default, headers: nil, interceptor: nil).response {
+    func getTaskFromCategory(categoryId: String){
+        AF.request(self.baseUrl + "/getByCategory/" + categoryId, method: .get, parameters: nil, encoding: URLEncoding.default, headers: nil, interceptor: nil).response {
             DataResponse in
             print(DataResponse.request)
             print(DataResponse.request?.httpBody)

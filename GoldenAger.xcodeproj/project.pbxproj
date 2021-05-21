@@ -28,6 +28,9 @@
 		8984D13F2620CE2900C65994 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8984D13D2620CE2900C65994 /* LaunchScreen.storyboard */; };
 		8984D14A2620CE2900C65994 /* GoldenAgerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8984D1492620CE2900C65994 /* GoldenAgerTests.swift */; };
 		8984D1552620CE2900C65994 /* GoldenAgerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8984D1542620CE2900C65994 /* GoldenAgerUITests.swift */; };
+		8988F98E265554E0000D1E10 /* RequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8988F98D265554E0000D1E10 /* RequestFactory.swift */; };
+		8988F99326556F28000D1E10 /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8988F99226556F28000D1E10 /* ApiError.swift */; };
+		8988F9A32656885D000D1E10 /* DateHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8988F9A22656885D000D1E10 /* DateHelpers.swift */; };
 		89896C79264AFD4500047CD4 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89896C78264AFD4500047CD4 /* Utilities.swift */; };
 		89896C81264B197F00047CD4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89896C80264B197F00047CD4 /* LoginViewController.swift */; };
 		899823F026506B2500371489 /* InboxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899823EF26506B2500371489 /* InboxViewController.swift */; };
@@ -48,6 +51,8 @@
 		89C222E3264ACBF3002A93FD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C222E2264ACBF3002A93FD /* User.swift */; };
 		89C222EB264ACC03002A93FD /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C222EA264ACC03002A93FD /* Category.swift */; };
 		89C222F0264ACC10002A93FD /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C222EF264ACC10002A93FD /* Task.swift */; };
+		89F4C281265542BA004263B8 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F4C280265542BA004263B8 /* AuthService.swift */; };
+		89F4C289265542FD004263B8 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F4C288265542FD004263B8 /* Config.swift */; };
 		8E8611045A909E23E906E224 /* Pods_GoldenAger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DECB5AE32C25B4E72C873821 /* Pods_GoldenAger.framework */; };
 		FA5FF108F03F8D0B6D5CBC8C /* Pods_GoldenAgerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23C02FBA4092B14B48AE2F02 /* Pods_GoldenAgerTests.framework */; };
 		FE62A58DF1901861AD7CEC6E /* Pods_GoldenAger_GoldenAgerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF8CE197CFB7D9C37E9101A4 /* Pods_GoldenAger_GoldenAgerUITests.framework */; };
@@ -102,6 +107,9 @@
 		8984D1502620CE2900C65994 /* GoldenAgerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoldenAgerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8984D1542620CE2900C65994 /* GoldenAgerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoldenAgerUITests.swift; sourceTree = "<group>"; };
 		8984D1562620CE2900C65994 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8988F98D265554E0000D1E10 /* RequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestFactory.swift; sourceTree = "<group>"; };
+		8988F99226556F28000D1E10 /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
+		8988F9A22656885D000D1E10 /* DateHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelpers.swift; sourceTree = "<group>"; };
 		89896C78264AFD4500047CD4 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		89896C80264B197F00047CD4 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		899823EF26506B2500371489 /* InboxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxViewController.swift; sourceTree = "<group>"; };
@@ -122,6 +130,8 @@
 		89C222E2264ACBF3002A93FD /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		89C222EA264ACC03002A93FD /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		89C222EF264ACC10002A93FD /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		89F4C280265542BA004263B8 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		89F4C288265542FD004263B8 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		8CAECE4EBBBCC44A7D75473C /* Pods-GoldenAgerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoldenAgerTests.debug.xcconfig"; path = "Target Support Files/Pods-GoldenAgerTests/Pods-GoldenAgerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CFAC7FA06A05B987E6265077 /* Pods-GoldenAger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoldenAger.release.xcconfig"; path = "Target Support Files/Pods-GoldenAger/Pods-GoldenAger.release.xcconfig"; sourceTree = "<group>"; };
 		DECB5AE32C25B4E72C873821 /* Pods_GoldenAger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoldenAger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -202,6 +212,9 @@
 				8984D1362620CE2200C65994 /* ViewController.swift */,
 				8984D1402620CE2900C65994 /* Info.plist */,
 				89AA3A342645BB390017FE5E /* Fonts */,
+				89F4C288265542FD004263B8 /* Config.swift */,
+				8988F98D265554E0000D1E10 /* RequestFactory.swift */,
+				8988F99226556F28000D1E10 /* ApiError.swift */,
 			);
 			path = GoldenAger;
 			sourceTree = "<group>";
@@ -228,6 +241,7 @@
 			isa = PBXGroup;
 			children = (
 				89896C78264AFD4500047CD4 /* Utilities.swift */,
+				8988F9A22656885D000D1E10 /* DateHelpers.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -294,6 +308,7 @@
 				89C222CE264ABFE6002A93FD /* TaskService.swift */,
 				89A51EAF264DA82D00A964D3 /* FieldsValidator.swift */,
 				89A51EBC264DF43500A964D3 /* TaskTemplateService.swift */,
+				89F4C280265542BA004263B8 /* AuthService.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -576,6 +591,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8988F98E265554E0000D1E10 /* RequestFactory.swift in Sources */,
 				89C222C5264ABFC9002A93FD /* UserService.swift in Sources */,
 				89A51ECF264F336E00A964D3 /* RegisterPhoneViewController.swift in Sources */,
 				89C222CA264ABFDB002A93FD /* CategoryService.swift in Sources */,
@@ -584,10 +600,12 @@
 				896327D9264C7007005394B0 /* QAViewController.swift in Sources */,
 				8984D1372620CE2200C65994 /* ViewController.swift in Sources */,
 				89A51EBD264DF43500A964D3 /* TaskTemplateService.swift in Sources */,
+				8988F99326556F28000D1E10 /* ApiError.swift in Sources */,
 				899823F026506B2500371489 /* InboxViewController.swift in Sources */,
 				896327DE264C7030005394B0 /* SurnameViewController.swift in Sources */,
 				8984D1332620CE2200C65994 /* AppDelegate.swift in Sources */,
 				896327E8264C70C9005394B0 /* PhoneViewController.swift in Sources */,
+				8988F9A32656885D000D1E10 /* DateHelpers.swift in Sources */,
 				89C222CF264ABFE6002A93FD /* TaskService.swift in Sources */,
 				89A51EAA264D991500A964D3 /* MyCollectionViewCell.swift in Sources */,
 				8984D1352620CE2200C65994 /* SceneDelegate.swift in Sources */,
@@ -604,6 +622,8 @@
 				89896C79264AFD4500047CD4 /* Utilities.swift in Sources */,
 				89C222EB264ACC03002A93FD /* Category.swift in Sources */,
 				89896C81264B197F00047CD4 /* LoginViewController.swift in Sources */,
+				89F4C281265542BA004263B8 /* AuthService.swift in Sources */,
+				89F4C289265542FD004263B8 /* Config.swift in Sources */,
 				896327CA264C5D49005394B0 /* BirthdayViewController.swift in Sources */,
 				896327D4264C67DC005394B0 /* NameViewController.swift in Sources */,
 			);

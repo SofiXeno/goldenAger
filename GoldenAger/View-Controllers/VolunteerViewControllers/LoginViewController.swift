@@ -22,31 +22,42 @@ class LoginViewController: UIViewController {
         
     }
     
-    @IBAction func validateAction(_ sender: Any) {
-        validate()
+    @IBAction func loginOnClick(_ sender: UIButton) {
+     
+        
+        Reqs.post(url:"/auth/login",
+                  params:["phone":phone.text, "password":password.text],
+                              onSuccess: {
+                                (res: Token) in print(res.token)
+                              },
+                                onFail: {
+                                    res in print(res)
+
+                                })
+        
     }
     
-    func validate() {
-        do {
-            let phone_numb = try phone.validatedText(validationType: ValidatorType.phone)
-            let pass = try password.validatedText(validationType: ValidatorType.password)
-            let data = LoginData(phone: phone_numb, password: pass)
-            save(data)
-        } catch(let error) {
-            showAlert(for: (error as! ValidationError).message)
-        }
-    }
+   // func validate() {
+//        do {
+//            let phone_numb = try phone.validatedText(validationType: ValidatorType.phone)
+//            let pass = try password.validatedText(validationType: ValidatorType.password)
+//            let data = LoginData(phone: phone_numb, password: pass)
+//            save(data)
+//        } catch(let error) {
+//            showAlert(for: (error as! ValidationError).message)
+//        }
+//    }
     
-    func save(_ data: LoginData) {
-        showAlert(for: "Register Successful")
-    }
-    
-    func showAlert(for alert: String) {
-        let alertController = UIAlertController(title: nil, message: alert, preferredStyle: UIAlertController.Style.alert)
-        let alertAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-        alertController.addAction(alertAction)
-        present(alertController, animated: true, completion: nil)
-    }
+//    func save(_ data: LoginData) {
+//        showAlert(for: "Register Successful")
+//    }
+//
+//    func showAlert(for alert: String) {
+//        let alertController = UIAlertController(title: nil, message: alert, preferredStyle: UIAlertController.Style.alert)
+//        let alertAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+//        alertController.addAction(alertAction)
+//        present(alertController, animated: true, completion: nil)
+//    }
     
     //  func bindKeyboardNotifications() {
     //      NotificationCenter.default.addObserver(forName: Notification.Name.UIKeyboardWillShow, object: nil, queue: nil) { notification in

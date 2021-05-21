@@ -47,7 +47,7 @@ class CategoriesViewControнller: UIViewController, UICollectionViewDelegate, UI
         
         
         let service = CategoryService(baseUrl: "https://golden-ager.herokuapp.com/category")
-        service.getAllCategories(endPoint: "/")
+        service.getAllCategories()
         
         
     }

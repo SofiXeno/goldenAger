@@ -6,9 +6,10 @@
 //
 
 import Foundation
+// data:Category
+// data.ert
 
-
-struct Category: Decodable {
+struct Category: Decodable, Encodable {
     var _id: String
     var title: String
   
