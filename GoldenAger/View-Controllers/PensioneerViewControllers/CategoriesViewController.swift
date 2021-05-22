@@ -9,46 +9,50 @@ import UIKit
 import CSS3ColorsSwift
 
 
-private let reuseIdentifier = "Cell"
+//private let reuseIdentifier = "Cell"
 
 struct Cell {
+    var _id:String=""
     var image:String = ""
     var name:String = ""
     
-    init(image: String, name: String){
+    init(_id:String, image: String, name: String){
+        self._id = _id
         self.image = image
         self.name = name
     }
 }
 
 
-class CategoriesViewControнller: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class CategoriesViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
-    
-    @IBOutlet weak var categories: UICollectionView!
-    
-    private var cells: [Cell] = [Cell(image: "hospital_board", name: "Здоров'я"),Cell(image: "accounting_calculator", name: "Рахунки"),
-                                 Cell(image: "delivery_person_motorcycle", name: "Доставка"),
-                                 Cell(image: "real estate favorite hold house", name: "Хатня робота"),Cell(image: "real estate settings house wrench", name: "Ремонт"),
-                                 Cell(image: "question circle", name: "Консультація")]
+    var pensioner_registration : PensionerRegistration?
+    var pensioner_login : PensionerLogin?
 
+    @IBOutlet weak var categories: UICollectionView!
+    private var cells: [Cell] = []
     
-    
-    
-    //    @IBOutlet weak var categories: UICollectionView!
+    var category_id:String?
     
     override func viewDidLoad() {
-        super.viewDidLoad()
+    
+        
+       Reqs.get(url: "/category", params: nil, onSuccess: {(res: [Category]) in
+        
+        for c in res {
+            
+            self.cells.append(Cell(_id: c._id, image: c.image, name: c.title))
+           
+        }
         self.categories.dataSource = self
         self.categories.delegate = self
+//        print(self.cells)
         
-//        if (cell.label.text == "Консультація")
+       }, onFail:{res in print(res)})
         
-        
-        
-        let service = CategoryService(baseUrl: "https://golden-ager.herokuapp.com/category")
-        service.getAllCategories()
-        
+        super.viewDidLoad()
+//        print(pensioner_login)
+//        print(pensioner_registration)
         
     }
     
@@ -58,7 +62,6 @@ class CategoriesViewControнller: UIViewController, UICollectionViewDelegate, UI
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
-    
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
@@ -71,30 +74,88 @@ class CategoriesViewControнller: UIViewController, UICollectionViewDelegate, UI
         cell.layer.masksToBounds = false
         
         // Configure the cell
+        cell.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tap(_:))))
         
         let c = cells[indexPath.row]
+//        print(c)
         cell.image.image = UIImage(named: c.image)
         cell.label.text = c.name
-        
+        cell._id = c._id
+//        print(cell)
         return cell
     }
     
     
-    //
-    //    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-    //           let  size = collectionView.frame.size.width / CGFloat(2) - CGFloat((2 - 1)) * 26
-    //           return CGSize(width: size, height: size)
-    //       }
+//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//        if (cells[indexPath.row].name == "Консультація"){
+//
+//            self.performSegue(withIdentifier: "consultation_segue", sender: self)}
+//        else{
+//
+////            let destinationVC = segue.destination as! TasksViewController
+////            destinationVC.category_id = cells[indexPath.row]._id
+////
+//            self.performSegue(withIdentifier: "tasks_segue", sender: self)
+//
+//
+//
+//        }
+//    }
     
+    
+   
+    @objc func tap(_ sender: UITapGestureRecognizer) {
+        
+        let location = sender.location(in: categories)
+        let indexPath = categories.indexPathForItem(at: location)
+        let cell = collectionView(categories, cellForItemAt: indexPath!) as! MyCollectionViewCell
+        
+        self.category_id = cell._id
+   
+        
+//        print(category_id)
+        
+        
+        if (cells[indexPath!.row].name == "Консультація"){
+           
+            self.performSegue(withIdentifier: "consultation_segue", sender: self)}
+        else{
+            
+
+            self.performSegue(withIdentifier: "tasks_segue", sender: self)
+            
+            
+            
+        }
+        
+    }
+  
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Create a variable to store the name the user entered on textField
+        
+        if (segue.identifier=="consultation_segue"){
+        
+            let consultViewController: ConsultationViewController = ConsultationViewController()
+
+        }
+        else {
+            
+
+
+            let destinationVC = segue.destination as! TasksViewController
+            destinationVC._id = self.category_id
+   
+        }
+
+
+
+    }
     
 }
 
 
 
-//extension CategoriesViewController: UICollectionViewDelegateFlowLayout{
-//    
-//    
-//}
 
 
 

@@ -9,9 +9,9 @@ import Foundation
 import UIKit
 
 
-protocol DocumentSerializable {
-    init?(dictionary:[String:Any])
-}
+//protocol DocumentSerializable {
+//    init?(dictionary:[String:Any])
+//}
 
 
 class Utilities {
@@ -25,4 +25,11 @@ class Utilities {
     textfield.leftViewMode = UITextField.ViewMode.always
     
      }
+    
+    
+    
+    
+    
+
+    
 }

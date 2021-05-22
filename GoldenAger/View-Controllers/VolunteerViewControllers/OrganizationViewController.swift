@@ -12,10 +12,16 @@ class OrganizationViewController: UIViewController, UIPickerViewDelegate, UIPick
 
     @IBOutlet weak var organization: UIPickerView!
     
+    var volonteer_registration : VolunteerRegistration?
+    
     var pickerData: [String] = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        
+     
 
         self.organization.delegate = self
         self.organization.dataSource = self
@@ -24,15 +30,15 @@ class OrganizationViewController: UIViewController, UIPickerViewDelegate, UIPick
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        // Create a variable to store the name the user entered on textField
+        let destinationVC = segue.destination as! BirthdayViewController
+        self.volonteer_registration?.organization = pickerData[organization.selectedRow(inComponent: 0)]
+     
+        
+        destinationVC.volonteer_registration = self.volonteer_registration
+        
     }
-    */
     
     override func didReceiveMemoryWarning() {
           super.didReceiveMemoryWarning()

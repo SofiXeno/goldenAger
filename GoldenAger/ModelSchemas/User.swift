@@ -6,10 +6,43 @@
 //
 
 import Foundation
+import UIKit
+
+
+struct PensionerRegistration {
+    var is_volunteer: Bool = false
+    var name: String?
+    var surname: String?
+    var birthday: Date?
+    var phone: String?
+    var password: String?
+    
+}
 
 
 
-class Pensioner{
+struct PensionerLogin {
+    var phone: String?
+    var password: String?
+    
+}
+
+
+struct VolunteerRegistration {
+    var is_volunteer: Bool = true
+    var name: String?
+    var surname: String?
+    var birthday: Date?
+    var phone: String?
+    var organization: String?
+    var password: String?
+    
+}
+
+
+struct VolunteerLogin {
+    var phone: String?
+    var password: String?
     
 }
 
@@ -54,10 +87,10 @@ struct Token: Codable {
 }
 
 
-struct LoginData {
-    var phone: String
-    var password: String
-}
+//struct LoginData {
+//    var phone: String
+//    var password: String
+//}
 
 
 //struct RegisterData {

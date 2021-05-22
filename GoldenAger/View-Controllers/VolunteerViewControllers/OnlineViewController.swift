@@ -49,9 +49,9 @@ class OnlineViewController: UIViewController {
     }
 
    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        online.setOn(false, animated: true)
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        online.setOn(false, animated: true)
+//    }
 
 
 }

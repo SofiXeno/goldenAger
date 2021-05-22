@@ -10,21 +10,27 @@ import UIKit
 class BirthdayViewController: UIViewController {
     @IBOutlet weak var birthday: UIDatePicker!
     
+    var volonteer_registration : VolunteerRegistration?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        
 
         // Do any additional setup after loading the view.
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        // Create a variable to store the name the user entered on textField
+        self.volonteer_registration!.birthday = birthday.date
+     
+    
+            let destinationVC = segue.destination as! PasswordViewController
+        
+        destinationVC.volonteer_registration = self.volonteer_registration
+        
     }
-    */
 
 }

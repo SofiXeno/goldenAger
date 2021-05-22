@@ -29,28 +29,31 @@
 		8984D14A2620CE2900C65994 /* GoldenAgerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8984D1492620CE2900C65994 /* GoldenAgerTests.swift */; };
 		8984D1552620CE2900C65994 /* GoldenAgerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8984D1542620CE2900C65994 /* GoldenAgerUITests.swift */; };
 		8988F98E265554E0000D1E10 /* RequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8988F98D265554E0000D1E10 /* RequestFactory.swift */; };
-		8988F99326556F28000D1E10 /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8988F99226556F28000D1E10 /* ApiError.swift */; };
 		8988F9A32656885D000D1E10 /* DateHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8988F9A22656885D000D1E10 /* DateHelpers.swift */; };
+		8988F9AC2657BB04000D1E10 /* PasswordRegistrViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8988F9AB2657BB04000D1E10 /* PasswordRegistrViewController.swift */; };
+		8988F9B426582E6F000D1E10 /* ConsultationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8988F9B326582E6E000D1E10 /* ConsultationViewController.swift */; };
 		89896C79264AFD4500047CD4 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89896C78264AFD4500047CD4 /* Utilities.swift */; };
 		89896C81264B197F00047CD4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89896C80264B197F00047CD4 /* LoginViewController.swift */; };
 		899823F026506B2500371489 /* InboxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899823EF26506B2500371489 /* InboxViewController.swift */; };
 		899823F526506B5B00371489 /* OnlineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899823F426506B5B00371489 /* OnlineViewController.swift */; };
 		899823FA26506BAC00371489 /* DoneTasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899823F926506BAC00371489 /* DoneTasksViewController.swift */; };
+		89987AA7265914A900856B0F /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89987AA6265914A900856B0F /* ProfileViewController.swift */; };
+		89987AAC26591DB800856B0F /* LoginPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89987AAB26591DB800856B0F /* LoginPasswordViewController.swift */; };
+		89987AB126593CE500856B0F /* TaskCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89987AB026593CE500856B0F /* TaskCollectionViewCell.swift */; };
 		89A4777226482C1F00E88343 /* Pensioner.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89A4777126482C1F00E88343 /* Pensioner.storyboard */; };
 		89A4777A26482C7800E88343 /* Volunteer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89A4777926482C7800E88343 /* Volunteer.storyboard */; };
 		89A51EAA264D991500A964D3 /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A51EA8264D991500A964D3 /* MyCollectionViewCell.swift */; };
 		89A51EB0264DA82D00A964D3 /* FieldsValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A51EAF264DA82D00A964D3 /* FieldsValidator.swift */; };
 		89A51EB8264DF19A00A964D3 /* TaskTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A51EB7264DF19900A964D3 /* TaskTemplate.swift */; };
-		89A51EBD264DF43500A964D3 /* TaskTemplateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A51EBC264DF43500A964D3 /* TaskTemplateService.swift */; };
 		89A51EC2264DF51900A964D3 /* TasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A51EC1264DF51900A964D3 /* TasksViewController.swift */; };
 		89A51ECA264F329800A964D3 /* PasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A51EC9264F329700A964D3 /* PasswordViewController.swift */; };
 		89A51ECF264F336E00A964D3 /* RegisterPhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A51ECE264F336E00A964D3 /* RegisterPhoneViewController.swift */; };
-		89C222C5264ABFC9002A93FD /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C222C4264ABFC9002A93FD /* UserService.swift */; };
-		89C222CA264ABFDB002A93FD /* CategoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C222C9264ABFDB002A93FD /* CategoryService.swift */; };
-		89C222CF264ABFE6002A93FD /* TaskService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C222CE264ABFE6002A93FD /* TaskService.swift */; };
 		89C222E3264ACBF3002A93FD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C222E2264ACBF3002A93FD /* User.swift */; };
 		89C222EB264ACC03002A93FD /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C222EA264ACC03002A93FD /* Category.swift */; };
 		89C222F0264ACC10002A93FD /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C222EF264ACC10002A93FD /* Task.swift */; };
+		89CB65C626595FCB00E69EFB /* ProfileVoluntTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CB65C526595FCB00E69EFB /* ProfileVoluntTableViewController.swift */; };
+		89CB65CB26596BAF00E69EFB /* SelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CB65CA26596BAF00E69EFB /* SelectViewController.swift */; };
+		89CB65D026596C7700E69EFB /* FindVoluntViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CB65CF26596C7700E69EFB /* FindVoluntViewController.swift */; };
 		89F4C281265542BA004263B8 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F4C280265542BA004263B8 /* AuthService.swift */; };
 		89F4C289265542FD004263B8 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F4C288265542FD004263B8 /* Config.swift */; };
 		8E8611045A909E23E906E224 /* Pods_GoldenAger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DECB5AE32C25B4E72C873821 /* Pods_GoldenAger.framework */; };
@@ -108,28 +111,31 @@
 		8984D1542620CE2900C65994 /* GoldenAgerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoldenAgerUITests.swift; sourceTree = "<group>"; };
 		8984D1562620CE2900C65994 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8988F98D265554E0000D1E10 /* RequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestFactory.swift; sourceTree = "<group>"; };
-		8988F99226556F28000D1E10 /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
 		8988F9A22656885D000D1E10 /* DateHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelpers.swift; sourceTree = "<group>"; };
+		8988F9AB2657BB04000D1E10 /* PasswordRegistrViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordRegistrViewController.swift; sourceTree = "<group>"; };
+		8988F9B326582E6E000D1E10 /* ConsultationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultationViewController.swift; sourceTree = "<group>"; };
 		89896C78264AFD4500047CD4 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		89896C80264B197F00047CD4 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		899823EF26506B2500371489 /* InboxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxViewController.swift; sourceTree = "<group>"; };
 		899823F426506B5B00371489 /* OnlineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlineViewController.swift; sourceTree = "<group>"; };
 		899823F926506BAC00371489 /* DoneTasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneTasksViewController.swift; sourceTree = "<group>"; };
+		89987AA6265914A900856B0F /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		89987AAB26591DB800856B0F /* LoginPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPasswordViewController.swift; sourceTree = "<group>"; };
+		89987AB026593CE500856B0F /* TaskCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCollectionViewCell.swift; sourceTree = "<group>"; };
 		89A4777126482C1F00E88343 /* Pensioner.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Pensioner.storyboard; sourceTree = "<group>"; };
 		89A4777926482C7800E88343 /* Volunteer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Volunteer.storyboard; sourceTree = "<group>"; };
 		89A51EA8264D991500A964D3 /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
 		89A51EAF264DA82D00A964D3 /* FieldsValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldsValidator.swift; sourceTree = "<group>"; };
 		89A51EB7264DF19900A964D3 /* TaskTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTemplate.swift; sourceTree = "<group>"; };
-		89A51EBC264DF43500A964D3 /* TaskTemplateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTemplateService.swift; sourceTree = "<group>"; };
 		89A51EC1264DF51900A964D3 /* TasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksViewController.swift; sourceTree = "<group>"; };
 		89A51EC9264F329700A964D3 /* PasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordViewController.swift; sourceTree = "<group>"; };
 		89A51ECE264F336E00A964D3 /* RegisterPhoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPhoneViewController.swift; sourceTree = "<group>"; };
-		89C222C4264ABFC9002A93FD /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
-		89C222C9264ABFDB002A93FD /* CategoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryService.swift; sourceTree = "<group>"; };
-		89C222CE264ABFE6002A93FD /* TaskService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskService.swift; sourceTree = "<group>"; };
 		89C222E2264ACBF3002A93FD /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		89C222EA264ACC03002A93FD /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		89C222EF264ACC10002A93FD /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		89CB65C526595FCB00E69EFB /* ProfileVoluntTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVoluntTableViewController.swift; sourceTree = "<group>"; };
+		89CB65CA26596BAF00E69EFB /* SelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectViewController.swift; sourceTree = "<group>"; };
+		89CB65CF26596C7700E69EFB /* FindVoluntViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindVoluntViewController.swift; sourceTree = "<group>"; };
 		89F4C280265542BA004263B8 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		89F4C288265542FD004263B8 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		8CAECE4EBBBCC44A7D75473C /* Pods-GoldenAgerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoldenAgerTests.debug.xcconfig"; path = "Target Support Files/Pods-GoldenAgerTests/Pods-GoldenAgerTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -214,7 +220,6 @@
 				89AA3A342645BB390017FE5E /* Fonts */,
 				89F4C288265542FD004263B8 /* Config.swift */,
 				8988F98D265554E0000D1E10 /* RequestFactory.swift */,
-				8988F99226556F28000D1E10 /* ApiError.swift */,
 			);
 			path = GoldenAger;
 			sourceTree = "<group>";
@@ -249,14 +254,20 @@
 		89896C95264B2B7F00047CD4 /* PensioneerViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				896327D3264C67DC005394B0 /* NameViewController.swift */,
-				896327D8264C7007005394B0 /* QAViewController.swift */,
 				896327DD264C7030005394B0 /* SurnameViewController.swift */,
+				896327D3264C67DC005394B0 /* NameViewController.swift */,
 				896327E2264C7081005394B0 /* Birthday2ViewController.swift */,
+				89A51ECE264F336E00A964D3 /* RegisterPhoneViewController.swift */,
+				8988F9AB2657BB04000D1E10 /* PasswordRegistrViewController.swift */,
 				896327E7264C70C9005394B0 /* PhoneViewController.swift */,
+				896327D8264C7007005394B0 /* QAViewController.swift */,
 				89632800264D44AA005394B0 /* CategoriesViewController.swift */,
 				89A51EC1264DF51900A964D3 /* TasksViewController.swift */,
-				89A51ECE264F336E00A964D3 /* RegisterPhoneViewController.swift */,
+				8988F9B326582E6E000D1E10 /* ConsultationViewController.swift */,
+				89987AA6265914A900856B0F /* ProfileViewController.swift */,
+				89987AAB26591DB800856B0F /* LoginPasswordViewController.swift */,
+				89CB65CA26596BAF00E69EFB /* SelectViewController.swift */,
+				89CB65CF26596C7700E69EFB /* FindVoluntViewController.swift */,
 			);
 			path = PensioneerViewControllers;
 			sourceTree = "<group>";
@@ -269,6 +280,7 @@
 				89A4777926482C7800E88343 /* Volunteer.storyboard */,
 				8984D1382620CE2200C65994 /* Main.storyboard */,
 				89A51EA8264D991500A964D3 /* MyCollectionViewCell.swift */,
+				89987AB026593CE500856B0F /* TaskCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -295,6 +307,7 @@
 				899823EF26506B2500371489 /* InboxViewController.swift */,
 				899823F426506B5B00371489 /* OnlineViewController.swift */,
 				899823F926506BAC00371489 /* DoneTasksViewController.swift */,
+				89CB65C526595FCB00E69EFB /* ProfileVoluntTableViewController.swift */,
 			);
 			path = VolunteerViewControllers;
 			sourceTree = "<group>";
@@ -303,11 +316,7 @@
 			isa = PBXGroup;
 			children = (
 				89C222E1264ACBDF002A93FD /* ModelSchemas */,
-				89C222C4264ABFC9002A93FD /* UserService.swift */,
-				89C222C9264ABFDB002A93FD /* CategoryService.swift */,
-				89C222CE264ABFE6002A93FD /* TaskService.swift */,
 				89A51EAF264DA82D00A964D3 /* FieldsValidator.swift */,
-				89A51EBC264DF43500A964D3 /* TaskTemplateService.swift */,
 				89F4C280265542BA004263B8 /* AuthService.swift */,
 			);
 			path = Model;
@@ -592,39 +601,42 @@
 			buildActionMask = 2147483647;
 			files = (
 				8988F98E265554E0000D1E10 /* RequestFactory.swift in Sources */,
-				89C222C5264ABFC9002A93FD /* UserService.swift in Sources */,
 				89A51ECF264F336E00A964D3 /* RegisterPhoneViewController.swift in Sources */,
-				89C222CA264ABFDB002A93FD /* CategoryService.swift in Sources */,
 				89A51EC2264DF51900A964D3 /* TasksViewController.swift in Sources */,
+				89987AAC26591DB800856B0F /* LoginPasswordViewController.swift in Sources */,
 				899823F526506B5B00371489 /* OnlineViewController.swift in Sources */,
+				89CB65C626595FCB00E69EFB /* ProfileVoluntTableViewController.swift in Sources */,
 				896327D9264C7007005394B0 /* QAViewController.swift in Sources */,
 				8984D1372620CE2200C65994 /* ViewController.swift in Sources */,
-				89A51EBD264DF43500A964D3 /* TaskTemplateService.swift in Sources */,
-				8988F99326556F28000D1E10 /* ApiError.swift in Sources */,
+				89987AA7265914A900856B0F /* ProfileViewController.swift in Sources */,
 				899823F026506B2500371489 /* InboxViewController.swift in Sources */,
 				896327DE264C7030005394B0 /* SurnameViewController.swift in Sources */,
 				8984D1332620CE2200C65994 /* AppDelegate.swift in Sources */,
 				896327E8264C70C9005394B0 /* PhoneViewController.swift in Sources */,
 				8988F9A32656885D000D1E10 /* DateHelpers.swift in Sources */,
-				89C222CF264ABFE6002A93FD /* TaskService.swift in Sources */,
 				89A51EAA264D991500A964D3 /* MyCollectionViewCell.swift in Sources */,
 				8984D1352620CE2200C65994 /* SceneDelegate.swift in Sources */,
 				896327E3264C7081005394B0 /* Birthday2ViewController.swift in Sources */,
 				896327CF264C620E005394B0 /* OrganizationViewController.swift in Sources */,
+				8988F9AC2657BB04000D1E10 /* PasswordRegistrViewController.swift in Sources */,
+				89CB65D026596C7700E69EFB /* FindVoluntViewController.swift in Sources */,
 				896327B0264C11CF005394B0 /* RegistrationViewController.swift in Sources */,
 				89C222E3264ACBF3002A93FD /* User.swift in Sources */,
 				89C222F0264ACC10002A93FD /* Task.swift in Sources */,
 				89A51EB0264DA82D00A964D3 /* FieldsValidator.swift in Sources */,
+				89CB65CB26596BAF00E69EFB /* SelectViewController.swift in Sources */,
 				899823FA26506BAC00371489 /* DoneTasksViewController.swift in Sources */,
 				89A51EB8264DF19A00A964D3 /* TaskTemplate.swift in Sources */,
 				89A51ECA264F329800A964D3 /* PasswordViewController.swift in Sources */,
 				89632801264D44AA005394B0 /* CategoriesViewController.swift in Sources */,
 				89896C79264AFD4500047CD4 /* Utilities.swift in Sources */,
 				89C222EB264ACC03002A93FD /* Category.swift in Sources */,
+				8988F9B426582E6F000D1E10 /* ConsultationViewController.swift in Sources */,
 				89896C81264B197F00047CD4 /* LoginViewController.swift in Sources */,
 				89F4C281265542BA004263B8 /* AuthService.swift in Sources */,
 				89F4C289265542FD004263B8 /* Config.swift in Sources */,
 				896327CA264C5D49005394B0 /* BirthdayViewController.swift in Sources */,
+				89987AB126593CE500856B0F /* TaskCollectionViewCell.swift in Sources */,
 				896327D4264C67DC005394B0 /* NameViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

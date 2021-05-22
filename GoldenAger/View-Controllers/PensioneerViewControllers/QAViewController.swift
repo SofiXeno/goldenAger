@@ -9,19 +9,40 @@ import UIKit
 
 class QAViewController: UIViewController {
     @IBOutlet weak var label_name: UILabel!
-   
-    var nickName: String = ""
+    var pensioner_registration : PensionerRegistration?
+    @IBOutlet weak var noBtn: UIButton!
+    
+    @IBOutlet weak var yesBtn: UIButton!
+    
+//    var nickName: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        label_name.text = "Вітаю " + nickName + "!"
+        
+        
+        self.label_name.text = "Вітаю " + pensioner_registration!.name! + "!"
      
+ 
+        print(self.pensioner_registration!.name!)
+        
     }
     
   
       
   
-          
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Create a variable to store the name the user entered on textField
+        
+        if noBtn.isSelected {
+        
+            let destinationVC = segue.destination as! SurnameViewController
+            destinationVC.pensioner_registration = self.pensioner_registration
+        }
+        if yesBtn.isSelected {
+            let destinationVC = segue.destination as! PhoneViewController
+            
+        }
+    }
          
     
 

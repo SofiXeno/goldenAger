@@ -1,31 +1,38 @@
 //
-//  PasswordViewController.swift
+//  PasswordRegistrViewController.swift
 //  GoldenAger
 //
-//  Created by Софія Ксенофонтова  on 15.05.2021.
+//  Created by Софія Ксенофонтова  on 21.05.2021.
 //
 
 import UIKit
 import HideShowPasswordTextField
 
-class PasswordViewController: UIViewController {
+class PasswordRegistrViewController: UIViewController {
     @IBOutlet weak var password: HideShowPasswordTextField!
     
-    @IBOutlet weak var repeatPassword: HideShowPasswordTextField!
     
-    var volonteer_registration : VolunteerRegistration?
+    @IBAction func Registration(_ sender: Any) {
+    }
     
+    @IBOutlet weak var repeat_password: HideShowPasswordTextField!
+    
+    
+    var pensioner_registration : PensionerRegistration?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+
+       
+        
         // Do any additional setup after loading the view.
     }
     
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Create a variable to store the name the user entered on textField
-         self.volonteer_registration?.password = password.text ?? ""
+         self.pensioner_registration?.password = password.text ?? ""
 
 
       //  let destinationVC = segue.destination as! CategoriesViewController
@@ -33,20 +40,20 @@ class PasswordViewController: UIViewController {
         
         let tabCtrl: UITabBarController = segue.destination as! UITabBarController
         let nav = tabCtrl.viewControllers![0] as! UINavigationController
-        let destinationVC = nav.topViewController as! InboxViewController
+        let destinationVC = nav.topViewController as! CategoriesViewController
         
-        destinationVC.volonteer_registration = self.volonteer_registration
+        destinationVC.pensioner_registration = self.pensioner_registration
 
         
-        print(volonteer_registration)
+        print(pensioner_registration)
     }
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         
-        let volunteer_password1 = password.text ?? ""
-        let volunteer_password2 = repeatPassword.text ?? ""
+        let pensioner_password1 = password.text ?? ""
+        let pensioner_password2 = repeat_password.text ?? ""
         
-        if  (volunteer_password1 == volunteer_password2) && (volunteer_password1.count >= 6) && (volunteer_password2.count >= 6){
+        if  (pensioner_password1 == pensioner_password2) && (pensioner_password1.count >= 6) && (pensioner_password2.count >= 6){
             return true
         }
         let alert = UIAlertController(title: "Помилка", message: "Паролі в двох полях мають співпадати та бути більшими за 6 символів", preferredStyle: .alert)

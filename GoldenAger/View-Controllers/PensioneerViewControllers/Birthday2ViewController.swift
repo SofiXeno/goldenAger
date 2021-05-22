@@ -9,6 +9,10 @@ import UIKit
 
 class Birthday2ViewController: UIViewController {
 
+    var pensioner_registration : PensionerRegistration?
+    
+    @IBOutlet weak var birthday: UIDatePicker!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -16,14 +20,15 @@ class Birthday2ViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        // Create a variable to store the name the user entered on textField
+        self.pensioner_registration!.birthday = birthday.date
+     
+    
+            let destinationVC = segue.destination as! RegisterPhoneViewController
+        
+        destinationVC.pensioner_registration = self.pensioner_registration
+        
     }
-    */
 
 }
