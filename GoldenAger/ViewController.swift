@@ -21,11 +21,11 @@ class ViewController: UIViewController {
 //        let params = ["60992b68e4a13c001554b74b",true,true]
         
 //   Reqs.get(url: "/category", params: nil, onSuccess: {(res: [Category]) in print(res)}, onFail:{res in print(res)})
-        
-        Reqs.get(url: "/template/getByCategory/609690d67cb3785fc858cc83", params: nil, onSuccess: {(res: [TaskTemplate]) in
-            print(res)
-         
-        }, onFail:{res in print(res)})
+//        
+//        Reqs.get(url: "/template/getByCategory/609690d67cb3785fc858cc83", params: nil, onSuccess: {(res: [TaskTemplate]) in
+//            print(res)
+//         
+//        }, onFail:{res in print(res)})
 //
 //        Reqs.get(url: "/users/60993ca76b6378a974d36dea", params: nil, onSuccess: {(res: [User]) in print(res)}, onFail:{res in print(res)})
         

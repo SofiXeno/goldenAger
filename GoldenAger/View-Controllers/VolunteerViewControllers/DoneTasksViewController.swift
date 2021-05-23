@@ -9,6 +9,8 @@ import UIKit
 
 class DoneTasksViewController: UIViewController {
 
+    @IBOutlet weak var image: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

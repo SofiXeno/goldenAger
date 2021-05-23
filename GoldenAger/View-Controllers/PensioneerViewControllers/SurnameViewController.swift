@@ -18,7 +18,7 @@ class SurnameViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         
 
-//        print(pensioner_registration!.name!)
+        print(pensioner_registration)
         
         
         self.surname.delegate = self
@@ -47,7 +47,7 @@ class SurnameViewController: UIViewController, UITextFieldDelegate {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Create a variable to store the name the user entered on textField
-         self.pensioner_registration!.surname = surname.text!
+        self.pensioner_registration?.surname = surname.text!
          let destinationVC = segue.destination as! Birthday2ViewController
          destinationVC.pensioner_registration = self.pensioner_registration
         

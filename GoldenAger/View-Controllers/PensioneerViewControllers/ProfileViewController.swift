@@ -34,11 +34,7 @@ class ProfileViewController: UITableViewController {
 
         present(refreshAlert, animated: true, completion: nil)
         
-        
-        
-        
-      
-        
+    
     }
  
     
@@ -46,14 +42,14 @@ class ProfileViewController: UITableViewController {
      
         
         
-        Reqs.get(url: "/users/60993ca76b6378a974d36dea", params: nil, onSuccess: {(res: [User]) in
+        Reqs.get(url: "/users/current", params: nil, onSuccess: {(res: UserP) in
          
             
             print(res)
                 
-            self.name_surname.text = res[0].last_name + " " + res[0].first_name
-            self.phone.text = res[0].phone
-            self.birthday.text = DateHelpers.dateToServerString(date: res[0].birthday)
+            self.name_surname.text = res.last_name + " " + res.first_name
+            self.phone.text = res.phone
+            self.birthday.text = DateHelpers.dateToServerString(date: res.birthday)
             
          
         }, onFail:{res in print(res)})

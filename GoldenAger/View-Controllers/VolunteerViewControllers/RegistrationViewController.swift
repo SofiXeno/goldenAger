@@ -29,15 +29,21 @@ class RegistrationViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func back(_ sender: UIButton) {
+        
+        self.performSegue(withIdentifier: "backToLogin", sender: self)
+        
+      
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Create a variable to store the name the user entered on textField
-        let destinationVC = segue.destination as! OrganizationViewController
+        if let destinationVC = segue.destination as? OrganizationViewController{
         self.volonteer_registration?.name = name.text!
         self.volonteer_registration?.surname = surname.text!
         self.volonteer_registration?.phone = phone.text!
         
-        destinationVC.volonteer_registration = self.volonteer_registration
+            destinationVC.volonteer_registration = self.volonteer_registration}
         
     }
     
@@ -46,7 +52,7 @@ class RegistrationViewController: UIViewController {
         let volunteer_name = name!.text!
         let volunteer_surname = surname!.text!
         
-        
+        if (identifier != "backToLogin"){
         do {let volunteer_phone = phone.text
             
             let regex = try NSRegularExpression(pattern: "^380[5-9][0-9]\\d{7}$", options: .caseInsensitive)
@@ -68,7 +74,10 @@ class RegistrationViewController: UIViewController {
         self.present(alert, animated: true, completion: nil)
         return false
         
-    
+        }
+         else {
+               return true
+    }
         
     }
     

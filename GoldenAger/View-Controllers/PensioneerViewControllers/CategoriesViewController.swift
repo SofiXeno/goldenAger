@@ -139,7 +139,7 @@ class CategoriesViewController: UIViewController, UICollectionViewDelegate, UICo
             let consultViewController: ConsultationViewController = ConsultationViewController()
 
         }
-        else {
+        else if (segue.identifier=="tasks_segue"){
             
 
 

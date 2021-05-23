@@ -44,7 +44,8 @@ class RegisterPhoneViewController: UIViewController, UITextFieldDelegate {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Create a variable to store the name the user entered on textField
-        self.pensioner_registration!.phone = newphone.text!
+        self.pensioner_registration?.phone = newphone.text!
+        print(pensioner_registration)
         
         
         let destinationVC = segue.destination as! PasswordRegistrViewController

@@ -13,6 +13,8 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var phone: UITextField!
     @IBOutlet weak var password: HideShowPasswordTextField!
     
+    @IBOutlet weak var warning: UILabel!
+    
     let keychain = KeychainSwift()
     
     @IBOutlet weak var login: UIButton!
@@ -20,93 +22,136 @@ class LoginViewController: UIViewController {
     
     var volonteer_login : VolunteerLogin?
     
+   
     override func viewDidLoad() {
         super.viewDidLoad()
     
-        self.volonteer_login = VolunteerLogin()
+        self.warning.text = ""
     
         Utilities.paddingTextField(phone)
-        
         
     }
     
     @IBAction func loginOnClick(_ sender: UIButton) {
         
         
-        Reqs.post(url:"/auth/login",
-                  params:["phone":phone.text, "password":password.text],
-                  onSuccess: {
-                    (res: Token) in
-                              
-                    self.keychain.set(res.token, forKey: "token")
-                    
-                    
-                    print(res.token)
-                  },
-                  onFail: {
-                    res in print(res)
-                    
-                  })
-        
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Create a variable to store the name the user entered on textField
-        
-        
-        if login.isSelected {
+        let volunteer_password = password!.text!
+        do {let volunteer_phone = phone.text
             
-            self.volonteer_login?.phone = phone.text!
-            self.volonteer_login?.password = password.text!
+            let regex = try NSRegularExpression(pattern: "^380[5-9][0-9]\\d{7}$", options: .caseInsensitive)
             
+            let matches = regex.firstMatch(in: volunteer_phone!, options: [], range: NSRange(location: 0, length: volunteer_phone!.count))
             
-            let tabCtrl: UITabBarController = segue.destination as! UITabBarController
-            let nav = tabCtrl.viewControllers![0] as! UINavigationController
-            let destinationVC = nav.topViewController as! InboxViewController
-            
-            destinationVC.volonteer_login = self.volonteer_login
-            self.performSegue(withIdentifier: "login", sender: self)
-            
-        }
-        
-        if registration.isSelected {
-            let destinationVC = segue.destination as! RegistrationViewController
-            self.performSegue(withIdentifier: "registration", sender: self)}
-        
-    }
-    
-    
-    
-    
-    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-        
-        
-        if (identifier=="login"){
-            let volunteer_password = password!.text!
-            do {let volunteer_phone = phone.text
+            if (volunteer_password.count >= 5) && (matches != nil){
                 
-                let regex = try NSRegularExpression(pattern: "^380[5-9][0-9]\\d{7}$", options: .caseInsensitive)
-                
-                let matches = regex.firstMatch(in: volunteer_phone!, options: [], range: NSRange(location: 0, length: volunteer_phone!.count))
-                
-                if (volunteer_password.count >= 6) && (matches != nil){
-                    return true
-                }
-                
-                
-            } catch{
-                print("Неправильний телефон")
+                Reqs.post(url:"/auth/login",
+                          params:["phone":phone.text!, "password":password.text!],
+                          onSuccess: {
+                            (res: Token) in
+                            
+                            self.warning.text = ""
+                                      
+                            self.keychain.set(res.token, forKey: "token")
+                            
+                            self.performSegue(withIdentifier: "loginRequest_Volunteer", sender: self)
+                            
+                            print(res.token)
+                          },
+                          onFail: {
+                            (res : MessageResponse) in
+                            
+                            self.warning.text = res.message + "!"
+                            self.warning.textColor = .indianRed
+                            
+                            print(res.message)
+                            
+                          })
             }
-            
-            let alert = UIAlertController(title: "Помилка", message: "Пароль має бути більшим за 6 символів; телефон має бути заданим у форматі 380XXXXXXXXX і не може бути пустим", preferredStyle: .alert)
+            else {let alert = UIAlertController(title: "Помилка", message: "Пароль має бути більшим за 5 символів; телефон має бути заданим у форматі 380XXXXXXXXX і не може бути пустим", preferredStyle: .alert)
             let okAction = UIAlertAction(title: "ОК", style: .default, handler: nil)
             alert.addAction(okAction)
-            self.present(alert, animated: true, completion: nil)
-            return false
+                self.present(alert, animated: true, completion: nil)
+                
+            }
             
+        } catch{
+            print("Неправильний телефон")
         }
-         else {
-               return true
-    
+        
+       
+      
+
     }
-    }}
+    
+    @IBAction func registationOnClick(_ sender: UIButton) {
+        
+        self.performSegue(withIdentifier: "registration", sender: self)
+        
+    }
+    
+    
+  
+    
+    
+    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        // Create a variable to store the name the user entered on textField
+//
+//
+//        if login.isSelected {
+//
+//            self.volonteer_login?.phone = phone.text!
+//            self.volonteer_login?.password = password.text!
+//
+//
+//            let tabCtrl: UITabBarController = segue.destination as! UITabBarController
+//            let nav = tabCtrl.viewControllers![0] as! UINavigationController
+//            let destinationVC = nav.topViewController as! InboxViewController
+//
+//            destinationVC.volonteer_login = self.volonteer_login
+//            self.performSegue(withIdentifier: "login", sender: self)
+//
+//        }
+//
+//        if registration.isSelected {
+//            let destinationVC = segue.destination as! RegistrationViewController
+//            self.performSegue(withIdentifier: "registration", sender: self)}
+//
+//    }
+    
+    
+    
+    
+    
+//
+//    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+//
+//        if (identifier=="loginRequest_Volunteer"){
+//            let volunteer_password = password!.text!
+//            do {let volunteer_phone = phone.text
+//
+//                let regex = try NSRegularExpression(pattern: "^380[5-9][0-9]\\d{7}$", options: .caseInsensitive)
+//
+//                let matches = regex.firstMatch(in: volunteer_phone!, options: [], range: NSRange(location: 0, length: volunteer_phone!.count))
+//
+//                if (volunteer_password.count >= 5) && (matches != nil){
+//                    return true
+//                }
+//
+//            } catch{
+//                print("Неправильний телефон")
+//            }
+//
+//            let alert = UIAlertController(title: "Помилка", message: "Пароль має бути більшим за 5 символів; телефон має бути заданим у форматі 380XXXXXXXXX і не може бути пустим", preferredStyle: .alert)
+//            let okAction = UIAlertAction(title: "ОК", style: .default, handler: nil)
+//            alert.addAction(okAction)
+//            self.present(alert, animated: true, completion: nil)
+//            return false
+//
+//        }
+//         else {
+//               return true
+//    }
+//    }
+
+}

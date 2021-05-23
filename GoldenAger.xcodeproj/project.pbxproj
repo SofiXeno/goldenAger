@@ -54,6 +54,8 @@
 		89CB65C626595FCB00E69EFB /* ProfileVoluntTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CB65C526595FCB00E69EFB /* ProfileVoluntTableViewController.swift */; };
 		89CB65CB26596BAF00E69EFB /* SelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CB65CA26596BAF00E69EFB /* SelectViewController.swift */; };
 		89CB65D026596C7700E69EFB /* FindVoluntViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CB65CF26596C7700E69EFB /* FindVoluntViewController.swift */; };
+		89D0EB0A265A8F1000348D1A /* P_TaskArchiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D0EB09265A8F1000348D1A /* P_TaskArchiveViewController.swift */; };
+		89D0EB2F265AA53700348D1A /* NewTaskCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D0EB2E265AA53600348D1A /* NewTaskCollectionViewCell.swift */; };
 		89F4C281265542BA004263B8 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F4C280265542BA004263B8 /* AuthService.swift */; };
 		89F4C289265542FD004263B8 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F4C288265542FD004263B8 /* Config.swift */; };
 		8E8611045A909E23E906E224 /* Pods_GoldenAger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DECB5AE32C25B4E72C873821 /* Pods_GoldenAger.framework */; };
@@ -136,6 +138,8 @@
 		89CB65C526595FCB00E69EFB /* ProfileVoluntTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVoluntTableViewController.swift; sourceTree = "<group>"; };
 		89CB65CA26596BAF00E69EFB /* SelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectViewController.swift; sourceTree = "<group>"; };
 		89CB65CF26596C7700E69EFB /* FindVoluntViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindVoluntViewController.swift; sourceTree = "<group>"; };
+		89D0EB09265A8F1000348D1A /* P_TaskArchiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = P_TaskArchiveViewController.swift; sourceTree = "<group>"; };
+		89D0EB2E265AA53600348D1A /* NewTaskCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaskCollectionViewCell.swift; sourceTree = "<group>"; };
 		89F4C280265542BA004263B8 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		89F4C288265542FD004263B8 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		8CAECE4EBBBCC44A7D75473C /* Pods-GoldenAgerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoldenAgerTests.debug.xcconfig"; path = "Target Support Files/Pods-GoldenAgerTests/Pods-GoldenAgerTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -268,6 +272,7 @@
 				89987AAB26591DB800856B0F /* LoginPasswordViewController.swift */,
 				89CB65CA26596BAF00E69EFB /* SelectViewController.swift */,
 				89CB65CF26596C7700E69EFB /* FindVoluntViewController.swift */,
+				89D0EB09265A8F1000348D1A /* P_TaskArchiveViewController.swift */,
 			);
 			path = PensioneerViewControllers;
 			sourceTree = "<group>";
@@ -281,6 +286,7 @@
 				8984D1382620CE2200C65994 /* Main.storyboard */,
 				89A51EA8264D991500A964D3 /* MyCollectionViewCell.swift */,
 				89987AB026593CE500856B0F /* TaskCollectionViewCell.swift */,
+				89D0EB2E265AA53600348D1A /* NewTaskCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -630,10 +636,12 @@
 				89A51ECA264F329800A964D3 /* PasswordViewController.swift in Sources */,
 				89632801264D44AA005394B0 /* CategoriesViewController.swift in Sources */,
 				89896C79264AFD4500047CD4 /* Utilities.swift in Sources */,
+				89D0EB2F265AA53700348D1A /* NewTaskCollectionViewCell.swift in Sources */,
 				89C222EB264ACC03002A93FD /* Category.swift in Sources */,
 				8988F9B426582E6F000D1E10 /* ConsultationViewController.swift in Sources */,
 				89896C81264B197F00047CD4 /* LoginViewController.swift in Sources */,
 				89F4C281265542BA004263B8 /* AuthService.swift in Sources */,
+				89D0EB0A265A8F1000348D1A /* P_TaskArchiveViewController.swift in Sources */,
 				89F4C289265542FD004263B8 /* Config.swift in Sources */,
 				896327CA264C5D49005394B0 /* BirthdayViewController.swift in Sources */,
 				89987AB126593CE500856B0F /* TaskCollectionViewCell.swift in Sources */,

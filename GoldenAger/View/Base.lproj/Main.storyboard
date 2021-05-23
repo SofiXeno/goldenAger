@@ -87,6 +87,13 @@
                                 <rect key="frame" x="0.0" y="-7" width="414" height="910"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MBh-0q-2Zx">
+                                <rect key="frame" x="28" y="530" width="359" height="74"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.92156862750000001" green="0.3411764706" blue="0.3411764706" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Привіт друже!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6bt-60-Uhh">
                                 <rect key="frame" x="52" y="94" width="311" height="58"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -135,6 +142,7 @@
                                     <color key="titleShadowColor" systemColor="placeholderTextColor"/>
                                 </state>
                                 <connections>
+                                    <action selector="registationOnClick:" destination="Pqo-DO-WMA" eventType="touchUpInside" id="eMo-Wk-cFk"/>
                                     <segue destination="Vht-ei-uKr" kind="show" identifier="registration" id="9HK-qn-qyf"/>
                                 </connections>
                             </button>
@@ -154,7 +162,7 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3vp-z9-oAe">
-                                <rect key="frame" x="138" y="578" width="138" height="72"/>
+                                <rect key="frame" x="138" y="600" width="138" height="72"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="YesevaOne-Regular" family="Yeseva One" pointSize="48"/>
                                 <size key="titleShadowOffset" width="0.0" height="3"/>
@@ -164,7 +172,6 @@
                                 </state>
                                 <connections>
                                     <action selector="loginOnClick:" destination="Pqo-DO-WMA" eventType="touchUpInside" id="nj8-N1-o1m"/>
-                                    <segue destination="78R-Kv-Aah" kind="show" identifier="login" id="aUQ-3U-zzr"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -177,44 +184,13 @@
                         <outlet property="password" destination="4dl-ob-ihU" id="CIW-LV-dFO"/>
                         <outlet property="phone" destination="AKO-yo-6RI" id="wz7-FK-5Ly"/>
                         <outlet property="registration" destination="X6v-EV-QmF" id="gzf-UW-iyX"/>
+                        <outlet property="warning" destination="MBh-0q-2Zx" id="Nmv-e5-aDy"/>
+                        <segue destination="78R-Kv-Aah" kind="show" identifier="loginRequest_Volunteer" id="LhA-sR-hrD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="coQ-wz-0jI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-446" y="838"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="Uhh-uq-sH1">
-            <objects>
-                <viewController id="PNx-yb-qDl" customClass="ViewController" customModule="GoldenAger" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="nqJ-tA-OIx">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q3s-E0-MoR">
-                                <rect key="frame" x="129" y="145" width="156" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.12941176469999999" green="0.58823529409999997" blue="0.32549019610000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <color key="tintColor" red="0.89411764709999997" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Send request to server">
-                                    <color key="titleShadowColor" red="0.85490196080000003" green="0.1333333333" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                </state>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Server responce label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XAZ-Tu-EqZ">
-                                <rect key="frame" x="111" y="223" width="193" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="lZ0-cp-go8"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vOS-0E-OBg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4617" y="852"/>
+            <point key="canvasLocation" x="-446.37681159420293" y="837.72321428571422"/>
         </scene>
         <!--Registration View Controller-->
         <scene sceneID="k8N-8M-SpR">
@@ -294,7 +270,7 @@
                                     <color key="titleShadowColor" systemColor="placeholderTextColor"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Pqo-DO-WMA" kind="show" id="mFx-Aq-5GY"/>
+                                    <action selector="back:" destination="Vht-ei-uKr" eventType="touchUpInside" id="UWX-Vr-Au1"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mKG-1T-uuh">
@@ -327,6 +303,7 @@
                         <outlet property="name" destination="hyr-oT-yUk" id="YN3-IL-hhd"/>
                         <outlet property="phone" destination="EEn-hf-9Qi" id="Jur-QN-KJS"/>
                         <outlet property="surname" destination="S5I-tf-lsk" id="Qne-HW-XdW"/>
+                        <segue destination="Pqo-DO-WMA" kind="show" identifier="backToLogin" id="aOj-qL-44F"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OWR-X1-MTs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -532,7 +509,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="h5s-pn-DSL" kind="show" id="cQO-36-z0N"/>
+                                    <action selector="loginAction:" destination="YpV-X2-6zZ" eventType="touchUpInside" id="lmz-IX-SJY"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="&lt;Label&gt;" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P7d-t0-5sk">
@@ -560,7 +537,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="IlH-4P-Vou" kind="show" id="5SZ-I4-fKO"/>
+                                    <action selector="registrationAction:" destination="YpV-X2-6zZ" eventType="touchUpInside" id="u4M-Yo-ZaT"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -572,6 +549,8 @@
                         <outlet property="label_name" destination="P7d-t0-5sk" id="2Pq-sb-hRv"/>
                         <outlet property="noBtn" destination="XOf-l4-6bL" id="8v3-9Y-K34"/>
                         <outlet property="yesBtn" destination="YcF-Vy-LA8" id="QCh-Bn-exi"/>
+                        <segue destination="IlH-4P-Vou" kind="show" identifier="register" id="7aP-HW-OGf"/>
+                        <segue destination="h5s-pn-DSL" kind="show" identifier="login" id="gCp-cH-8U8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="icS-f7-Zf6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -611,24 +590,6 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="mXE-kx-2eZ" kind="show" id="iyX-xx-Nu8"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j2S-iL-jIT">
-                                <rect key="frame" x="43" y="708" width="64" height="64"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.96078431369999995" green="1" blue="0.49019607840000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <color key="tintColor" red="0.0" green="0.1843137255" blue="0.18039215689999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" image="chevron.left" catalog="system">
-                                    <color key="titleColor" red="0.0" green="0.1843137255" blue="0.18039215689999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="30"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <segue destination="Vht-ei-uKr" kind="show" id="itN-ZG-PIr"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Rectangle 5" translatesAutoresizingMaskIntoConstraints="NO" id="EIp-6V-SNQ">
@@ -880,8 +841,8 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Введіть нижче Ваш номер телефону" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ija-WR-AS2">
-                                <rect key="frame" x="0.0" y="187" width="414" height="82"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Введіть нижче номер телефону за яким Ви зареєстровані" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ija-WR-AS2">
+                                <rect key="frame" x="26" y="168" width="364" height="135"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="30"/>
                                 <color key="textColor" red="0.043137254899999998" green="0.1215686275" blue="0.1215686275" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -898,7 +859,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ddd-ob-sf7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2277" y="-761"/>
+            <point key="canvasLocation" x="2275.36231884058" y="-761.38392857142856"/>
         </scene>
         <!--Password View Controller-->
         <scene sceneID="m4R-78-fMw">
@@ -913,24 +874,6 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.74901960784313726" green="0.8784313725490196" blue="0.8784313725490196" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8fe-Pr-IXE">
-                                <rect key="frame" x="43" y="708" width="64" height="64"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.96078431369999995" green="1" blue="0.49019607840000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <color key="tintColor" red="0.0" green="0.1843137255" blue="0.18039215689999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" image="chevron.left" catalog="system">
-                                    <color key="titleColor" red="0.0" green="0.1843137255" blue="0.18039215689999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="30"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <segue destination="mXE-kx-2eZ" kind="show" id="250-gd-kiT"/>
-                                </connections>
-                            </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Warm1" translatesAutoresizingMaskIntoConstraints="NO" id="CZ4-du-4hB">
                                 <rect key="frame" x="263" y="0.0" width="151" height="256"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1003,9 +946,16 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="NqV-Vu-j2N" kind="show" id="eBh-5j-MgT"/>
+                                    <action selector="registrationOnClick:" destination="Gf2-lW-QqE" eventType="touchUpInside" id="SCU-c1-JrP"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Two-uj-7AY">
+                                <rect key="frame" x="28" y="652" width="359" height="84"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.92156862750000001" green="0.3411764706" blue="0.3411764706" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="1YM-U4-uPd"/>
                         <color key="backgroundColor" red="0.89411764709999997" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1017,21 +967,13 @@
                     <connections>
                         <outlet property="password" destination="EgP-0v-E3G" id="QUL-u8-FUY"/>
                         <outlet property="repeatPassword" destination="LZV-ih-PRL" id="rRc-x6-07P"/>
+                        <outlet property="warning" destination="Two-uj-7AY" id="gqI-st-2qf"/>
+                        <segue destination="Pqo-DO-WMA" kind="show" identifier="registrationRequest_Volunteer" id="XNe-b8-XAy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LKW-Ee-J6z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2782.608695652174" y="837.72321428571422"/>
-        </scene>
-        <!--Volunteer-->
-        <scene sceneID="Qjw-T2-Ih0">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Volunteer" id="NqV-Vu-j2N" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="XSh-ML-LRJ"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tTz-h3-qQN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3380" y="838"/>
         </scene>
         <!--Birthday View Controller-->
         <scene sceneID="pfs-a0-gw9">
@@ -1072,24 +1014,6 @@
                                 <rect key="frame" x="-15" y="130" width="349" height="16"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pr4-hz-JLv">
-                                <rect key="frame" x="43" y="708" width="64" height="64"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.96078431369999995" green="1" blue="0.49019607840000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <color key="tintColor" red="0.0" green="0.1843137255" blue="0.18039215689999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" image="chevron.left" catalog="system">
-                                    <color key="titleColor" red="0.0" green="0.1843137255" blue="0.18039215689999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="30"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <segue destination="yUX-MJ-LxU" kind="show" id="Nee-s7-nTi"/>
-                                </connections>
-                            </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Rectangle 5" translatesAutoresizingMaskIntoConstraints="NO" id="9Yc-AL-dO0">
                                 <rect key="frame" x="17" y="203" width="438" height="16"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1245,13 +1169,6 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Введіть нижче Ваш пароль" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YT3-KP-YE8">
-                                <rect key="frame" x="22" y="187" width="372" height="82"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="30"/>
-                                <color key="textColor" red="0.043137254899999998" green="0.1215686275" blue="0.1215686275" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i8o-9K-2Xv">
                                 <rect key="frame" x="91" y="672" width="235" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1269,9 +1186,22 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="logIn:" destination="pdf-V3-znU" eventType="touchUpInside" id="87u-1H-6m8"/>
-                                    <segue destination="Kn5-wU-OvS" kind="show" id="pCT-Pw-5mD"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Введіть нижче пароль за яким Ви зареєстровані" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YT3-KP-YE8">
+                                <rect key="frame" x="22" y="187" width="372" height="102"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="30"/>
+                                <color key="textColor" red="0.043137254899999998" green="0.1215686275" blue="0.1215686275" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tKM-i6-VcR">
+                                <rect key="frame" x="35" y="483" width="359" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.92156862750000001" green="0.3411764706" blue="0.3411764706" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="9Yc-Zy-sjZ"/>
                         <color key="backgroundColor" red="0.74901960779999999" green="0.87843137250000003" blue="0.87843137250000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -1279,6 +1209,8 @@
                     <navigationItem key="navigationItem" id="Kvr-gq-EFs"/>
                     <connections>
                         <outlet property="password" destination="zyy-Xr-lUI" id="31X-WZ-tqr"/>
+                        <outlet property="warning" destination="tKM-i6-VcR" id="XY4-QW-C6b"/>
+                        <segue destination="Kn5-wU-OvS" kind="show" identifier="loginRequest_Pensioner" id="JwK-oG-TAT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AmI-gq-If1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1368,9 +1300,15 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="Registration:" destination="UzN-iI-rke" eventType="touchUpInside" id="hRI-dI-c2f"/>
-                                    <segue destination="5C8-7L-vSw" kind="show" id="0RE-bY-D6b"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DUQ-7h-BLR">
+                                <rect key="frame" x="29" y="552" width="359" height="84"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.92156862750000001" green="0.3411764706" blue="0.3411764706" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="P1q-WJ-R4X"/>
                         <color key="backgroundColor" red="0.74901960779999999" green="0.87843137250000003" blue="0.87843137250000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -1379,28 +1317,19 @@
                     <connections>
                         <outlet property="password" destination="XPq-BE-Pce" id="oRG-eN-qIZ"/>
                         <outlet property="repeat_password" destination="4mC-Jo-U5e" id="Swo-EI-eOq"/>
+                        <outlet property="warning" destination="DUQ-7h-BLR" id="9mO-bb-6dF"/>
+                        <segue destination="h5s-pn-DSL" kind="show" identifier="registrationRequest_Pensioner" id="8Ad-cw-Ris"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SCP-rV-nq1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5818.840579710145" y="-60.267857142857139"/>
-        </scene>
-        <!--Pensioner-->
-        <scene sceneID="f4G-OE-Qg2">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Pensioner" id="5C8-7L-vSw" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="qxa-Op-5Xk"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Jnc-Jr-rac" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="6862" y="-60"/>
+            <point key="canvasLocation" x="5817.3913043478269" y="-60.267857142857139"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="iyX-xx-Nu8"/>
-        <segue reference="Nee-s7-nTi"/>
         <segue reference="9HK-qn-qyf"/>
-        <segue reference="sHQ-iC-2NS"/>
+        <segue reference="8Ad-cw-Ris"/>
+        <segue reference="XNe-b8-XAy"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Group 121" width="375" height="812"/>
@@ -1412,16 +1341,12 @@
         <image name="arm1" width="183" height="172"/>
         <image name="arm_1" width="183" height="172"/>
         <image name="arm_31" width="244" height="243.5"/>
-        <image name="chevron.left" catalog="system" width="96" height="128"/>
         <image name="chevron.right" catalog="system" width="96" height="128"/>
         <image name="people1" width="375" height="185"/>
         <image name="stars" width="67" height="143.5"/>
         <image name="stars_1" width="260" height="47"/>
         <systemColor name="placeholderTextColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

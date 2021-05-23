@@ -10,18 +10,28 @@ import UIKit
 class QAViewController: UIViewController {
     @IBOutlet weak var label_name: UILabel!
     var pensioner_registration : PensionerRegistration?
+    
     @IBOutlet weak var noBtn: UIButton!
     
     @IBOutlet weak var yesBtn: UIButton!
     
-//    var nickName: String = ""
+    @IBAction func registrationAction(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "register", sender: self)
+    }
     
+    @IBAction func loginAction(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "login", sender: self)
+    }
+    
+    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
         
         self.label_name.text = "Вітаю " + pensioner_registration!.name! + "!"
      
+        print(pensioner_registration)
  
         print(self.pensioner_registration!.name!)
         
@@ -31,29 +41,17 @@ class QAViewController: UIViewController {
       
   
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Create a variable to store the name the user entered on textField
-        
-        if noBtn.isSelected {
-        
-            let destinationVC = segue.destination as! SurnameViewController
-            destinationVC.pensioner_registration = self.pensioner_registration
-        }
-        if yesBtn.isSelected {
-            let destinationVC = segue.destination as! PhoneViewController
+
             
+        if let registrationVC = segue.destination as? SurnameViewController {
+            registrationVC.pensioner_registration = self.pensioner_registration
         }
+        
+
     }
-         
     
 
-    /*
-    // MARK: - Navigation
+         
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

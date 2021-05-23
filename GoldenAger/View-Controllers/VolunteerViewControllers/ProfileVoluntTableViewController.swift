@@ -8,15 +8,30 @@
 import UIKit
 
 class ProfileVoluntTableViewController: UITableViewController {
+    @IBOutlet weak var name_surname: UILabel!
+    
+    @IBOutlet weak var organization: UILabel!
 
+    
+    @IBOutlet weak var birthday: UILabel!
+    
+    @IBOutlet weak var phone: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
+        Reqs.get(url: "/users/current", params: nil, onSuccess: {(res: UserV) in
+         
+            
+            print(res)
+            self.name_surname.text = res.last_name + " " + res.first_name
+            self.organization.text = "«" + res.organization + "»"
+            self.phone.text = res.phone
+            self.birthday.text = DateHelpers.dateToServerString(date: res.birthday)
 
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+            
+         
+        }, onFail:{res in print(res)})
     }
 
   

@@ -22,7 +22,7 @@ class Birthday2ViewController: UIViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Create a variable to store the name the user entered on textField
-        self.pensioner_registration!.birthday = birthday.date
+        self.pensioner_registration?.birthday = birthday.date
      
     
             let destinationVC = segue.destination as! RegisterPhoneViewController
