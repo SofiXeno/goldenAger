@@ -30,6 +30,8 @@ class TasksViewController: UIViewController, UICollectionViewDelegate, UICollect
     
     
     var task_label:String?
+    var task_id:String?
+    
     
     var _id: String?
     
@@ -80,14 +82,13 @@ class TasksViewController: UIViewController, UICollectionViewDelegate, UICollect
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Create a variable to store the name the user entered on textField
         
-        
-        let destinationVC = segue.destination as! SelectViewController
+        if let destinationVC = segue.destination as? SelectViewController {
+    
         destinationVC.text = self.task_label
+        destinationVC.task_id = self.task_id
         
-        
+        }
     }
-    
-    
     
     
     
@@ -114,10 +115,12 @@ class TasksViewController: UIViewController, UICollectionViewDelegate, UICollect
         
         let c = Tasks[indexPath.row]
         //        print(c)
+        
         cell.name.text = c.title
         cell.about.text = c.description
         cell.time.text = c.time
         cell._id = c._id
+        cell.category_id = c.category_id
         //        print(cell)
         return cell
     }
@@ -132,24 +135,11 @@ class TasksViewController: UIViewController, UICollectionViewDelegate, UICollect
         let cell = collectionView(tasks, cellForItemAt: indexPath!) as! TaskCollectionViewCell
         
         self.task_label = cell.name.text
+        self.task_id = cell._id
         
-        
-        //
-        
-        //        let destinationVC =  SelectViewController()
-        //
-        //        destinationVC.text =  cell.name.text
-        //
-        //
-        //        print(destinationVC.text!)
-        
-//        print(task_label)
         
         self.performSegue(withIdentifier: "task_detailed", sender: self)
-        
-        //        let nvc = navigationController?.pushViewController(selectVC, animated: true)
-        
-        
+ 
         
     }
 }

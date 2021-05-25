@@ -7,25 +7,95 @@
 
 import UIKit
 
-class DoneTasksViewController: UIViewController {
 
-    @IBOutlet weak var image: UIImageView!
+
+struct ArchiveTasksV {
+    var title: String
+    var time: String
+    var description: String
+    var pensioner_name: String
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    
+    init(title: String, time: String, description: String, pensioner_name:String){
+        
+        self.title = title
+        self.time = time
+        self.description = description
+        self.pensioner_name = pensioner_name
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
+    class DoneTasksViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+        
+        @IBOutlet weak var image: UIImageView!
+        
+        
+        private var Tasks : [ArchiveTasksV] = []
+        
+        @IBOutlet weak var archiveV: UICollectionView!
+        
+        
+        override func viewDidLoad() {
+            
+            
+            
+            Reqs.get(url: "/task/completedTasks", params: nil, onSuccess: {(res: [TaskInboxV]) in
+                self.image.alpha = 0
+                for c in res {
+                    
+                    self.Tasks.append(ArchiveTasksV(title: c.template_title, time: c.template_time, description: c.template_description, pensioner_name: c.pensioner_surname + " " + c.pensioner_name))
+                    
+                }
+                self.archiveV.dataSource = self
+                self.archiveV.delegate = self
+                
+                if (self.Tasks.isEmpty){
+                    self.image.alpha = 1
+                }
+                
+                print(self.Tasks)
+                
+            }, onFail:{res in
+                
+                print(res)})
+            
+            
+            super.viewDidLoad()
+            
+            // Do any additional setup after loading the view.
+        }
+        
+        
+        // MARK: UICollectionViewDataSource
+        func numberOfSections(in collectionView: UICollectionView) -> Int {
+            // #warning Incomplete implementation, return the number of sections
+            return 1
+        }
+        
+        func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+            // #warning Incomplete implementation, return the number of items
+            return Tasks.count
+        }
+        
+        func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "archiveTaskCell", for: indexPath) as! ArchiveTaskCollectionViewCell
+            cell.layer.cornerRadius = 15
+            cell.layer.masksToBounds = false
+            
+            // Configure the cell
+            
+            
+            let c = Tasks[indexPath.row]
+            //        print(c)
+            
+            cell.title.text = c.title
+            cell.about.text = c.description
+            cell.name_surname.text = c.pensioner_name
+            cell.time.text = c.time
+            
+            
+            //        print(cell)
+            return cell
+        }
+        
+    }

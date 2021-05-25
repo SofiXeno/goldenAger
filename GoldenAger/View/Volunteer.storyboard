@@ -15,6 +15,7 @@
             <string>Inter-Regular_ExtraBold</string>
             <string>Inter-Regular_Light</string>
             <string>Inter-Regular_Medium</string>
+            <string>Inter-Regular_SemiBold</string>
         </array>
         <array key="YesevaOne-Regular.ttf">
             <string>YesevaOne-Regular</string>
@@ -47,96 +48,86 @@
             </objects>
             <point key="canvasLocation" x="-555" y="-244"/>
         </scene>
-        <!--Вхідні завдання-->
+        <!--InboxV_ViewController-->
         <scene sceneID="qO0-kg-Vf2">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="Jt2-bf-K6s" customClass="InboxViewController" customModule="GoldenAger" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="InboxV_ViewController" title="InboxV_ViewController" modalPresentationStyle="fullScreen" id="Jt2-bf-K6s" customClass="InboxViewController" customModule="GoldenAger" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yWs-jO-yyb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="icB-Wn-4Dy">
-                                <rect key="frame" x="103" y="650" width="208" height="64"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemGreenColor"/>
-                                <fontDescription key="fontDescription" name="Inter-Regular_Bold" family="Inter" pointSize="32"/>
-                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <size key="titleShadowOffset" width="0.0" height="4"/>
-                                <state key="normal" title="Оновити">
-                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="20"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="updateForNewTasks:" destination="Jt2-bf-K6s" eventType="touchUpInside" id="VGZ-We-KDA"/>
-                                </connections>
-                            </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="w9X-Fg-UCu">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="627"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="718"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.74901960779999999" green="0.87843137250000003" blue="0.87843137250000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="DYC-Gq-0ni">
-                                    <size key="itemSize" width="380" height="212"/>
+                                    <size key="itemSize" width="380" height="264"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="10" maxX="0.0" maxY="10"/>
                                 </collectionViewFlowLayout>
                                 <imageView key="backgroundView" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Group 1089" id="hda-zB-Jtd">
-                                    <rect key="frame" x="0.0" y="-88" width="414" height="627"/>
+                                    <rect key="frame" x="0.0" y="-88" width="414" height="718"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 </imageView>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="taskCell" id="aEV-3s-ffv" customClass="NewTaskCollectionViewCell" customModule="GoldenAger" customModuleProvider="target">
-                                        <rect key="frame" x="17" y="10" width="380" height="212"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="newTaskCell" id="aEV-3s-ffv" customClass="NewTaskCollectionViewCell" customModule="GoldenAger" customModuleProvider="target">
+                                        <rect key="frame" x="17" y="10" width="380" height="264"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="QxF-ti-m0C">
-                                            <rect key="frame" x="0.0" y="0.0" width="380" height="212"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="380" height="264"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tQP-c5-Gpx">
-                                                    <rect key="frame" x="20" y="8" width="303" height="74"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Назва" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tQP-c5-Gpx">
+                                                    <rect key="frame" x="20" y="8" width="282" height="74"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="Inter-Regular_ExtraBold" family="Inter" pointSize="19"/>
                                                     <color key="textColor" red="0.0" green="0.1843137255" blue="0.18039215689999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iHe-Gg-7zz">
-                                                    <rect key="frame" x="20" y="60" width="303" height="66"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Опис" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iHe-Gg-7zz">
+                                                    <rect key="frame" x="20" y="60" width="342" height="97"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="Inter-Regular_Medium" family="Inter" pointSize="18"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Q1-VT-kL1">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Час" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Q1-VT-kL1">
                                                     <rect key="frame" x="278" y="28" width="94" height="35"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="Inter-Regular_Light" family="Inter" pointSize="18"/>
                                                     <color key="textColor" red="0.92156862750000001" green="0.3411764706" blue="0.3411764706" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Пенсіонер:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gUY-B0-WWJ">
+                                                    <rect key="frame" x="20" y="165" width="114" height="35"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Inter-Regular_Medium" family="Inter" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Прізвище ім'я" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KXo-rA-nGC">
+                                                    <rect key="frame" x="142" y="165" width="230" height="35"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Inter-Regular_SemiBold" family="Inter" pointSize="19"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eid-Ql-uBb">
-                                                    <rect key="frame" x="20" y="156" width="126" height="48"/>
+                                                    <rect key="frame" x="8" y="208" width="364" height="48"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="Inter-Regular_Bold" family="Inter" pointSize="21"/>
                                                     <state key="normal" title="Прийняти">
                                                         <color key="titleColor" red="0.2784313725" green="0.46274509800000002" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
                                                     </state>
-                                                </button>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mfz-EQ-NEX">
-                                                    <rect key="frame" x="246" y="155" width="126" height="48"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" name="Inter-Regular_Bold" family="Inter" pointSize="21"/>
-                                                    <state key="normal" title="Відхилити">
-                                                        <color key="titleColor" red="0.92156862750000001" green="0.3411764706" blue="0.3411764706" alpha="1" colorSpace="calibratedRGB"/>
-                                                    </state>
+                                                    <connections>
+                                                        <action selector="acceptTask:" destination="aEV-3s-ffv" eventType="touchUpInside" id="WGb-6r-UK5"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </collectionViewCellContentView>
                                         <color key="backgroundColor" red="0.93725490199999995" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <size key="customSize" width="380" height="212"/>
+                                        <size key="customSize" width="380" height="264"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                 <integer key="value" value="5"/>
@@ -156,13 +147,51 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <outlet property="about" destination="iHe-Gg-7zz" id="ynd-9x-u8l"/>
-                                            <outlet property="name" destination="tQP-c5-Gpx" id="J8P-nf-mgL"/>
-                                            <outlet property="time" destination="4Q1-VT-kL1" id="3iO-b7-bnp"/>
+                                            <outlet property="about" destination="iHe-Gg-7zz" id="dJI-WR-lzZ"/>
+                                            <outlet property="pesionerName" destination="KXo-rA-nGC" id="O7A-cZ-y0J"/>
+                                            <outlet property="time" destination="4Q1-VT-kL1" id="eLX-CA-1GQ"/>
+                                            <outlet property="title" destination="tQP-c5-Gpx" id="8Sw-cu-iFK"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="icB-Wn-4Dy">
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <fontDescription key="fontDescription" name="Inter-Regular_Bold" family="Inter" pointSize="32"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <size key="titleShadowOffset" width="0.0" height="4"/>
+                                <state key="normal" title="Оновити">
+                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="updateForNewTasks:" destination="Jt2-bf-K6s" eventType="touchUpInside" id="VGZ-We-KDA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hkq-zj-tk1">
+                                <rect key="frame" x="113" y="736" width="208" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <fontDescription key="fontDescription" name="Inter-Regular_Bold" family="Inter" pointSize="32"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <size key="titleShadowOffset" width="0.0" height="4"/>
+                                <state key="normal" title="Оновити">
+                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="updateForNewTasks:" destination="Jt2-bf-K6s" eventType="touchUpInside" id="WM0-mM-gYs"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="J7O-X5-xG8"/>
                         <color key="backgroundColor" red="0.74901960779999999" green="0.87843137250000003" blue="0.87843137250000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -181,11 +210,12 @@
                     </navigationItem>
                     <connections>
                         <outlet property="image" destination="hda-zB-Jtd" id="oWx-dh-oa8"/>
+                        <outlet property="inboxTasksV" destination="w9X-Fg-UCu" id="quE-Ny-oM1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kot-gv-zaU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1267" y="503"/>
+            <point key="canvasLocation" x="-1268.1159420289855" y="502.90178571428567"/>
         </scene>
         <!--Profile Volunt Table View Controller-->
         <scene sceneID="Dk0-jF-aN5">
@@ -318,7 +348,22 @@
                             <outlet property="delegate" destination="kq9-8h-1q0" id="uxU-cC-gDz"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="uJ9-E5-Jej"/>
+                    <navigationItem key="navigationItem" id="uJ9-E5-Jej">
+                        <barButtonItem key="backBarButtonItem" title="Профіль" id="Qug-8h-Cnk"/>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="y7d-sK-tpC">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="gWE-Nx-asZ">
+                                <rect key="frame" x="232" y="4.5" width="162" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="Поточне завдання">
+                                    <color key="titleColor" red="0.0" green="0.1843137255" blue="0.18039215689999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="UFs-wr-fFN" kind="show" id="auo-2m-xAP"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="birthday" destination="vzc-ro-zNm" id="aaQ-aK-GYJ"/>
                         <outlet property="name_surname" destination="KHW-dL-uFB" id="AW4-yU-VrK"/>
@@ -329,6 +374,119 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yTa-Be-hJr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="569.56521739130437" y="1326.5625"/>
+        </scene>
+        <!--Current Task View Controller-->
+        <scene sceneID="Twj-aU-mz1">
+            <objects>
+                <viewController id="UFs-wr-fFN" customClass="VCurrentTaskViewController" customModule="GoldenAger" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bEY-es-JI7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="5wt-Q9-Cl0">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="357"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.74901960779999999" green="0.87843137250000003" blue="0.87843137250000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="o4I-1y-8tV">
+                                    <size key="itemSize" width="380" height="233"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="10" maxX="0.0" maxY="10"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="currentTaskVCell" id="0CE-LX-wrl" customClass="ArchiveTaskCollectionViewCell" customModule="GoldenAger" customModuleProvider="target">
+                                        <rect key="frame" x="17" y="10" width="380" height="233"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="tm3-pv-136">
+                                            <rect key="frame" x="0.0" y="0.0" width="380" height="233"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mWu-au-eAV">
+                                                    <rect key="frame" x="20" y="8" width="303" height="74"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Inter-Regular_ExtraBold" family="Inter" pointSize="19"/>
+                                                    <color key="textColor" red="0.0" green="0.1843137255" blue="0.18039215689999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vfu-qB-u14">
+                                                    <rect key="frame" x="20" y="60" width="340" height="111"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Inter-Regular_Medium" family="Inter" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nj9-sh-ANT">
+                                                    <rect key="frame" x="278" y="28" width="94" height="35"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Inter-Regular_Light" family="Inter" pointSize="18"/>
+                                                    <color key="textColor" red="0.92156862750000001" green="0.3411764706" blue="0.3411764706" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Пенсіонер:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="faH-dT-rku">
+                                                    <rect key="frame" x="20" y="179" width="114" height="35"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Inter-Regular_Medium" family="Inter" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Прізвище ім'я" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vT5-tc-8XE">
+                                                    <rect key="frame" x="142" y="179" width="230" height="35"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Inter-Regular_SemiBold" family="Inter" pointSize="19"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </collectionViewCellContentView>
+                                        <color key="backgroundColor" red="0.93725490199999995" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <size key="customSize" width="380" height="233"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowOpacity">
+                                                <integer key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="layer.shadowColor">
+                                                <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowRadius">
+                                                <integer key="value" value="0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="NO"/>
+                                            <userDefinedRuntimeAttribute type="size" keyPath="layer.shadowOffset">
+                                                <size key="value" width="0.0" height="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="about" destination="Vfu-qB-u14" id="TdE-ZV-JFF"/>
+                                            <outlet property="name_surname" destination="vT5-tc-8XE" id="LBD-GQ-2RN"/>
+                                            <outlet property="time" destination="nj9-sh-ANT" id="KxD-DM-aR0"/>
+                                            <outlet property="title" destination="mWu-au-eAV" id="5uT-QA-GFe"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="У Вас немає поточних завдань" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sk2-zU-yIy">
+                                <rect key="frame" x="70" y="365" width="274" height="110"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="fcE-yT-5IC"/>
+                        <color key="backgroundColor" red="0.74901960779999999" green="0.87843137250000003" blue="0.87843137250000003" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="NMG-Rv-9p3"/>
+                    <connections>
+                        <outlet property="currentTaskInfoV" destination="sk2-zU-yIy" id="0rh-D1-PGp"/>
+                        <outlet property="currentTaskV" destination="5wt-Q9-Cl0" id="66B-cu-rfg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Mv-jQ-cUD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1489.8550724637682" y="1331.9196428571429"/>
         </scene>
         <!--Режим-->
         <scene sceneID="zXK-5b-KLb">
@@ -395,25 +553,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="GVh-XB-41D">
-                                <rect key="frame" x="0.0" y="43" width="414" height="770"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.74901960779999999" green="0.87843137250000003" blue="0.87843137250000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="pq4-nv-VKQ">
-                                    <size key="itemSize" width="380" height="212"/>
+                                    <size key="itemSize" width="380" height="233"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="10" maxX="0.0" maxY="10"/>
                                 </collectionViewFlowLayout>
                                 <imageView key="backgroundView" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Group 10" id="D8s-EA-7oa">
-                                    <rect key="frame" x="0.0" y="-45" width="414" height="770"/>
+                                    <rect key="frame" x="0.0" y="-88" width="414" height="813"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 </imageView>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="taskCell" id="U2M-QI-rJ2" customClass="TaskCollectionViewCell" customModule="GoldenAger" customModuleProvider="target">
-                                        <rect key="frame" x="17" y="10" width="380" height="212"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="archiveTaskCell" id="U2M-QI-rJ2" customClass="ArchiveTaskCollectionViewCell" customModule="GoldenAger" customModuleProvider="target">
+                                        <rect key="frame" x="17" y="10" width="380" height="233"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Sr0-Gf-kYs">
-                                            <rect key="frame" x="0.0" y="0.0" width="380" height="212"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="380" height="233"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gn3-Gw-Z9L">
@@ -424,7 +582,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4jN-Q3-OXx">
-                                                    <rect key="frame" x="20" y="60" width="340" height="158"/>
+                                                    <rect key="frame" x="20" y="60" width="340" height="111"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="Inter-Regular_Medium" family="Inter" pointSize="18"/>
                                                     <nil key="textColor"/>
@@ -437,10 +595,24 @@
                                                     <color key="textColor" red="0.92156862750000001" green="0.3411764706" blue="0.3411764706" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Пенсіонер:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rZt-p9-PBe">
+                                                    <rect key="frame" x="20" y="179" width="114" height="35"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Inter-Regular_Medium" family="Inter" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Прізвище ім'я" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j5J-el-34L">
+                                                    <rect key="frame" x="142" y="179" width="230" height="35"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Inter-Regular_SemiBold" family="Inter" pointSize="19"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                         </collectionViewCellContentView>
                                         <color key="backgroundColor" red="0.93725490199999995" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <size key="customSize" width="380" height="212"/>
+                                        <size key="customSize" width="380" height="233"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                 <integer key="value" value="5"/>
@@ -460,9 +632,10 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <outlet property="about" destination="4jN-Q3-OXx" id="jiG-50-1Ra"/>
-                                            <outlet property="name" destination="gn3-Gw-Z9L" id="c51-Yx-Mmo"/>
-                                            <outlet property="time" destination="laz-ft-vjo" id="wEJ-16-e4w"/>
+                                            <outlet property="about" destination="4jN-Q3-OXx" id="G4c-dd-eT2"/>
+                                            <outlet property="name_surname" destination="j5J-el-34L" id="IBe-PJ-hxr"/>
+                                            <outlet property="time" destination="laz-ft-vjo" id="QOS-x1-SEb"/>
+                                            <outlet property="title" destination="gn3-Gw-Z9L" id="KcS-TY-pa6"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -484,12 +657,13 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="archiveV" destination="GVh-XB-41D" id="i2V-7m-muu"/>
                         <outlet property="image" destination="D8s-EA-7oa" id="KSd-6m-Bp1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O3f-ic-emf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="535" y="503"/>
+            <point key="canvasLocation" x="534.78260869565224" y="502.90178571428567"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ToQ-6U-1vR">
@@ -520,7 +694,7 @@
         <scene sceneID="4DC-ee-OMw">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="qQ9-Q6-KBn" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="inbox" badgeValue="0" id="Tjg-Mj-icH">
+                    <tabBarItem key="tabBarItem" title="" image="inbox" id="Tjg-Mj-icH">
                         <color key="badgeColor" red="0.92156862750000001" green="0.3411764706" blue="0.3411764706" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBarItem>
                     <toolbarItems/>
@@ -571,7 +745,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="rSW-RY-bYV"/>
+        <segue reference="k2V-DL-K9z"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Group 10" width="306" height="250"/>

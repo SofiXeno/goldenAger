@@ -45,7 +45,7 @@ class LoginViewController: UIViewController {
             if (volunteer_password.count >= 5) && (matches != nil){
                 
                 Reqs.post(url:"/auth/login",
-                          params:["phone":phone.text!, "password":password.text!],
+                          params:["phone":phone.text!, "password":password.text!, "is_volunteer" : true],
                           onSuccess: {
                             (res: Token) in
                             
@@ -60,7 +60,7 @@ class LoginViewController: UIViewController {
                           onFail: {
                             (res : MessageResponse) in
                             
-                            self.warning.text = res.message + "!"
+                            self.warning.text = res.message
                             self.warning.textColor = .indianRed
                             
                             print(res.message)
