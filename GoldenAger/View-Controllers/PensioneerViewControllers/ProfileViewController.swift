@@ -43,9 +43,7 @@ class ProfileViewController: UITableViewController {
  
     
     override func viewDidLoad() {
-     
-       // self.tabBarController?.tabBar.isHidden = false
-        
+
         Reqs.get(url: "/users/current", params: nil, onSuccess: {(res: UserP) in
          
             

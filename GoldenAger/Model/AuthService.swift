@@ -19,10 +19,7 @@ class AuthService {
         
         var headers: HTTPHeaders = [:]
         
-        //        if let authorizationHeader = Request.authorizationHeader(user: user, password: password) {
-        //            headers[authorizationHeader.key] = authorizationHeader.value
-        //        }
-        
+
         AF.request(
             "http://golden-ager.herokuapp.com/auth/registration" + endPoint,
             method: .post,
@@ -42,8 +39,6 @@ class AuthService {
                 }
             }
         
-        
-
     }
     
     struct LoginResponse {

@@ -80,8 +80,7 @@ class TasksViewController: UIViewController, UICollectionViewDelegate, UICollect
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Create a variable to store the name the user entered on textField
-        
+       
         if let destinationVC = segue.destination as? SelectViewController {
     
         destinationVC.text = self.task_label
@@ -95,12 +94,10 @@ class TasksViewController: UIViewController, UICollectionViewDelegate, UICollect
     
     // MARK: UICollectionViewDataSource
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of items
         return Tasks.count
     }
     
@@ -108,20 +105,17 @@ class TasksViewController: UIViewController, UICollectionViewDelegate, UICollect
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "taskCell", for: indexPath) as! TaskCollectionViewCell
         cell.layer.cornerRadius = 15
         cell.layer.masksToBounds = false
-        
-        // Configure the cell
+
         
         cell.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tap(_:))))
         
         let c = Tasks[indexPath.row]
-        //        print(c)
         
         cell.name.text = c.title
         cell.about.text = c.description
         cell.time.text = c.time
         cell._id = c._id
         cell.category_id = c.category_id
-        //        print(cell)
         return cell
     }
     

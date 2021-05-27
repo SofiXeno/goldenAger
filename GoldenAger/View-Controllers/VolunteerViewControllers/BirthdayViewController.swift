@@ -14,16 +14,12 @@ class BirthdayViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        
-
-        // Do any additional setup after loading the view.
+   
     }
     
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Create a variable to store the name the user entered on textField
+    
         self.volonteer_registration?.birthday = birthday.date
      
     

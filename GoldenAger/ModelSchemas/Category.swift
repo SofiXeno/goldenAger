@@ -6,8 +6,6 @@
 //
 
 import Foundation
-// data:Category
-// data.ert
 
 struct Category: Decodable, Encodable {
     var _id: String
@@ -25,13 +23,4 @@ struct Category: Decodable, Encodable {
 
 
 }
-
-//extension Category : DocumentSerializable {
-//
-//    init?(dictionary: [String : Any]) {
-//
-//        let title = dictionary["title"] as? String ?? "Error! Title Field Not Found!"
-//
-//        self.init(title: title)
-//    }
 

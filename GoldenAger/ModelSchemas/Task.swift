@@ -201,19 +201,15 @@ struct ArchiveTasksP: Decodable {
         let templateContainer = try outerContainer.nestedContainer(keyedBy: TemplateKeys.self,
                                                                      forKey: .template_id)
         
-        
         self._id = try outerContainer.decode(String.self, forKey: ._id)
         self.pensioner_id = try outerContainer.decode(String.self, forKey: .pensioner_id)
         self.task_is_done = try outerContainer.decode(Bool.self, forKey: .task_is_done)
-        
-        
-        
+    
         self.template_id = try templateContainer.decode(String.self, forKey: ._id)
         self.template_title = try templateContainer.decode(String.self, forKey: .title)
         self.template_description = try templateContainer.decode(String.self, forKey: .description)
         self.template_time = try templateContainer.decode(String.self, forKey: .time)
-        
-
+    
     }
     
     
@@ -222,7 +218,6 @@ struct ArchiveTasksP: Decodable {
 
 struct MyVolunteer: Decodable {
 
-  //  var volunteer: String
     var volunteer: String?
     
     var _id: String?
@@ -262,8 +257,7 @@ struct MyVolunteer: Decodable {
         let volunteerContainer = try? outerContainer.nestedContainer(keyedBy: VolunteerKeys.self,
                                                                      forKey: .volunteer)
      
-        
-        
+    
             self._id = try volunteerContainer?.decodeIfPresent(String.self, forKey: ._id)
             self.is_volunteer = try volunteerContainer?.decodeIfPresent(Bool.self, forKey: .is_volunteer)
             self.phone = try volunteerContainer?.decodeIfPresent(String.self, forKey: .phone)
@@ -279,10 +273,6 @@ struct MyVolunteer: Decodable {
             volunteer = nil
         }
         
-        
-        
-    
-        
     }
     
     
@@ -290,104 +280,3 @@ struct MyVolunteer: Decodable {
 
 
 
-
-//extension TaskInboxV : DocumentSerializable {
-//
-//
-//    init?(dictionary: [String : Any]) {
-//
-//        let volunteer_id = dictionary["volunteer_id"] as? String ?? nil
-//
-//        let task_is_done = dictionary["task_is_done"] as? Bool ?? false
-//
-//        let _id = dictionary["_id"] as? String ?? "Error! _id Field Not Found!"
-//
-//
-//
-//        let pensioner_id = dictionary["pensioner_id"] as? String ?? "Error! pensioner_id Field Not Found!"
-//        let pensioner_name = dictionary["pensioner_name"] as? String ?? "Error! pensioner_name Field Not Found!"
-//
-//        let pensioner_surname = dictionary["pensioner_surname"] as? String ?? "Error! pensioner_surname Field Not Found!"
-//
-//        let template_id = dictionary["template_id"] as? String ?? "Error! template_id Field Not Found!"
-//
-//        let template_title = dictionary["template_title"] as? String ?? "Error! template_id Field Not Found!"
-//
-//        let template_description = dictionary["template_description"] as? String ?? "Error! template_id Field Not Found!"
-//
-//        let template_time = dictionary["template_time"] as? String ?? "Error! template_id Field Not Found!"
-//
-//
-//        self.init(volunteer_id: volunteer_id, task_is_done: task_is_done, _id: _id, pensioner_id: pensioner_id, pensioner_name: pensioner_name, pensioner_surname :pensioner_surname, template_id:template_id, template_title:template_title, template_description:template_description,template_time:template_time)
-//    }
-//}
-
-
-//
-//struct TaskInboxV: Codable {
-//
-//    var _id: String
-//    var volunteer_id: String
-//    var task_is_done: Bool
-//
-//    var _idt: String
-//    var title: String
-//    var description: String
-//    var time: String
-//
-//    var _id_p: String
-//    var name: String
-//    var surname: String
-//
-//
-//    enum CodingKeys : String, CodingKey{
-//        case _id, volunteer_id, task_is_done, template_id, pensioner_id
-//
-//    }
-//
-//    enum NameKeys: CodingKeys {
-//        init?(rawValue: String) {
-//            switch rawValue {
-//                   case 0 : self = ._id_t
-//                   case 1 : self = .title
-//                   case 2 : self = .description
-//                   case 3 : self = .time
-//                   case 4 : self = ._id_p
-//                    case 5 : self = .name
-//            case 5 : self = .name
-//                   default : return nil
-//                   }
-//        }
-//
-//
-//
-//        typealias RawValue = String
-//
-//       case _id_t, title, description, time, _id_p, name, surname
-//    }
-//
-//
-//}
-//
-//extension TaskInboxV : Decodable {
-//
-//    init(from decoder: Decoder) throws {
-//        let container = try decoder.container(keyedBy: CodingKeys.self)
-//
-//        _id = try container.decode(String.self, forKey: ._id)
-//        volunteer_id = try container.decode(String.self, forKey: .volunteer_id)
-//        task_is_done = try container.decode(Bool.self, forKey: .task_is_done)
-//
-//        let template_id = try container.nestedContainer(keyedBy: NameKeys.self, forKey: .template_id)
-//        let pensioner_id = try container.nestedContainer(keyedBy: NameKeys.self, forKey: .pensioner_id)
-//
-//
-//        _idt = try name.decode(String.self, forKey: ._idt)
-//        title = try name.decode(String.self, forKey: .title)
-//        description = try name.decode(String.self, forKey: .description)
-//        description = try name.decode(String.self, forKey: .description)
-//    }
-//
-//
-//
-//}

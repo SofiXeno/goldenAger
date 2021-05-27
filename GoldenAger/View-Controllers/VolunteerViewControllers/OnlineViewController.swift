@@ -9,8 +9,6 @@ import UIKit
 import CSS3ColorsSwift
 import Hue
 
-
-
 class OnlineViewController: UIViewController {
 
     @IBOutlet weak var online: UISwitch!
@@ -22,8 +20,7 @@ class OnlineViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-   
-        // Do any additional setup after loading the view.
+
     }
     
 
@@ -47,11 +44,5 @@ class OnlineViewController: UIViewController {
             return
         }
     }
-
-   
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        online.setOn(false, animated: true)
-//    }
-
 
 }

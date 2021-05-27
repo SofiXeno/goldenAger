@@ -18,15 +18,12 @@ class RegistrationViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
         self.volonteer_registration = VolunteerRegistration()
         
         Utilities.paddingTextField(name)
         Utilities.paddingTextField(surname)
         Utilities.paddingTextField(phone)
-        
-        // Do any additional setup after loading the view.
+
     }
     
     @IBAction func back(_ sender: UIButton) {
@@ -37,7 +34,6 @@ class RegistrationViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Create a variable to store the name the user entered on textField
         if let destinationVC = segue.destination as? OrganizationViewController{
         self.volonteer_registration?.name = name.text!
         self.volonteer_registration?.surname = surname.text!

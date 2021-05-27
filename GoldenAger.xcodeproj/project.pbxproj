@@ -43,7 +43,6 @@
 		89A4777226482C1F00E88343 /* Pensioner.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89A4777126482C1F00E88343 /* Pensioner.storyboard */; };
 		89A4777A26482C7800E88343 /* Volunteer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89A4777926482C7800E88343 /* Volunteer.storyboard */; };
 		89A51EAA264D991500A964D3 /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A51EA8264D991500A964D3 /* MyCollectionViewCell.swift */; };
-		89A51EB0264DA82D00A964D3 /* FieldsValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A51EAF264DA82D00A964D3 /* FieldsValidator.swift */; };
 		89A51EB8264DF19A00A964D3 /* TaskTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A51EB7264DF19900A964D3 /* TaskTemplate.swift */; };
 		89A51EC2264DF51900A964D3 /* TasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A51EC1264DF51900A964D3 /* TasksViewController.swift */; };
 		89A51ECA264F329800A964D3 /* PasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A51EC9264F329700A964D3 /* PasswordViewController.swift */; };
@@ -130,7 +129,6 @@
 		89A4777126482C1F00E88343 /* Pensioner.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Pensioner.storyboard; sourceTree = "<group>"; };
 		89A4777926482C7800E88343 /* Volunteer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Volunteer.storyboard; sourceTree = "<group>"; };
 		89A51EA8264D991500A964D3 /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
-		89A51EAF264DA82D00A964D3 /* FieldsValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldsValidator.swift; sourceTree = "<group>"; };
 		89A51EB7264DF19900A964D3 /* TaskTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTemplate.swift; sourceTree = "<group>"; };
 		89A51EC1264DF51900A964D3 /* TasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksViewController.swift; sourceTree = "<group>"; };
 		89A51EC9264F329700A964D3 /* PasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordViewController.swift; sourceTree = "<group>"; };
@@ -331,7 +329,6 @@
 			isa = PBXGroup;
 			children = (
 				89C222E1264ACBDF002A93FD /* ModelSchemas */,
-				89A51EAF264DA82D00A964D3 /* FieldsValidator.swift */,
 				89F4C280265542BA004263B8 /* AuthService.swift */,
 			);
 			path = Model;
@@ -640,7 +637,6 @@
 				896327B0264C11CF005394B0 /* RegistrationViewController.swift in Sources */,
 				89C222E3264ACBF3002A93FD /* User.swift in Sources */,
 				89C222F0264ACC10002A93FD /* Task.swift in Sources */,
-				89A51EB0264DA82D00A964D3 /* FieldsValidator.swift in Sources */,
 				89CB65CB26596BAF00E69EFB /* SelectViewController.swift in Sources */,
 				899823FA26506BAC00371489 /* DoneTasksViewController.swift in Sources */,
 				89A51EB8264DF19A00A964D3 /* TaskTemplate.swift in Sources */,

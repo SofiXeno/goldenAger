@@ -16,9 +16,7 @@ class PhoneViewController: UIViewController {
     
         super.viewDidLoad()
         
-        
         self.pensioner_login  = PensionerLogin()
-        
         
         Utilities.paddingTextField(phone)
       
@@ -26,9 +24,8 @@ class PhoneViewController: UIViewController {
     
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Create a variable to store the name the user entered on textField
+
         self.pensioner_login!.phone = phone.text!
-        
         
         let destinationVC = segue.destination as! LoginPasswordViewController
         

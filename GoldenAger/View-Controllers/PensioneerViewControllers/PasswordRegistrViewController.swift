@@ -58,58 +58,15 @@ class PasswordRegistrViewController: UIViewController {
         self.present(alert, animated: true, completion: nil)
         
     }
-     
-        
-
         
     }
-    
- 
-    
+        
     var pensioner_registration : PensionerRegistration?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.warning.text=""
 
-//        print(self.pensioner_registration)
-       
-        
-        // Do any additional setup after loading the view.
     }
-    
 
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        // Create a variable to store the name the user entered on textField
-//         self.pensioner_registration?.password = password.text!
-//
-//
-//      //  let destinationVC = segue.destination as! CategoriesViewController
-//
-//
-//        let tabCtrl: UITabBarController = segue.destination as! UITabBarController
-//        let nav = tabCtrl.viewControllers![0] as! UINavigationController
-//        let destinationVC = nav.topViewController as! CategoriesViewController
-//
-//        destinationVC.pensioner_registration = self.pensioner_registration
-//
-//
-//        print(pensioner_registration)
-//    }
-//
-//    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-//
-//        let pensioner_password1 = password.text ?? ""
-//        let pensioner_password2 = repeat_password.text ?? ""
-//
-//        if  (pensioner_password1 == pensioner_password2) && (pensioner_password1.count >= 5) && (pensioner_password2.count >= 5){
-//            return true
-//        }
-//        let alert = UIAlertController(title: "Помилка", message: "Паролі в двох полях мають співпадати та бути більшими за 5 символів", preferredStyle: .alert)
-//        let okAction = UIAlertAction(title: "ОК", style: .default, handler: nil)
-//        alert.addAction(okAction)
-//        self.present(alert, animated: true, completion: nil)
-//        return false
-//
-//    }
 }

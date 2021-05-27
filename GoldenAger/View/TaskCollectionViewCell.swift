@@ -17,5 +17,4 @@ class TaskCollectionViewCell: UICollectionViewCell {
     var category_id:String=""
     
     
-    
 }

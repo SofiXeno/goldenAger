@@ -23,8 +23,6 @@ class NewTaskCollectionViewCell: UICollectionViewCell {
     
     var _id: String?
     
-   // var success: Bool = false
-    
     weak var delegate: CollectionViewCellDelegate?
     
  
@@ -32,11 +30,6 @@ class NewTaskCollectionViewCell: UICollectionViewCell {
         
         print(self._id!)
 
-//        print(self)
-        
-//        let refreshAlert = UIAlertController(title: "Прийняти завдання", message: "Ви впевнені що хочете прийняти завдання? Це незворотна дія, Вам доведеться виконати завдання яке ви прийняли", preferredStyle: .alert)
-//
-//        refreshAlert.addAction(UIAlertAction(title: "Так", style: .default, handler: { (action: UIAlertAction!) in
             
             Reqs.post(url: "/task/take/" + self._id!, params: nil, onSuccess: {(res : MessageResponse) in
                 
@@ -59,16 +52,7 @@ class NewTaskCollectionViewCell: UICollectionViewCell {
                 
                 
             })
-            
-       // }))
-        
-//        refreshAlert.addAction(UIAlertAction(title: "Ні", style: .cancel, handler: { (action: UIAlertAction!) in
-//            refreshAlert.dismiss(animated: true, completion: nil)
-//        }))
-        
-       // present(refreshAlert, animated: true, completion: nil)
-        
-        
+              
         
         
     }

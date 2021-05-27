@@ -85,56 +85,8 @@ class InboxViewController: UIViewController, UICollectionViewDelegate, UICollect
             print(res)})
         
     }
-        
-//        let refreshAlert = UIAlertController(title: "Прийняти завдання", message: "Ви впевнені що хочете прийняти завдання? Це незворотна дія, Вам доведеться виконати завдання яке ви прийняли", preferredStyle: .alert)
-//
-//        refreshAlert.addAction(UIAlertAction(title: "Так", style: .default, handler: { (action: UIAlertAction!) in
-//
-//
-//
-//
-//            Reqs.post(url: "/task/take/" + self.task_id!, params: nil, onSuccess: {(res : MessageResponse) in
-//
-//             print(res)
-//
-//
-//                let alert = UIAlertController(title: "Вітаю", message: res.message, preferredStyle: .alert)
-//                let okAction = UIAlertAction(title: "ОК", style: .default, handler: nil)
-//                alert.addAction(okAction)
-//                self.present(alert, animated: true, completion: nil)
-//
-//
-//                //         print(self.Tasks)
-//
-//            }, onFail:{(res : MessageResponse) in
-//
-//                let alert = UIAlertController(title: "Помилка", message: res.message, preferredStyle: .alert)
-//                let okAction = UIAlertAction(title: "ОК", style: .default, handler: nil)
-//                alert.addAction(okAction)
-//                self.present(alert, animated: true, completion: nil)
-//
-//                print(res)
-//
-//
-//            })
-//
-//        }))
-//
-//        refreshAlert.addAction(UIAlertAction(title: "Ні", style: .cancel, handler: { (action: UIAlertAction!) in
-//            refreshAlert.dismiss(animated: true, completion: nil)
-//        }))
-//
-//        present(refreshAlert, animated: true, completion: nil)
-//
-//
-        
-        
-    
     
     override func viewDidLoad() {
-        
-//        acceptTask.addGestureRecognizer(UIGestureRecognizer(target: self, action: #selector(tap(_:))))
-        
         super.viewDidLoad()
         
         self.inboxTasksV.dataSource = self
@@ -164,49 +116,16 @@ class InboxViewController: UIViewController, UICollectionViewDelegate, UICollect
         cell.layer.masksToBounds = false
         cell.delegate = self
 
-
-        
-//        if cell.success {
-//            Tasks.remove(at: indexPath.row)
-//            self.inboxTasksV.reloadData()
-//
-//        }
-        
-      //  cell.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tap(_:))))
-
         let c = Tasks[indexPath.row]
-        //        print(c)
 
         cell._id = c._id
         cell.title.text = c.title
         cell.about.text = c.description
         cell.time.text = c.time
         cell.pesionerName.text = c.pensioner_name
-        //        print(cell)
+ 
         return cell
     }
-
-    
-    
-    
-    
-//    @objc func tap(_ sender: UITapGestureRecognizer) {
-//
-//        let location = sender.location(in: inboxTasksV)
-//        let indexPath = inboxTasksV.indexPathForItem(at: location)
-//        let cell = collectionView(inboxTasksV, cellForItemAt: indexPath!) as! NewTaskCollectionViewCell
-//
-//        self.task_id = cell._id
-//        print(self.task_id!)
-//
-//
-//
-//
-//    }
-    
-    
-   
-    
 
 }
 

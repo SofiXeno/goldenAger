@@ -28,8 +28,6 @@ class SelectViewController: UIViewController {
         
         self.task_title.text = self.text
         
-        
-        // Do any additional setup after loading the view.
     }
     
     
@@ -43,16 +41,11 @@ class SelectViewController: UIViewController {
                     
                     self.warning.text = ""
                     
-                    
                     self.textNext1 = "Заявка з Вашим завданням була успішно створена !"
                     self.textNext2 = "Дізнайтеся чи знайшовся волонтер, котрий прийняв Ваше завдання волонтер, натиснувши на кнопку"
                     
-                    
                     self.performSegue(withIdentifier: "successTaskCreation", sender: self)
-                    
                     print(res)
-                    
-                    
                     self.createTask.alpha = 0
                     
                     
@@ -70,9 +63,7 @@ class SelectViewController: UIViewController {
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Create a variable to store the name the user entered on textField
-        
-        if let findVC = segue.destination as? PCurrentTaskViewController {
+      if let findVC = segue.destination as? PCurrentTaskViewController {
             findVC.textForSuccess1 = self.textNext1
             findVC.textForSuccess2 = self.textNext2
         

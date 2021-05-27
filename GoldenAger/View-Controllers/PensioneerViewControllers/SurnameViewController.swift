@@ -20,7 +20,6 @@ class SurnameViewController: UIViewController, UITextFieldDelegate {
 
         print(pensioner_registration)
         
-        
         self.surname.delegate = self
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(handleTap))
@@ -30,9 +29,7 @@ class SurnameViewController: UIViewController, UITextFieldDelegate {
 
         Utilities.paddingTextField(surname)
     }
-    
-    
-    
+
     
     @objc func handleTap() {
          surname.resignFirstResponder() // dismiss keyoard
@@ -65,16 +62,4 @@ class SurnameViewController: UIViewController, UITextFieldDelegate {
         
     }
     
-    
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

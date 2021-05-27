@@ -37,7 +37,6 @@ class VCurrentTaskViewController: UIViewController, UICollectionViewDelegate, UI
     var task_time : String=""
     var pensioner_name : String=""
     
-    
     override func viewDidLoad() {
         
         
@@ -63,10 +62,8 @@ class VCurrentTaskViewController: UIViewController, UICollectionViewDelegate, UI
             
         })
         
-        
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
+       
     }
     
     
@@ -75,12 +72,12 @@ class VCurrentTaskViewController: UIViewController, UICollectionViewDelegate, UI
     
     // MARK: UICollectionViewDataSource
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
+        // #warning Incomplete implementation, return the number of section
         return 1
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of items
+       
         return 1
     }
     

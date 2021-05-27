@@ -59,19 +59,16 @@ class P_TaskArchiveViewController: UIViewController, UICollectionViewDelegate, U
         
         
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
+
     }
     
     
     // MARK: UICollectionViewDataSource
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of items
         return Tasks.count
     }
     
@@ -79,20 +76,14 @@ class P_TaskArchiveViewController: UIViewController, UICollectionViewDelegate, U
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "archiveTaskP", for: indexPath) as! ArchiveTaskCollectionViewCell
         cell.layer.cornerRadius = 15
         cell.layer.masksToBounds = false
-        
-        // Configure the cell
-        
-        
+ 
         let c = Tasks[indexPath.row]
-        //        print(c)
         
         cell.title.text = c.title
         cell.about.text = c.description
         cell.name_surname.text = c.volunteer_name
         cell.time.text = c.time
-        
-        
-        //        print(cell)
+
         return cell
     }
     

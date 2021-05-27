@@ -25,7 +25,6 @@ class LoginPasswordViewController: UIViewController {
     @IBAction func logIn(_ sender: Any) {
         
         
-        
         let pensioner_password1 = password.text ?? ""
         
         
@@ -68,40 +67,5 @@ class LoginPasswordViewController: UIViewController {
         
         
     }
-    
-    
-    //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    //        // Create a variable to store the name the user entered on textField
-    //        self.pensioner_login?.password = password.text ?? ""
-    //
-    //
-    //        //  let destinationVC = segue.destination as! CategoriesViewController
-    //
-    //
-    //        let tabCtrl: UITabBarController = segue.destination as! UITabBarController
-    //        let nav = tabCtrl.viewControllers![0] as! UINavigationController
-    //        let destinationVC = nav.topViewController as! CategoriesViewController
-    //
-    //        destinationVC.pensioner_login = self.pensioner_login
-    //
-    //
-    //        print(pensioner_login)
-    //    }
-    
-    //    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-    //
-    //        let pensioner_password1 = password.text ?? ""
-    //
-    //
-    //        if  (pensioner_password1.count >= 5) {
-    //            return true
-    //        }
-    //        let alert = UIAlertController(title: "Помилка", message: "Пароль має бути більшим за 5 символів", preferredStyle: .alert)
-    //        let okAction = UIAlertAction(title: "ОК", style: .default, handler: nil)
-    //        alert.addAction(okAction)
-    //        self.present(alert, animated: true, completion: nil)
-    //        return false
-    //
-    //    }
     
 }

@@ -16,15 +16,9 @@ class RegisterPhoneViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
-        
-        
         self.newphone.delegate = self
         let tap = UITapGestureRecognizer(target: self, action: #selector(handleTap))
                 view.addGestureRecognizer(tap) // Add gesture recognizer to background view
-        
-    
-       
         
         Utilities.paddingTextField(newphone)
         // Do any additional setup after loading the view.

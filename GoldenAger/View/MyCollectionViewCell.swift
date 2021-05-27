@@ -25,31 +25,6 @@ class MyCollectionViewCell: UICollectionViewCell {
     
 }
 
-//    override var isSelected: Bool{
-//      didSet{
-//        let categoriesVC: CategoriesViewController = CategoriesViewController()
-//        if self.isSelected
-//        {
-//            if (self.label.text == "Консультація"){
-//                let consultViewController: ConsultationViewController = ConsultationViewController()
-//
-//                categoriesVC.present(consultViewController, animated: true, completion: nil)
-//
-//            }
-//            else{
-//
-//                let taskViewController: TasksViewController = TasksViewController()
-//
-//                        categoriesVC.present(taskViewController, animated: true, completion: nil)
-//
-//
-//            }
-//        }
-//        else
-//        {
-//
-//        }
-//      }
 
 
 

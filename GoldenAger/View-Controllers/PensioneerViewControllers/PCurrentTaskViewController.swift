@@ -107,21 +107,15 @@ class PCurrentTaskViewController: UIViewController, UICollectionViewDelegate, UI
             
             if((res._id==nil) || (res.first_name==nil) || (res.last_name==nil) || (res.birthday==nil) || (res.is_free==nil) || (res.is_volunteer==nil) || (res.organization==nil) || (res.password==nil) ){
                 
-                
                 self.warning.text = "Жоден волонтер ще не прийняв Ваше завдання"
                 self.warning.textColor = .indianRed
-                
-                
                 
                 print(res)
                 
             }
             
             else{
-                
-                
-                
-                
+   
                 self.warning.text = ""
                 
                 self.volunteer_name = res.last_name! + " " + res.first_name!
@@ -132,31 +126,23 @@ class PCurrentTaskViewController: UIViewController, UICollectionViewDelegate, UI
                 print(res)
                 
                 self.performSegue(withIdentifier: "successFind", sender: self)
-                
-             
-                
+       
             }
             
             
             
             
         }, onFail:{ res in
-            
-            
+    
             self.warning.text = "Жоден волонтер ще не прийняв Ваше завдання"
             self.warning.textColor = .indianRed
-            
-            
-            
+
             print(res)
             
         })
         
         
     }
-    
-    
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if let endTaskVC = segue.destination as? EndTaskViewController {
@@ -167,27 +153,11 @@ class PCurrentTaskViewController: UIViewController, UICollectionViewDelegate, UI
             endTaskVC.v_phone  = self.volunteer_phone
             endTaskVC.v_birthday = self.volunteer_birthday
             endTaskVC.v_organization = self.volunteer_organization
-            
-            //            endTaskVC.volunteer_name.text = self.volunteer_name
-            //            endTaskVC.volunteer_phone.text = self.volunteer_phone
-            //            endTaskVC.volunteer_birthday.text = self.volunteer_birthday
-            //            endTaskVC.volunteer_organization.text = self.volunteer_organization
+  
         }
         
         
     }
-    
-    //    override func viewWillAppear(_ animated: Bool) {
-    //        super.viewWillAppear(animated)
-    //        navigationController?.setNavigationBarHidden(true, animated: animated)
-    //    }
-    //
-    //    override func viewWillDisappear(_ animated: Bool) {
-    //        super.viewWillDisappear(animated)
-    //        navigationController?.setNavigationBarHidden(false, animated: animated)
-    //    }
-    
-    
     
     // MARK: UICollectionViewDataSource
     func numberOfSections(in collectionView: UICollectionView) -> Int {
